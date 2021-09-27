@@ -28,8 +28,8 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, './coverage/d2r-runes'),
       subdir: '.',
       reporters: [
-        { type: 'html' },
-        { type: 'text-summary' }
+        { itemType: 'html' },
+        { itemType: 'text-summary' }
       ]
     },
     reporters: ['progress', 'kjhtml'],

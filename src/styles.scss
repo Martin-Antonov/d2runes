@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: 'Exocet';
+  src:  url('assets/exocet.woff2') format('woff2');
+}
