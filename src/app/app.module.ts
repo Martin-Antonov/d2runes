@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { RuneComponent } from './components/rune/rune.component';
 import { RunewordComponent } from './components/runeword/runeword.component';
 import { FilterComponent } from './components/home/filter/filter.component';
+import { RunewordHoverComponent } from './components/home/runeword-hover/runeword-hover.component';
+import {NgxSliderModule} from "@angular-slider/ngx-slider";
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { FilterComponent } from './components/home/filter/filter.component';
     HomeComponent,
     RuneComponent,
     RunewordComponent,
-    FilterComponent
+    FilterComponent,
+    RunewordHoverComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,7 @@ import { FilterComponent } from './components/home/filter/filter.component';
     AdsenseModule.forRoot({
       adClient: 'ca-pub-7640562161899788',
     }),
+    NgxSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

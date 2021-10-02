@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RunesService} from "../../services/runes/runes.service";
+import {IRunewordUI} from "../../services/runes/models/Runewords";
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,9 @@ import {RunesService} from "../../services/runes/runes.service";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   constructor(public runes: RunesService) {
   }
 
   ngOnInit(): void {
   }
-
 }

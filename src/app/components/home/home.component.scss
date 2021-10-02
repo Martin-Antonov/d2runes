@@ -1,21 +1,20 @@
 @import "../../shared/constants";
 
 :host {
-  color: white;
-  font-family: $d2;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-
   .table {
     display: flex;
+    font-family: $d2;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
     flex-direction: column;
     width: 725px;
     background-color: #111;
     border-width: 40px 40px;
     border-style: solid;
     border-image: url("../../../assets/frame.png") 120;
+    color: white;
 
     .header {
       display: flex;
@@ -26,6 +25,10 @@
 
     .line {
       display: flex;
+
+      &.inactive {
+        opacity: 0.3;
+      }
 
       .runeword-info {
         color: $gold;
@@ -71,23 +74,19 @@
       width: 150px;
     }
 
+    .runeword-info {
+      &:hover {
+        cursor: pointer;
+        color: $gold-hover !important;
+        font-weight: bold;
+      }
+    }
+
     .runes-list {
       width: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      .single-rune {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        img {
-          width: 40px;
-          height: 40px;
-        }
-      }
     }
 
     .type {

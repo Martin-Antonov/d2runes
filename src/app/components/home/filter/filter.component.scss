@@ -1,0 +1,150 @@
+@import "../../../shared/constants";
+
+:host {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  width: 610px;
+  height: 700px;
+  border: 1px solid red;
+  background: #222222;
+  font-family: $d2-light;
+  color: white;
+  font-size: 20px;
+  z-index: 5;
+
+  .title {
+    display: flex;
+    font-family: $d2;
+    color: $gold;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+  }
+
+  .container {
+    overflow: auto;
+    height: calc(100% - 50px);
+
+    .subtitle {
+      color: $gold;
+      font-size: 24px;
+      width: 100%;
+      display: flex;
+
+      font-family: $d2;
+      margin-top: 10px;
+    }
+
+    .first-line {
+      display: flex;
+      justify-content: space-between;
+
+      .sockets {
+        display: flex;
+
+        .socket {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+
+          span {
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .level {
+        display: flex;
+        align-items: center;
+        font-family: $d2 !important;
+        color: white;
+        width: 310px;
+        justify-content: space-between;
+
+        .from {
+          width: 30px;
+          text-align: left;
+        }
+
+        .to {
+          width: 30px;
+          text-align: right;
+        }
+
+        .slider-container {
+          width: 247px;
+          height: 27px;
+        }
+      }
+    }
+
+    .runes {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 16px;
+
+      .single-rune {
+        opacity: 0.5;
+        margin: 5px;
+
+        &.selected {
+          opacity: 1;
+        }
+      }
+    }
+
+
+    .item-types {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+
+    }
+
+    .stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      height: 200px;
+      width: 100%;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 5px;
+
+  span {
+    margin-left: 5px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 33%;
+
+  .small-title {
+    font-size: 18px;
+    color: $grey;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+
+    &.missile {
+      margin-top: 10px;
+    }
+  }
+}

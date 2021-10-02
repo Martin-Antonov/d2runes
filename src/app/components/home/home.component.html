@@ -1,3 +1,4 @@
+<app-filter></app-filter>
 <div class="table">
   <div class="header">
     <div class="id">#</div>
@@ -6,16 +7,17 @@
     <div class="runes-list">Runes</div>
     <div class="type">Type</div>
   </div>
-  <div class="line" *ngFor="let runeword of runes.runewords; index as i">
-    <div class="id">{{i+1}}</div>
+  <div class="line" [ngClass]="{'inactive': !runeword.selected}" *ngFor="let runeword of runes.runewords; index as i">
+    <div class="id">{{i + 1}}</div>
     <div class="level">{{runeword.level}}</div>
-    <div class="runeword-info">{{runeword.name}}</div>
+    <div class="runeword-info" (mouseenter)="runes.setRuneword($event,runeword)" (mouseleave)="runes.deleteRuneword()">{{runeword.name}}</div>
     <div class="runes-list">
       <div class="single-rune" *ngFor="let word of runeword.word.split(' ')">
-        <img class="icon" src="assets/rune.png">
+        <img class="icon" [src]="'assets/'+word.toLowerCase()+'.png'">
         <div class="name">{{word}}</div>
       </div>
     </div>
     <div class="type">{{runeword.itemTypeShort}}</div>
   </div>
 </div>
+<app-runeword-hover *ngIf="runes.hoveredRuneword"></app-runeword-hover>

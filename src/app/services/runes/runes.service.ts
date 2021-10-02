@@ -1,3 +1,4 @@
+// Todo: lower case, skills vs skill damage, bottom hover not working properly.
 import {Injectable} from '@angular/core';
 import {IRune, RUNES} from "./models/Runes";
 import {IRunewordUI, RUNEWORDS} from "./models/Runewords";
@@ -11,6 +12,9 @@ export class RunesService {
   runes: Array<IRune>;
   runewords: Array<IRunewordUI>
   filterConfig: IFilterConfig;
+  hoveredRuneword: IRunewordUI;
+  hoveredRunewordPosition: { x: number, y: number };
+
   private currentSortType: SortType;
   private currentSortOrder: SortOrder;
 
@@ -24,7 +28,7 @@ export class RunesService {
       r.sockets = r.word.split(" ").length;
     });
 
-    this.filterConfig = {sockets: [], weaponTypes: [], runes: [], level: {from: 13, to: 69}, stats: []};
+    this.filterConfig = {sockets: [], itemTypes: [], runes: [], level: {from: 13, to: 69}, stats: []};
   }
 
   sortBy(type: SortType, order: SortOrder) {
@@ -39,7 +43,7 @@ export class RunesService {
         const aProp = this.getSortPropDependingOnType(a, type);
         const bProp = this.getSortPropDependingOnType(b, type);
         const resultAsBoolean = order === SortOrder.ASCENDING ? aProp <= bProp : aProp > bProp;
-        return resultAsBoolean ? -1 : 1;
+        return resultAsBoolean ? 1 : -1;
 
       }
     });
@@ -56,7 +60,8 @@ export class RunesService {
     }
   }
 
-  filter(by: IFilterConfig) {
+  filter() {
+    const by = this.filterConfig;
     this.runewords.forEach((r: IRunewordUI) => {
       r.selected = true;
     });
@@ -67,7 +72,7 @@ export class RunesService {
         r.selected = false;
       }
       // WeaponTypes
-      if (by.weaponTypes.length > 0 && !this.checkWeaponTypeInclusion(by.weaponTypes, r.itemType)) {
+      if (by.itemTypes.length > 0 && !this.checkWeaponTypeInclusion(by.itemTypes, r.itemType)) {
         r.selected = false;
       }
       // Runes
@@ -119,5 +124,15 @@ export class RunesService {
     }
 
     return true;
+  }
+
+  setRuneword(ev: any, runeword: IRunewordUI) {
+    this.hoveredRunewordPosition = {x: ev.pageX, y: ev.pageY};
+    this.hoveredRuneword = runeword;
+    console.log(ev);
+  }
+
+  deleteRuneword() {
+    this.hoveredRuneword = null;
   }
 }

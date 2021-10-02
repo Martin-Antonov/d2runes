@@ -1,5 +1,3 @@
-// TODO: Presi Add all runes here, follow this structure and be very careful with copy pasting
-// TODO: Rune icons should have the same name as the key. For example: "el.png"
 export const RUNES = [
   {
     key: "El",

@@ -1,0 +1,38 @@
+@import "../../../shared/constants";
+
+:host {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
+  font-family: $d2-light;
+  padding: 10px 15px;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+
+  div:not(:last-child) {
+    margin-bottom: 3px;
+  }
+
+  .name {
+    color: $gold;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .item-type {
+    color: $grey;
+    font-size: 22px;
+  }
+
+  .word {
+    color: $gold;
+  }
+
+  .stat {
+    color: $blue;
+  }
+}
