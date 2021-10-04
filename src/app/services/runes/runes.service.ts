@@ -1,4 +1,11 @@
-// Todo: lower case, skills vs skill damage, bottom hover not working properly.
+// Todo:
+//  rune page,
+//  search field,
+//  semantic HTML,
+//  ads,
+//  info,
+//  home page
+
 import {Injectable} from '@angular/core';
 import {IRune, RUNES} from "./models/Runes";
 import {IRunewordUI, RUNEWORDS} from "./models/Runewords";
@@ -14,6 +21,7 @@ export class RunesService {
   filterConfig: IFilterConfig;
   hoveredRuneword: IRunewordUI;
   hoveredRunewordPosition: { x: number, y: number };
+  filterOpen: boolean;
 
   private currentSortType: SortType;
   private currentSortOrder: SortOrder;
@@ -21,6 +29,7 @@ export class RunesService {
   constructor() {
     this.currentSortType = null;
     this.currentSortOrder = null;
+    this.filterOpen = false;
     this.runes = RUNES.slice();
     this.runewords = RUNEWORDS.slice();
     this.runewords.forEach((r: IRunewordUI) => {
@@ -35,11 +44,23 @@ export class RunesService {
     this.currentSortType = type;
     this.currentSortOrder = order;
     this.runewords.sort((a: IRunewordUI, b: IRunewordUI) => {
+      // sort by selected
       if (a.selected && !b.selected) {
         return -1;
       } else if (b.selected && !a.selected) {
         return 1;
       } else {
+        // then by rune selection, if present
+        if (this.filterConfig.runes.length > 0) {
+          const aRuneInclusionPercentage = this.calculateRuneInclusionPercentage(a);
+          const bRuneInclusionPercentage = this.calculateRuneInclusionPercentage(b);
+          if (aRuneInclusionPercentage < bRuneInclusionPercentage) {
+            return 1;
+          } else if (bRuneInclusionPercentage < aRuneInclusionPercentage) {
+            return -1;
+          }
+        }
+        // then by selected sort type
         const aProp = this.getSortPropDependingOnType(a, type);
         const bProp = this.getSortPropDependingOnType(b, type);
         const resultAsBoolean = order === SortOrder.ASCENDING ? aProp <= bProp : aProp > bProp;
@@ -50,7 +71,6 @@ export class RunesService {
   }
 
   private getSortPropDependingOnType(item: IRunewordUI, type: SortType) {
-
     if (type === SortType.NAME) {
       return item.name;
     } else if (type === SortType.TYPE) {
@@ -58,6 +78,14 @@ export class RunesService {
     } else {
       return item.level;
     }
+  }
+
+  private calculateRuneInclusionPercentage(item: IRunewordUI): number {
+    const words = item.word.split(" ");
+    const includedRunes = words.filter((rune: string) => {
+      return this.filterConfig.runes.includes(rune);
+    });
+    return Math.round(includedRunes.length / words.length * 100) / 100;
   }
 
   filter() {
@@ -93,8 +121,12 @@ export class RunesService {
   }
 
   private checkWeaponTypeInclusion(weaponTypes: Array<string>, runewordType: string) {
-    for (let i = 0; i < weaponTypes.length; i++) {
-      if (runewordType.includes(weaponTypes[i])) {
+    const weaponTypesToLower = weaponTypes.map((type: string) => {
+      return type.toLowerCase();
+    });
+    const runewordTypeToLower = runewordType.toLowerCase();
+    for (let i = 0; i < weaponTypesToLower.length; i++) {
+      if (runewordTypeToLower.includes(weaponTypesToLower[i])) {
         return true;
       }
     }
@@ -103,22 +135,28 @@ export class RunesService {
 
 
   private checkRuneTypeInclusion(selectedRunes: Array<string>, word: string) {
-    const runesInRuneword = word.split(' ');
-    for (let i = 0; i < runesInRuneword.length; i++) {
-      const currentRune = runesInRuneword[i];
-      if (!selectedRunes.includes(currentRune)) {
-        return false;
-      }
-    }
+    let runesInRunewordToLower = word.split(' ').map((rune: string) => {
+      return rune.toLowerCase();
+    })
+    const runesSet = new Set(runesInRunewordToLower);
+    const selectedRunesToLower = selectedRunes.map((rune) => {
+      return rune.toLowerCase();
+    })
 
-    return true;
+    selectedRunesToLower.push(...runesSet);
+    return new Set(selectedRunesToLower).size !== selectedRunesToLower.length;
   }
 
   private checkRuneStatInclusion(selectedStats: Array<string>, runewordStats: Array<string>) {
-    const runewordStatsJoined = runewordStats.join("");
+    const runewordStatsToLower = runewordStats.join(", ").toLowerCase();
     for (let i = 0; i < selectedStats.length; i++) {
-      const currentStat = selectedStats[i];
-      if (!runewordStatsJoined.includes(currentStat)) {
+      const currentStat = selectedStats[i].toLowerCase();
+      if (currentStat === "skill") {
+        if (!runewordStatsToLower.includes("skills") && !runewordStatsToLower.includes("skill levels")) {
+          return false;
+        }
+      }
+      if (!runewordStatsToLower.includes(currentStat)) {
         return false;
       }
     }
@@ -129,7 +167,6 @@ export class RunesService {
   setRuneword(ev: any, runeword: IRunewordUI) {
     this.hoveredRunewordPosition = {x: ev.pageX, y: ev.pageY};
     this.hoveredRuneword = runeword;
-    console.log(ev);
   }
 
   deleteRuneword() {

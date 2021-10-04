@@ -1,15 +1,40 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, HostBinding, HostListener, OnInit} from '@angular/core';
 import {RunesService} from "../../../services/runes/runes.service";
 import {Options} from "@angular-slider/ngx-slider";
 import {ARMOR_TYPES, MAGIC_WEAPONS, MELEE_WEAPONS, MISSILE_WEAPONS} from "../../../services/runes/models/WeaponTypes";
 import {STAT_TYPES} from "../../../services/runes/models/StatTypes";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.scss']
+  styleUrls: ['./filter.component.scss'],
+  animations: [trigger('host', [
+    state('open', style({
+      left: "10px"
+    })),
+    state('closed', style({
+      left: "-690px"
+    })),
+    transition('closed -> open', [
+      animate('200ms ease-out', style({left: "10px"})),
+    ]),
+    transition('open -> closed', [
+      animate('200ms ease-in', style({left: "-690px"}))
+    ]),
+  ])]
 })
 export class FilterComponent implements OnInit {
+  @HostBinding("@host") get state(): string {
+    return this.rs.filterOpen ? "open" : "closed";
+  }
+
+  // @HostListener('document:click', ['$event'])
+  // clickout(event) {
+  //   if (!this.eRef.nativeElement.contains(event.target)) {
+  //     this.rs.filterOpen = false;
+  //   }
+  // }
 
   options: Options = {
     floor: 13, ceil: 69, rightToLeft: false
@@ -19,9 +44,9 @@ export class FilterComponent implements OnInit {
   missileWeapons: Array<string>;
   armorTypes: Array<string>;
   sockets: Array<number>;
-  stats: Array<{name: string, searchKey: string}>;
+  stats: Array<{ name: string, searchKey: string }>;
 
-  constructor(public rs: RunesService) {
+  constructor(public rs: RunesService, private eRef: ElementRef) {
     this.meleeWeapons = MELEE_WEAPONS;
     this.magicWeapons = MAGIC_WEAPONS;
     this.missileWeapons = MISSILE_WEAPONS;

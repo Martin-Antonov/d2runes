@@ -1,0 +1,14 @@
+<nav>
+  <div>Runewords</div>
+  <div class="image-container">
+    <img src="assets/logo.png">
+  </div>
+  <div>Runes</div>
+  <img src="assets/search.png" alt="" class="search-box-icon" (click)="searchBoxVisible=!searchBoxVisible">
+</nav>
+<div *ngIf="searchBoxVisible" class="search-box">
+  <input type="text" class="search">
+</div>
+
+
+

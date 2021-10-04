@@ -9,6 +9,53 @@ html, body {
   background-color: black;
 }
 
+.preload-images1 {
+visibility: hidden;
+  background-image: url("assets/checked.jpg");
+  font-family: "Exocet", sans-serif;
+}
+
+.preload-images2 {
+  visibility: hidden;
+  font-family: "Exocet-light";
+  background-image: url("assets/unchecked.jpg");
+}
+
+.preload-images3 {
+  visibility: hidden;
+  background-image: url("assets/unchecked-active.jpg");
+}
+
+.preload-images4 {
+  visibility: hidden;
+  background-image: url("assets/checked-active.jpg");
+}
+
+.preload-images5 {
+  visibility: hidden;
+  background-image: url("assets/arrow.png");
+}
+.preload-images5 {
+  visibility: hidden;
+  background-image: url("assets/arrow-hover.png");
+}
+
+html {
+  &::-webkit-scrollbar-track {
+    display: none;
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #272728;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-image: url(assets/thumb.jpg);
+  }
+}
+
 @font-face {
   font-family: 'Exocet';
   src: url('assets/exocet.woff2') format('woff2');
@@ -39,8 +86,8 @@ html, body {
   }
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 }
 

@@ -6,4 +6,16 @@ $blue: #8282ff;
 $orange: #ffb600;
 $gold-hover: #e9c964;
 
-// TODO: Presi Add colors and fonts here
+@mixin removeSelection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:focus {
+    outline: none;
+  }
+}

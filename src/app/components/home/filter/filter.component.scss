@@ -1,128 +1,169 @@
 @import "../../../shared/constants";
 
 :host {
+  @include removeSelection();
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
-  width: 610px;
+  top: 140px;
+  left: -690px;
+  width: 650px;
   height: 700px;
-  border: 1px solid red;
   background: #222222;
   font-family: $d2-light;
   color: white;
   font-size: 20px;
   z-index: 5;
+  border-width: 30px 30px;
+  border-style: solid;
+  border-image: url("../../../../assets/filter-frame.png") 30;
 
   .title {
     display: flex;
     font-family: $d2;
     color: $gold;
     width: 100%;
-    height: 50px;
+    height: 32px;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
+    font-size: 24px;
+
+    background-image: url("../../../../assets/filter-title-frame.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    text-shadow: 2px 2px 3px black;
   }
 
-  .container {
-    overflow: auto;
-    height: calc(100% - 50px);
+  .outer-container {
+    height: calc(100% - 93px);
+    padding: 20px;
+    background-image: url("../../../../assets/filter-content-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    .subtitle {
-      color: $gold;
-      font-size: 24px;
+    .container {
+      overflow: auto;
+      height: 100%;
       width: 100%;
-      display: flex;
+      margin: 10px;
 
-      font-family: $d2;
-      margin-top: 10px;
-    }
 
-    .first-line {
-      display: flex;
-      justify-content: space-between;
+      &::-webkit-scrollbar-track {
+        display: none;
+        background-clip: content-box;
+      }
 
-      .sockets {
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #272728;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-image: url(../../../../assets/thumb.jpg);
+      }
+
+      .subtitle {
+        color: $gold;
+        font-size: 24px;
+        width: 100%;
         display: flex;
 
-        .socket {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin-right: 10px;
+        font-family: $d2;
+        margin-top: 10px;
+      }
 
-          span {
-            margin-top: 5px;
+      .first-line {
+        display: flex;
+        justify-content: space-between;
+
+        .sockets {
+          display: flex;
+
+          .socket {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+
+            span {
+              margin-top: 5px;
+            }
+          }
+        }
+
+        .level-container {
+          margin-right: 20px;
+
+          .level {
+            display: flex;
+            align-items: center;
+            font-family: $d2 !important;
+            color: white;
+            width: 310px;
+            justify-content: space-between;
+
+            .from {
+              width: 30px;
+              text-align: left;
+            }
+
+            .to {
+              width: 30px;
+              text-align: right;
+            }
+
+            .slider-container {
+              width: 247px;
+              height: 27px;
+            }
           }
         }
       }
 
-      .level {
+      .runes {
         display: flex;
-        align-items: center;
-        font-family: $d2 !important;
-        color: white;
-        width: 310px;
+        flex-wrap: wrap;
+        font-size: 16px;
+
+        .single-rune {
+          opacity: 0.5;
+          margin: 5px;
+
+          img {
+            width: 42px !important;
+            height: 42px !important;
+          }
+
+          &.selected {
+            opacity: 1;
+          }
+        }
+      }
+
+
+      .item-types {
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-
-        .from {
-          width: 30px;
-          text-align: left;
-        }
-
-        .to {
-          width: 30px;
-          text-align: right;
-        }
-
-        .slider-container {
-          width: 247px;
-          height: 27px;
-        }
       }
-    }
 
-    .runes {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 16px;
-
-      .single-rune {
-        opacity: 0.5;
-        margin: 5px;
-
-        &.selected {
-          opacity: 1;
-        }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 200px;
+        width: 100%;
       }
-    }
-
-
-    .item-types {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-
-    }
-
-    .stats {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      height: 200px;
-      width: 100%;
     }
   }
+
 }
 
 .item {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 5px;
 
   span {
@@ -141,10 +182,33 @@
     color: $grey;
     margin-bottom: 5px;
     width: 100%;
-    text-align: center;
 
     &.missile {
       margin-top: 10px;
     }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: -50px;
+  width: 44px;
+  height: 58px;
+  background-image: url('../../../../assets/arrow.png');
+
+  &:hover {
+    cursor: pointer;
+    background-image: url('../../../../assets/arrow-hover.png');
+  }
+
+  &:active {
+    zoom: 0.9;
+  }
+
+  &.reversed {
+    transform: translate(0, -50%) rotate(180deg);
+    right: -40px
   }
 }

@@ -1,30 +1,44 @@
 @import "../../shared/constants";
 
 :host {
+  position: relative;
+  top: 70px;
+  width: 100%;
+
   .table {
+    overflow: hidden;
     display: flex;
     font-family: $d2;
-    position: absolute;
-    top: 200px;
+    position: relative;
+    margin-top: 70px;
     left: 50%;
+    width: 880px;
     transform: translateX(-50%);
     flex-direction: column;
-    width: 725px;
     background-color: #111;
-    border-width: 40px 40px;
+    border-width: 30px 30px;
     border-style: solid;
-    border-image: url("../../../assets/frame.png") 120;
+    border-image: url("../../../assets/table-frame.png") 40;
     color: white;
 
     .header {
       display: flex;
-      background-color: #222;
+      background-color: #111;
       width: 100%;
       height: 25px;
+
     }
 
     .line {
       display: flex;
+
+      &:nth-child(odd) {
+        background-color: #202020;
+      }
+
+      &:nth-child(even) {
+        background-color: #2d2d2d;
+      }
 
       &.inactive {
         opacity: 0.3;
@@ -54,7 +68,7 @@
     }
 
     .id {
-      width: 25px;
+      width: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -71,10 +85,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 150px;
+      width: 250px;
     }
 
     .runeword-info {
+      font-size: 18px;
+
       &:hover {
         cursor: pointer;
         color: $gold-hover !important;
@@ -93,7 +109,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 200px;
+      width: 250px;
     }
   }
 }

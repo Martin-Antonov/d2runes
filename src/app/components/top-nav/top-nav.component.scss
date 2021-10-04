@@ -1,0 +1,87 @@
+@import "../../shared/constants";
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  --size-700: 42px;
+  --size-1000: 70px;
+  background-image: linear-gradient(
+      180deg, transparent 0, rgba(0, 0, 0, 0.42) 50%, transparent), url(../../../assets/top-nav-bg.png);
+  box-shadow: 0 2px 0 0 rgb(0 0 0 / 80%), inset 0 -1px 0 0 rgb(0 0 0 / 10%), 0 0 66px 66px rgb(0 0 0 / 10%);
+
+  font-family: $d2;
+  color: $gold;
+  font-size: 30px;
+
+  &:hover {
+    cursor: default;
+  }
+
+  div {
+    margin: 0 20px;
+    width: 33%;
+    text-align: center;
+
+    &:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+  }
+
+  .image-container {
+    width: 33%;
+
+    img {
+      position: relative;
+      width: 220px;
+      height: 147px;
+      top: 20px;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+
+  .search-box-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(1.2);
+    }
+  }
+}
+
+.search-box {
+  position: absolute;
+  right: 15px;
+  top: 80px;
+
+  input {
+    height: 30px;
+    width: 180px;
+    background-image: url("../../../assets/footer-bg.jpg");
+    color: white;
+    font-family: $d2-light;
+
+    border: 2px solid #383a3a;
+    caret-color: #767676;
+    padding: 0 10px;
+    font-size: 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
