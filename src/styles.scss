@@ -56,6 +56,12 @@ html {
   }
 }
 
+a {
+  text-decoration: none;
+  display: block;
+  color: $gold;
+}
+
 @font-face {
   font-family: 'Exocet';
   src: url('assets/exocet.woff2') format('woff2');

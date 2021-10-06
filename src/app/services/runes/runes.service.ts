@@ -1,9 +1,7 @@
 // Todo:
 //  rune page,
-//  search field,
 //  semantic HTML,
 //  ads,
-//  info,
 //  home page
 
 import {Injectable} from '@angular/core';
@@ -37,7 +35,7 @@ export class RunesService {
       r.sockets = r.word.split(" ").length;
     });
 
-    this.filterConfig = {sockets: [], itemTypes: [], runes: [], level: {from: 13, to: 69}, stats: []};
+    this.filterConfig = {sockets: [], itemTypes: [], runes: [], level: {from: 13, to: 69}, stats: [], search: ""};
   }
 
   sortBy(type: SortType, order: SortOrder) {
@@ -95,6 +93,10 @@ export class RunesService {
     });
 
     this.runewords.forEach((r) => {
+      // Search
+      if (by.search.length !== 0 && !r.name.toLowerCase().includes(by.search.toLowerCase())) {
+        r.selected = false;
+      }
       // Sockets
       if (by.sockets.length > 0 && !by.sockets.includes(r.sockets)) {
         r.selected = false;

@@ -34,7 +34,7 @@
     <div class="runes">
       <div class="single-rune" [ngClass]="{'selected': this.isRuneSelected(rune.key)}" *ngFor="let rune of rs.runes"
            (click)="changeRune(rune.key)">
-        <img class="icon" [src]="'assets/'+rune.key.toLowerCase()+'.png'">
+        <img class="icon" [src]="'assets/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">
         <div class="name">{{rune.key}}</div>
       </div>
     </div>

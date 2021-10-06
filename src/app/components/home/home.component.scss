@@ -1,115 +1,37 @@
 @import "../../shared/constants";
 
 :host {
+  width: 50%;
+  left: 50%;
   position: relative;
-  top: 70px;
-  width: 100%;
+  top: 140px;
+  transform: translateX(-50%);
+  color: white;
 
-  .table {
-    overflow: hidden;
-    display: flex;
+
+  h1 {
+    text-align: center;
+    color: $gold;
+    margin-bottom: 30px;
     font-family: $d2;
-    position: relative;
-    margin-top: 70px;
-    left: 50%;
-    width: 880px;
-    transform: translateX(-50%);
-    flex-direction: column;
-    background-color: #111;
-    border-width: 30px 30px;
-    border-style: solid;
-    border-image: url("../../../assets/table-frame.png") 40;
-    color: white;
+  }
 
-    .header {
-      display: flex;
-      background-color: #111;
-      width: 100%;
-      height: 25px;
+  p {
+    font-family: $text;
+    font-size: 20px;
 
-    }
-
-    .line {
-      display: flex;
-
-      &:nth-child(odd) {
-        background-color: #202020;
-      }
-
-      &:nth-child(even) {
-        background-color: #2d2d2d;
-      }
-
-      &.inactive {
-        opacity: 0.3;
-      }
-
-      .runeword-info {
-        color: $gold;
-      }
-
-      .runes-list {
-        display: flex;
-
-        .single-rune {
-          display: flex;
-          flex-direction: column;
-          margin: 5px;
-
-          .name {
-            color: $orange;
-          }
-        }
-      }
-
-      .type {
-        color: $grey;
-      }
-    }
-
-    .id {
-      width: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .level {
-      width: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .runeword-info, .runeword-title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 250px;
-    }
-
-    .runeword-info {
-      font-size: 18px;
-
-      &:hover {
-        cursor: pointer;
-        color: $gold-hover !important;
+    em {
+      font-weight: bold;
+      font-style: normal;
+      font-size: 28px;
+      font-family: $d2;
+      strong {
         font-weight: bold;
       }
     }
 
-    .runes-list {
-      width: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .type {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 250px;
+    strong {
+      font-weight: normal;
     }
   }
 }
