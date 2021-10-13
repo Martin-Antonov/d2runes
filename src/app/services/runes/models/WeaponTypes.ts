@@ -26,6 +26,3 @@ export const ARMOR_TYPES = [
   "Shields",
   "Paladin Shields"
 ]
-
-// "Axes/Fists/Maces/Polearms/Staves/Spears/Swords/Scepters/Clubs/Hammers"
-// Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws

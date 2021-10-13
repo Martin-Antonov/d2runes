@@ -1,4 +1,12 @@
 :host {
   display: flex;
   flex-direction: column;
+
+  main {
+    display: contents;
+  }
+
+  footer {
+    display: contents;
+  }
 }

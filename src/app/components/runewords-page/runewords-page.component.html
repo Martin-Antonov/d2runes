@@ -1,26 +1,5 @@
 <app-filter></app-filter>
-<div class="table" [@table]="rs.filterOpen? 'open':'closed'">
-  <div class="header">
-    <div class="id">#</div>
-    <div class="runeword-title">Runeword</div>
-    <div class="runes-list">Runes</div>
-    <div class="type">Type</div>
-    <div class="level">LVL</div>
-  </div>
-  <div class="line" [ngClass]="{'inactive': !runeword.selected}" *ngFor="let runeword of rs.runewords; index as i">
-    <div class="id">{{i + 1}}</div>
-
-    <div class="runeword-info" (mouseenter)="rs.setRuneword($event,runeword)"
-         (mouseleave)="rs.deleteRuneword()">{{runeword.name}}</div>
-    <div class="runes-list">
-      <div class="single-rune" *ngFor="let word of runeword.word.split(' ')"
-           [ngStyle]="{'opacity': rs.filterConfig.runes.length>0 && !rs.filterConfig.runes.includes(word)? 0.5 : 1}">
-        <img class="icon" [src]="'assets/'+word.toLowerCase()+'.png'" [alt]="word">
-        <div class="name">{{word}}</div>
-      </div>
-    </div>
-    <div class="type">{{runeword.itemTypeShort}}</div>
-    <div class="level">{{runeword.level}}</div>
-  </div>
-</div>
+<header><h1 class="header">Runeword Explorer</h1></header>
+<app-runewords-table [runewords]="rs.runewords"></app-runewords-table>
 <app-runeword-hover *ngIf="rs.hoveredRuneword"></app-runeword-hover>
+<!--<app-ads-container></app-ads-container>-->

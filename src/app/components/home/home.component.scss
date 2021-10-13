@@ -1,37 +1,44 @@
 @import "../../shared/constants";
 
 :host {
-  width: 50%;
-  left: 50%;
-  position: relative;
-  top: 140px;
-  transform: translateX(-50%);
-  color: white;
-
-
-  h1 {
-    text-align: center;
-    color: $gold;
-    margin-bottom: 30px;
-    font-family: $d2;
-  }
-
-  p {
-    font-family: $text;
-    font-size: 20px;
-
-    em {
-      font-weight: bold;
-      font-style: normal;
-      font-size: 28px;
-      font-family: $d2;
-      strong {
-        font-weight: bold;
-      }
-    }
+  .container {
+    width: 50%;
+    left: 50%;
+    position: relative;
+    top: 140px;
+    transform: translateX(-50%);
+    color: white;
 
     strong {
-      font-weight: normal;
+      display: inline-block;
+    }
+
+    p {
+      font-family: $text;
+      font-size: 20px;
+
+      a {
+        display: inline-block;
+
+        &:hover {
+          filter: brightness(1.2);
+        }
+      }
+
+      em {
+        font-weight: bold;
+        font-style: normal;
+        font-size: 28px;
+        font-family: $d2;
+
+        strong {
+          font-weight: bold;
+        }
+      }
+
+      strong {
+        font-weight: normal;
+      }
     }
   }
 }

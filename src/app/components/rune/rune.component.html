@@ -1,1 +1,11 @@
-<p>rune works!</p>
+<header><h1 class="header">Runes</h1></header>
+<div class="runes">
+  <a class="single-rune" *ngFor="let rune of rs.runes" [routerLink]="rune.key.toLowerCase()" (click)="setCurrentRune(rune)">
+    <img class="icon" [src]="'assets/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">
+    <strong class="name">{{rune.key}}</strong>
+  </a>
+</div>
+<app-runewords-table *ngIf="runewords.length>0" [runewords]="runewords"></app-runewords-table>
+<app-runeword-hover *ngIf="rs.hoveredRuneword"></app-runeword-hover>
+<app-rune-preview *ngIf="currentRune" [rune]="currentRune"></app-rune-preview>
+<!--<app-ads-container></app-ads-container>-->

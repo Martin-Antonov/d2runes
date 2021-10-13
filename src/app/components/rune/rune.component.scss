@@ -1,0 +1,30 @@
+:host {
+  position: relative;
+  top: 70px;
+  width: 100%;
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .runes {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 600px;
+
+    .single-rune {
+      margin: 5px;
+
+      img {
+        width: 42px !important;
+        height: 42px !important;
+      }
+    }
+  }
+}

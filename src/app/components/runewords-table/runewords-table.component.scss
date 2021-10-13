@@ -1,0 +1,114 @@
+@import "../../shared/constants";
+
+.table {
+  overflow: hidden;
+  display: flex;
+  font-family: $d2;
+  position: relative;
+  margin-top: 40px;
+  left: 50%;
+  width: 880px;
+  transform: translateX(-50%);
+  flex-direction: column;
+  background-color: #111;
+  border-width: 30px 30px;
+  border-style: solid;
+  border-image: url("../../../assets/table-frame.png") 40;
+  color: white;
+  z-index: 2;
+
+  .header {
+    display: flex;
+    background-color: #111;
+    width: 100%;
+    height: 25px;
+
+  }
+
+  .line {
+    display: flex;
+
+    a {
+      display: flex;
+    }
+
+    &:nth-child(odd) {
+      background-color: #202020;
+    }
+
+    &:nth-child(even) {
+      background-color: #2d2d2d;
+    }
+
+    &.inactive {
+      opacity: 0.3;
+    }
+
+    .runeword-info {
+      color: $gold;
+    }
+
+    .runes-list {
+      display: flex;
+
+      .single-rune {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+
+        .name {
+          color: $orange;
+        }
+      }
+    }
+
+    .type {
+      color: $grey;
+    }
+  }
+
+  .id {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .level {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .runeword-info, .runeword-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+  }
+
+  .runeword-info {
+    font-size: 18px;
+
+    &:hover {
+      cursor: pointer;
+      color: $gold-hover !important;
+      font-weight: bold;
+    }
+  }
+
+  .runes-list {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+  }
+}

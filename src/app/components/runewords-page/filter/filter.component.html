@@ -1,9 +1,9 @@
-<div class="title">Filter</div>
+<h2 class="title">Filter</h2>
 <div class="outer-container">
   <div class="container">
     <div class="first-line">
       <div class="sockets-container">
-        <div class="subtitle">Sockets</div>
+        <h3 class="subtitle">Sockets</h3>
         <hr>
         <div class="sockets">
           <div class="socket" *ngFor="let socket of sockets">
@@ -15,7 +15,7 @@
       </div>
 
       <div class="level-container">
-        <div class="subtitle">Level</div>
+        <h3 class="subtitle">Level</h3>
         <hr>
         <div class="level">
           <div class="from">{{rs.filterConfig.level.from}}</div>
@@ -29,53 +29,53 @@
       </div>
     </div>
 
-    <div class="subtitle">Runes</div>
+    <h3 class="subtitle">Runes</h3>
     <hr>
     <div class="runes">
       <div class="single-rune" [ngClass]="{'selected': this.isRuneSelected(rune.key)}" *ngFor="let rune of rs.runes"
            (click)="changeRune(rune.key)">
         <img class="icon" [src]="'assets/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">
-        <div class="name">{{rune.key}}</div>
+        <strong class="name">{{rune.key}}</strong>
       </div>
     </div>
 
-    <div class="subtitle">Item Type</div>
+    <h3 class="subtitle">Item Type</h3>
     <hr>
     <div class="item-types">
       <div class="column">
-        <div class="small-title">Melee Weapons</div>
+        <h4 class="small-title">Melee Weapons</h4>
         <div class="item" *ngFor="let weapon of meleeWeapons">
           <input type="checkbox" [id]="weapon" (change)="changeItem($event, weapon)">
           <label [for]="weapon"></label>
-          <span>{{weapon}}</span>
+          <strong>{{weapon}}</strong>
         </div>
       </div>
       <div class="column">
-        <div class="small-title">Magic Weapons</div>
+        <h4 class="small-title">Magic Weapons</h4>
         <div class="item" *ngFor="let magic of magicWeapons">
           <input type="checkbox" [id]="magic" (change)="changeItem($event, magic)">
           <label [for]="magic"></label>
-          <span>{{magic}}</span>
+          <strong>{{magic}}</strong>
         </div>
-        <div class="small-title missile">Missile Weapons</div>
+        <h4 class="small-title missile">Missile Weapons</h4>
         <div class="item" *ngFor="let missile of missileWeapons">
           <input type="checkbox" [id]="missile" (change)="changeItem($event, missile)">
           <label [for]="missile"></label>
-          <span>{{missile}}</span>
+          <strong>{{missile}}</strong>
         </div>
       </div>
       <div class="column">
 
-        <div class="small-title">Armor</div>
+        <h4 class="small-title">Armor</h4>
         <div class="item" *ngFor="let armor of armorTypes">
           <input type="checkbox" [id]="armor" (change)="changeItem($event, armor)">
           <label [for]="armor"></label>
-          <span>{{armor}}</span>
+          <strong>{{armor}}</strong>
         </div>
       </div>
     </div>
 
-    <div class="subtitle">Stats</div>
+    <h3 class="subtitle">Stats</h3>
     <hr>
     <div class="stats">
       <div class="item" *ngFor="let stat of stats">

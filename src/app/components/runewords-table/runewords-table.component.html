@@ -1,0 +1,25 @@
+<div class="table" [@table]="rs.filterOpen? 'open':'closed'">
+  <div class="header">
+    <div class="id">#</div>
+    <strong class="runeword-title">Runeword</strong>
+    <strong class="runes-list">Runes</strong>
+    <div class="type">Type</div>
+    <div class="level">LVL</div>
+  </div>
+  <div class="line" [ngClass]="{'inactive': !runeword.selected}" *ngFor="let runeword of runewords; index as i">
+    <div class="id">{{i + 1}}</div>
+
+    <a [routerLink]="runeword.name.split(' ').join('').replace('(L)','').toLowerCase()"><strong class="runeword-info"
+                                                                                                (mouseenter)="rs.setRuneword($event,runeword)"(mouseleave)="rs.deleteRuneword()">{{runeword.name}}
+    </strong></a>
+    <div class="runes-list">
+      <div class="single-rune" *ngFor="let word of runeword.word.split(' ')"
+           [ngStyle]="{'opacity': rs.filterConfig.runes.length>0 && !rs.filterConfig.runes.includes(word)? 0.5 : 1}">
+        <img class="icon" [src]="'assets/'+word.toLowerCase()+'.png'" [alt]="word">
+        <strong class="name">{{word}}</strong>
+      </div>
+    </div>
+    <strong class="type">{{runeword.itemTypeShort}}</strong>
+    <div class="level">{{runeword.level}}</div>
+  </div>
+</div>

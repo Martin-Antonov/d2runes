@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ts: Title) {
+    this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Welcome');
+  }
 
   ngOnInit(): void {
   }
-
 }

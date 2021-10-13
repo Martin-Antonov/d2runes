@@ -9,8 +9,12 @@ html, body {
   background-color: black;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .preload-images1 {
-visibility: hidden;
+  visibility: hidden;
   background-image: url("assets/checked.jpg");
   font-family: "Exocet", sans-serif;
 }
@@ -35,6 +39,7 @@ visibility: hidden;
   visibility: hidden;
   background-image: url("assets/arrow.png");
 }
+
 .preload-images5 {
   visibility: hidden;
   background-image: url("assets/arrow-hover.png");
@@ -60,6 +65,26 @@ a {
   text-decoration: none;
   display: block;
   color: $gold;
+}
+
+h1 {
+  text-align: center;
+  color: $gold;
+  margin-bottom: 30px;
+  font-family: $d2;
+}
+
+.tooltip-style {
+  font-family: $text;
+}
+
+header {
+  display: contents;
+}
+
+strong {
+  font-weight: normal;
+  display: block;
 }
 
 @font-face {

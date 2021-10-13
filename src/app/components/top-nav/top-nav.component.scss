@@ -40,8 +40,8 @@ nav {
 
     img {
       position: relative;
-      width: 220px;
-      height: 147px;
+      width: 180px;
+      height: 120px;
       top: 20px;
 
       &:hover {
@@ -50,33 +50,63 @@ nav {
     }
   }
 
-  .beer-icon {
+  .donate-link {
     position: absolute;
     right: 15px;
     top: 15px;
+    margin: 0;
     width: 40px;
-    height: 40px;
-    &:hover {
-      filter: brightness(1.2);
-      animation: shake 0.5s;
-      animation-iteration-count: 1;
-      cursor: pointer;
+
+    .beer-icon {
+      width: 40px;
+      height: 40px;
+
+      &:hover {
+        filter: brightness(1.2);
+        animation: shake 0.5s;
+        animation-iteration-count: 1;
+        cursor: pointer;
+      }
     }
 
+
     @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      10% { transform: translate(-1px, -2px) rotate(-5deg); }
-      20% { transform: translate(-3px, 0px) rotate(5deg); }
-      30% { transform: translate(3px, 2px) rotate(0deg); }
-      40% { transform: translate(1px, -1px) rotate(5deg); }
-      50% { transform: translate(-1px, 2px) rotate(-5deg); }
-      60% { transform: translate(-3px, 1px) rotate(0deg); }
-      70% { transform: translate(3px, 1px) rotate(-5deg); }
-      80% { transform: translate(-1px, -1px) rotate(5deg); }
-      90% { transform: translate(1px, 2px) rotate(0deg); }
-      100% { transform: translate(1px, -2px) rotate(-5deg); }
+      0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+      10% {
+        transform: translate(-1px, -2px) rotate(-5deg);
+      }
+      20% {
+        transform: translate(-3px, 0px) rotate(5deg);
+      }
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+      40% {
+        transform: translate(1px, -1px) rotate(5deg);
+      }
+      50% {
+        transform: translate(-1px, 2px) rotate(-5deg);
+      }
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+      70% {
+        transform: translate(3px, 1px) rotate(-5deg);
+      }
+      80% {
+        transform: translate(-1px, -1px) rotate(5deg);
+      }
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+      100% {
+        transform: translate(1px, -2px) rotate(-5deg);
+      }
     }
   }
+
   .search-box-icon {
     position: absolute;
     left: 15px;

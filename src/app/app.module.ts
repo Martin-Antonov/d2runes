@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AdsenseModule} from "ng2-adsense";
 import {RuneComponent} from './components/rune/rune.component';
-import {RunewordComponent} from './components/runeword/runeword.component';
 import {NgxSliderModule} from "@angular-slider/ngx-slider";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ClickOutsideModule} from 'ng-click-outside';
@@ -16,18 +15,28 @@ import {RunewordsPageComponent} from "./components/runewords-page/runewords-page
 import {FilterComponent} from "./components/runewords-page/filter/filter.component";
 import {RunewordHoverComponent} from "./components/runewords-page/runeword-hover/runeword-hover.component";
 import { HomeComponent } from './components/home/home.component';
+import { RunewordsTableComponent } from './components/runewords-table/runewords-table.component';
+import { RunePreviewComponent } from './components/rune/rune-preview/rune-preview.component';
+import { AdsContainerComponent } from './components/ads-container/ads-container.component';
+import {TooltipModule} from "ng2-tooltip-directive";
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { RunewordSinglePageComponent } from './components/runeword-single-page/runeword-single-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RunewordsPageComponent,
     RuneComponent,
-    RunewordComponent,
     FilterComponent,
     RunewordHoverComponent,
     TopNavComponent,
     FooterComponent,
     HomeComponent,
+    RunewordsTableComponent,
+    RunePreviewComponent,
+    AdsContainerComponent,
+    PrivacyPolicyComponent,
+    RunewordSinglePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +48,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserAnimationsModule,
     ClickOutsideModule,
     FormsModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

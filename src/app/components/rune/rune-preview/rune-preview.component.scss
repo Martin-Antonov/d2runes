@@ -1,0 +1,48 @@
+@import "../../../shared/constants";
+
+:host {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 150px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
+  font-family: $d2-light;
+  padding: 10px 15px;
+  font-size: 20px;
+  z-index: 2000;
+
+  border-width: 10px 10px;
+  border-style: solid;
+  border-image: url("../../../../assets/table-frame.png") 10;
+  background: #0c0c0c;
+
+  div:not(:last-child) {
+    margin-bottom: 3px;
+  }
+
+  .rune-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .name {
+      margin-left: 5px;
+      color: $orange;
+      font-size: 24px;
+    }
+  }
+
+  strong {
+    color: white;
+  }
+}

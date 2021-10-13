@@ -1,12 +1,9 @@
 // Todo:
-//  rune page,
-//  semantic HTML,
-//  ads,
-//  home page
+//  favicon
 
 import {Injectable} from '@angular/core';
-import {IRune, RUNES} from "./models/Runes";
-import {IRunewordUI, RUNEWORDS} from "./models/Runewords";
+import {IRune, RUNES_D2R} from "./models/Runes";
+import {IRunewordUI, RUNEWORDS_D2R} from "./models/Runewords";
 import {SortOrder, SortType} from "./models/Sorting";
 import {IFilterConfig} from "./models/IFilter";
 
@@ -28,8 +25,8 @@ export class RunesService {
     this.currentSortType = null;
     this.currentSortOrder = null;
     this.filterOpen = false;
-    this.runes = RUNES.slice();
-    this.runewords = RUNEWORDS.slice();
+    this.runes = RUNES_D2R.slice();
+    this.runewords = RUNEWORDS_D2R.slice();
     this.runewords.forEach((r: IRunewordUI) => {
       r.selected = true;
       r.sockets = r.word.split(" ").length;

@@ -1,11 +1,14 @@
 <nav>
-  <img *ngIf="searchIconVisible" src="assets/search.png" alt="search" class="search-box-icon" (click)="searchBoxVisible=!searchBoxVisible">
+  <img *ngIf="searchIconVisible" src="assets/search.png" alt="search" class="search-box-icon"
+       (click)="searchBoxVisible=!searchBoxVisible">
   <a routerLink="/runewords">Runewords</a>
   <a class="image-container" routerLink="/home">
     <img src="assets/logo.png" alt="logo">
   </a>
   <a routerLink="/runes">Runes</a>
-  <img src="assets/beer.png" alt="donate" class="beer-icon" >
+  <a href="https://donorbox.org/diablo-2-runes?default_interval=o" class="donate-link" tooltip="Buy me a beer :)" placement="top" tooltipClass="tooltip-style">
+    <img src="assets/beer.png" alt="donate" class="beer-icon">
+  </a>
 </nav>
 <div *ngIf="searchBoxVisible" class="search-box">
   <input type="text" class="search" [(ngModel)]="rs.filterConfig.search" (ngModelChange)="rs.filter()">

@@ -1,0 +1,22 @@
+@import "../../shared/constants";
+
+:host {
+  .container {
+    width: 50%;
+    left: 50%;
+    position: relative;
+    top: 140px;
+    transform: translateX(-50%);
+    color: white;
+
+    p {
+      font-family: $text;
+      font-size: 14px;
+    }
+
+    h2 {
+      margin: 20px 0;
+    }
+  }
+}
+

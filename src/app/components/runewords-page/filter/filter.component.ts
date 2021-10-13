@@ -29,13 +29,6 @@ export class FilterComponent implements OnInit {
     return this.rs.filterOpen ? "open" : "closed";
   }
 
-  // @HostListener('document:click', ['$event'])
-  // clickout(event) {
-  //   if (!this.eRef.nativeElement.contains(event.target)) {
-  //     this.rs.filterOpen = false;
-  //   }
-  // }
-
   options: Options = {
     floor: 13, ceil: 69, rightToLeft: false
   }
@@ -46,7 +39,7 @@ export class FilterComponent implements OnInit {
   sockets: Array<number>;
   stats: Array<{ name: string, searchKey: string }>;
 
-  constructor(public rs: RunesService, private eRef: ElementRef) {
+  constructor(public rs: RunesService) {
     this.meleeWeapons = MELEE_WEAPONS;
     this.magicWeapons = MAGIC_WEAPONS;
     this.missileWeapons = MISSILE_WEAPONS;

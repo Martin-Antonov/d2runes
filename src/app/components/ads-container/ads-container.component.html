@@ -1,0 +1,28 @@
+<div *ngIf="adsDisabled && checkPerformed" class="ads-disabled">
+  <div class="title">
+    Beer denied!
+  </div>
+  <img src="assets/nobeer.png" alt="No Beer">
+  <div class="text">Please, disable your adblocker to support this website (so that I can get some more beer).</div>
+</div>
+<div *ngIf="!adsDisabled && checkPerformed">
+  <ng-adsense
+    [adClient]="'ca-pub-7640562161899788'"
+    [adSlot]="7259870550"
+    [width]="300"
+    [height]="200"
+  ></ng-adsense>
+  <ng-adsense
+    [adClient]="'ca-pub-7640562161899788'"
+    [adSlot]="7259870550"
+    [width]="300"
+    [height]="200"
+  ></ng-adsense>
+  <ng-adsense
+    [adClient]="'ca-pub-7640562161899788'"
+    [adSlot]="7259870550"
+    [width]="300"
+    [height]="200"
+  ></ng-adsense>
+</div>
+

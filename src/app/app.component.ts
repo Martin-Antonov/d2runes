@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Title} from "@angular/platform-browser";
+import {SitemapGeneratorService} from "./services/sitemap-generator.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'd2r-runes';
+
+  // constructor(private sg: SitemapGeneratorService){
+  //
+  // }
 }
