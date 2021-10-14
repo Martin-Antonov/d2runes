@@ -57,6 +57,7 @@ export class RunesService {
     const filter = localStorage.getItem('filter');
     if (filter) {
       this.filterConfig = JSON.parse(filter);
+      this.filter();
     }
   }
 
