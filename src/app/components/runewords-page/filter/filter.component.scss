@@ -1,12 +1,13 @@
 @import "../../../shared/constants";
+@import "../../../shared/responsive";
 
 :host {
   @include removeSelection();
   position: fixed;
   top: 125px;
-  left: -690px;
-  width: 650px;
-  height: 700px;
+  box-sizing: border-box;
+  width: 710px;
+  height: 760px;
   background: #222222;
   font-family: $d2-light;
   color: white;
@@ -15,6 +16,12 @@
   border-width: 30px 30px;
   border-style: solid;
   border-image: url("../../../../assets/filter-frame.png") 30;
+
+  @include less-than(tablet) {
+    width: 100%;
+    top: 70px;
+    height: calc(100% - 70px);
+  }
 
   .title {
     display: flex;
@@ -27,25 +34,23 @@
     font-size: 24px;
 
     background-image: url("../../../../assets/filter-title-frame.jpg");
-    background-size: contain;
+    background-size: 100% 32px;
     background-repeat: no-repeat;
 
     text-shadow: 2px 2px 3px black;
   }
 
   .outer-container {
-    height: calc(100% - 93px);
-    padding: 20px;
+    height: calc(100% - 33px);
     background-image: url("../../../../assets/filter-content-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    padding-left: 10px;
 
     .container {
       overflow: auto;
       height: 100%;
       width: 100%;
-      margin: 10px;
-
 
       &::-webkit-scrollbar-track {
         display: none;
@@ -54,7 +59,10 @@
 
       &::-webkit-scrollbar {
         width: 10px;
-        background-color: #272728;
+        background-color: transparent;
+        @include less-than(tablet) {
+          width: 6px;
+        }
       }
 
       &::-webkit-scrollbar-thumb {
@@ -70,14 +78,57 @@
 
         font-family: $d2;
         margin-top: 10px;
+
+        @include less-than(tablet) {
+          text-align: center;
+          display: block;
+          margin-top: 20px;
+        }
+      }
+
+      hr {
+        @include less-than(tablet) {
+          background-position: center;
+        }
+      }
+
+
+      .search-box {
+        @include less-than(tablet) {
+          display: flex;
+          justify-content: center;
+        }
+
+        input {
+          height: 30px;
+          width: 180px;
+          background: transparent;
+          color: white;
+          font-family: $d2-light;
+
+          border: 2px solid #383a3a;
+          caret-color: #767676;
+          padding: 0 10px;
+          font-size: 20px;
+
+          &:focus {
+            outline: none;
+          }
+        }
       }
 
       .first-line {
         display: flex;
         justify-content: space-between;
+        @include less-than(tablet) {
+          flex-direction: column;
+        }
 
         .sockets {
           display: flex;
+          @include less-than(tablet) {
+            justify-content: center;
+          }
 
           .socket {
             display: flex;
@@ -94,6 +145,13 @@
 
         .level-container {
           margin-right: 20px;
+          @include less-than(tablet) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
 
           .level {
             display: flex;
@@ -125,9 +183,13 @@
         display: flex;
         flex-wrap: wrap;
         font-size: 16px;
+        width: 99%;
+        @include less-than(tablet) {
+          justify-content: center;
+        }
 
         .single-rune {
-          opacity: 0.5;
+          opacity: 0.3;
           margin: 5px;
 
           img {
@@ -146,6 +208,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include less-than(tablet) {
+          flex-wrap: wrap;
+        }
       }
 
       .stats {
@@ -155,6 +220,10 @@
         flex-wrap: wrap;
         height: 200px;
         width: 100%;
+
+        @include less-than(tablet) {
+          height: 300px;
+        }
 
         span {
           margin-left: 5px;
@@ -182,12 +251,22 @@
   align-items: flex-start;
   width: 33%;
 
+  @include less-than(tablet) {
+    width: 50%;
+  }
+
   .small-title {
     font-size: 18px;
     color: $grey;
     margin-bottom: 5px;
     width: 100%;
     font-weight: normal;
+
+    &.armor {
+      @include less-than(tablet) {
+        margin-top: 5px;
+      }
+    }
 
     &.missile {
       margin-top: 10px;
@@ -204,6 +283,10 @@
   height: 58px;
   background-image: url('../../../../assets/arrow.png');
 
+  @include less-than(tablet) {
+    right: -75px;
+  }
+
   &:hover {
     cursor: pointer;
     background-image: url('../../../../assets/arrow-hover.png');
@@ -215,6 +298,9 @@
 
   &.reversed {
     transform: translate(0, -50%) rotate(180deg);
-    right: -40px
+    right: -40px;
+    @include less-than(tablet) {
+      right: -30px;
+    }
   }
 }

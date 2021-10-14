@@ -22,8 +22,7 @@ import {animate, style, transition, trigger} from "@angular/animations";
 export class RunewordHoverComponent implements OnInit {
   @HostBinding("@rw")
   @HostBinding("style.transform") get transform() {
-    const xOffset = this.rs.filterOpen ? "1100px, " : "850px, ";
-    return 'translate(' + xOffset + (this.rs.hoveredRunewordPosition.y - 150) + 'px)';
+    return 'translate(' + (this.rs.hoveredRunewordPosition.x + 50) + 'px, ' + (this.rs.hoveredRunewordPosition.y - 150) + 'px)';
   }
 
   constructor(public rs: RunesService) {

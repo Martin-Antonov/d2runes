@@ -24,7 +24,5 @@ export class SitemapGeneratorService {
     <priority>${res.priority}</priority>
     </url>`
     });
-
-    console.log(result.join('\n'))
   }
 }

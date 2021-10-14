@@ -5,7 +5,7 @@
     <strong class="name">{{rune.key}}</strong>
   </a>
 </div>
+<app-rune-preview *ngIf="currentRune" [rune]="currentRune"></app-rune-preview>
 <app-runewords-table *ngIf="runewords.length>0" [runewords]="runewords"></app-runewords-table>
 <app-runeword-hover *ngIf="rs.hoveredRuneword"></app-runeword-hover>
-<app-rune-preview *ngIf="currentRune" [rune]="currentRune"></app-rune-preview>
 <!--<app-ads-container></app-ads-container>-->

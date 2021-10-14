@@ -1,4 +1,4 @@
-<div class="table" [@table]="rs.filterOpen? 'open':'closed'">
+<div class="table" [@table]="animationCondition">
   <div class="header">
     <div class="id">#</div>
     <strong class="runeword-title">Runeword</strong>
@@ -14,7 +14,7 @@
     </strong></a>
     <div class="runes-list">
       <div class="single-rune" *ngFor="let word of runeword.word.split(' ')"
-           [ngStyle]="{'opacity': rs.filterConfig.runes.length>0 && !rs.filterConfig.runes.includes(word)? 0.5 : 1}">
+           [ngStyle]="{'opacity': rs.filterConfig.runes.length>0 && !rs.filterConfig.runes.includes(word)? 0.3 : 1}">
         <img class="icon" [src]="'assets/'+word.toLowerCase()+'.png'" [alt]="word">
         <strong class="name">{{word}}</strong>
       </div>

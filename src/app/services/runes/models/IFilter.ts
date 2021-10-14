@@ -5,4 +5,5 @@ export interface IFilterConfig {
   itemTypes?: Array<string>;
   level?: { from: number, to: number };
   stats?: Array<string>;
+  pd2ModeOn?: boolean;
 }

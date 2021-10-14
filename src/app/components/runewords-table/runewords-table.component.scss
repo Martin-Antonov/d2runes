@@ -1,35 +1,45 @@
 @import "../../shared/constants";
+@import "../../shared/responsive";
 
 .table {
+  box-sizing: border-box;
   overflow: hidden;
   display: flex;
   font-family: $d2;
   position: relative;
-  margin-top: 40px;
+  margin-top: 30px;
   left: 50%;
-  width: 880px;
+  width: 940px;
   transform: translateX(-50%);
   flex-direction: column;
   background-color: #111;
   border-width: 30px 30px;
   border-style: solid;
-  border-image: url("../../../assets/table-frame.png") 40;
+  border-image: url("../../../assets/table-frame.png") 30;
   color: white;
   z-index: 2;
+
+  @include less-than(tableMin) {
+    width: 100%;
+  }
 
   .header {
     display: flex;
     background-color: #111;
     width: 100%;
     height: 25px;
-
   }
 
   .line {
     display: flex;
+    width: 100%;
 
     a {
       display: flex;
+      width: 30%;
+      @include less-than(tablet) {
+        width: 33.5%;
+      }
     }
 
     &:nth-child(odd) {
@@ -56,6 +66,17 @@
         flex-direction: column;
         margin: 5px;
 
+        @include less-than(tablet) {
+          margin: 5px 1px;
+          img {
+            width: 25px;
+            height: 25px;
+          }
+          .name {
+            font-size: 12px;
+          }
+        }
+
         .name {
           color: $orange;
         }
@@ -68,28 +89,48 @@
   }
 
   .id {
-    width: 30px;
+    width: 3.5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include less-than(tablet) {
+      display: none;
+    }
   }
 
   .level {
-    width: 50px;
+    width: 5.5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include less-than(tablet) {
+      font-size: 12px;
+    }
   }
 
   .runeword-info, .runeword-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
+  }
+
+  .runeword-title {
+    width: 30%;
+    @include less-than(tablet) {
+      width: 33.5%;
+    }
+  }
+
+  .runeword-info {
+    width: 100%;
+    text-align: center;
   }
 
   .runeword-info {
     font-size: 18px;
+    @include less-than(tablet) {
+      font-size: 14px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -99,7 +140,7 @@
   }
 
   .runes-list {
-    width: 300px;
+    width: 32%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,6 +150,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 30%;
+    overflow-wrap: anywhere;
+    text-align: center;
+
+    @include less-than(tablet) {
+      font-size: 12px;
+    }
   }
 }

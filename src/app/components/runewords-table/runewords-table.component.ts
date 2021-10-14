@@ -29,6 +29,10 @@ export class RunewordsTableComponent implements OnInit {
   constructor(public rs: RunesService) {
   }
 
+  public get animationCondition(): string {
+    return this.rs.filterOpen && window.innerWidth > 1600 ? 'open' : 'closed'
+  }
+
   ngOnInit(): void {
   }
 

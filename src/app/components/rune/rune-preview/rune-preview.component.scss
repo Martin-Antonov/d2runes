@@ -1,4 +1,5 @@
 @import "../../../shared/constants";
+@import "../../../shared/responsive";
 
 :host {
   position: fixed;
@@ -19,6 +20,11 @@
   border-style: solid;
   border-image: url("../../../../assets/table-frame.png") 10;
   background: #0c0c0c;
+
+  @include less-than(tablet) {
+    position: static;
+    margin: 20px 0;
+  }
 
   div:not(:last-child) {
     margin-bottom: 3px;

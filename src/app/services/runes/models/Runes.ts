@@ -326,8 +326,8 @@ export const RUNES_PD2 = [
   {
     key: "Dol",
     lvl: 31,
-    statsW: ["Monster flee 25%"],
-    statsA: ["Replenish Life +7"],
+    statsW: ["25% Enhanced Damage"],
+    statsA: ["Replenish Life +10"],
     gem: ""
   },
   {
@@ -404,34 +404,34 @@ export const RUNES_PD2 = [
     key: "Gul",
     lvl: 53,
     statsW: ["20% to Attack Rating"],
-    statsA: ["5% to Max Poison Resist"],
+    statsA: ["4% to Max Poison Resist"],
     gem: ""
   },
   {
     key: "Vex",
     lvl: 55,
     statsW: ["7% Mana Stolen Per Hit"],
-    statsA: ["5% to Max Fire Resist"],
+    statsA: ["4% to Max Fire Resist"],
     gem: ""
   },
   {
     key: "Ohm",
     lvl: 57,
     statsW: ["50% Enhanced Damage"],
-    statsA: ["5% to Max Cold Resist"],
+    statsA: ["4% to Max Cold Resist"],
     gem: ""
   },
   {
     key: "Lo",
     lvl: 59,
     statsW: ["20% Deadly strike"],
-    statsA: ["5% to Max Lightning Resist"],
+    statsA: ["4% to Max Lightning Resist"],
     gem: ""
   },
   {
     key: "Sur",
     lvl: 61,
-    statsW: ["Hit Blinds Target"],
+    statsW: ["+4 Life after each Kill"],
     statsA: ["Increases Max Mana 5%", "+50 To Mana"],
     gem: ""
   },
@@ -439,7 +439,7 @@ export const RUNES_PD2 = [
     key: "Ber",
     lvl: 63,
     statsW: ["20% Chance of Crushing Blow"],
-    statsA: ["Damage Reduced By 8%"],
+    statsA: ["Damage Reduced By 4%"],
     gem: ""
   },
   {

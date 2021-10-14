@@ -1,6 +1,11 @@
 <h2 class="title">Filter</h2>
 <div class="outer-container">
   <div class="container">
+    <h3 class="subtitle">Find by Name</h3>
+    <hr>
+    <div class="search-box">
+      <input type="text" class="search" [(ngModel)]="rs.filterConfig.search" (ngModelChange)="rs.filter()">
+    </div>
     <div class="first-line">
       <div class="sockets-container">
         <h3 class="subtitle">Sockets</h3>
@@ -66,7 +71,7 @@
       </div>
       <div class="column">
 
-        <h4 class="small-title">Armor</h4>
+        <h4 class="small-title armor">Armor</h4>
         <div class="item" *ngFor="let armor of armorTypes">
           <input type="checkbox" [id]="armor" (change)="changeItem($event, armor)">
           <label [for]="armor"></label>

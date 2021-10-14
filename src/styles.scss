@@ -1,4 +1,5 @@
 @import 'src/app/shared/constants';
+@import 'src/app/shared/responsive';
 
 * {
   margin: 0;
@@ -6,7 +7,7 @@
 }
 
 html, body {
-  background-color: black;
+  background-color: #111;
 }
 
 body {
@@ -14,33 +15,39 @@ body {
 }
 
 .preload-images1 {
+  position: absolute;
   visibility: hidden;
   background-image: url("assets/checked.jpg");
   font-family: "Exocet", sans-serif;
 }
 
 .preload-images2 {
+  position: absolute;
   visibility: hidden;
   font-family: "Exocet-light";
   background-image: url("assets/unchecked.jpg");
 }
 
 .preload-images3 {
+  position: absolute;
   visibility: hidden;
   background-image: url("assets/unchecked-active.jpg");
 }
 
 .preload-images4 {
+  position: absolute;
   visibility: hidden;
   background-image: url("assets/checked-active.jpg");
 }
 
 .preload-images5 {
+  position: absolute;
   visibility: hidden;
   background-image: url("assets/arrow.png");
 }
 
-.preload-images5 {
+.preload-images6 {
+  position: absolute;
   visibility: hidden;
   background-image: url("assets/arrow-hover.png");
 }
@@ -53,7 +60,11 @@ html {
 
   &::-webkit-scrollbar {
     width: 10px;
-    background-color: #272728;
+    background-color: transparent;
+
+    @include less-than(tablet) {
+      width: 4px;
+    }
   }
 
   &::-webkit-scrollbar-thumb {
@@ -226,6 +237,7 @@ hr {
   border: 0;
   position: relative;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 hr:before,

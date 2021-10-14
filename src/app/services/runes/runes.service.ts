@@ -1,9 +1,12 @@
 // Todo:
-//  favicon
+//  pd2
+//  mobile
+//  opacity
+// heroes
 
 import {Injectable} from '@angular/core';
-import {IRune, RUNES_D2R} from "./models/Runes";
-import {IRunewordUI, RUNEWORDS_D2R} from "./models/Runewords";
+import {IRune, RUNES_D2R, RUNES_PD2} from "./models/Runes";
+import {IRunewordUI, RUNEWORDS_D2R, RUNEWORDS_PD2} from "./models/Runewords";
 import {SortOrder, SortType} from "./models/Sorting";
 import {IFilterConfig} from "./models/IFilter";
 
@@ -11,8 +14,11 @@ import {IFilterConfig} from "./models/IFilter";
   providedIn: 'root'
 })
 export class RunesService {
-  runes: Array<IRune>;
-  runewords: Array<IRunewordUI>
+  private runesD2R: Array<IRune>;
+  private runewordsD2R: Array<IRunewordUI>;
+  private runesPD2: Array<IRune>;
+  private runewordsPD2: Array<IRunewordUI>;
+
   filterConfig: IFilterConfig;
   hoveredRuneword: IRunewordUI;
   hoveredRunewordPosition: { x: number, y: number };
@@ -25,14 +31,41 @@ export class RunesService {
     this.currentSortType = null;
     this.currentSortOrder = null;
     this.filterOpen = false;
-    this.runes = RUNES_D2R.slice();
-    this.runewords = RUNEWORDS_D2R.slice();
-    this.runewords.forEach((r: IRunewordUI) => {
+    this.runesD2R = RUNES_D2R.slice();
+    this.runewordsD2R = RUNEWORDS_D2R.slice();
+    this.runewordsD2R.forEach((r: IRunewordUI) => {
       r.selected = true;
       r.sockets = r.word.split(" ").length;
     });
 
-    this.filterConfig = {sockets: [], itemTypes: [], runes: [], level: {from: 13, to: 69}, stats: [], search: ""};
+    this.runesPD2 = RUNES_PD2.slice();
+    this.runewordsPD2 = RUNEWORDS_PD2.slice();
+    this.runewordsPD2.forEach((r: IRunewordUI) => {
+      r.selected = true;
+      r.sockets = r.word.split(" ").length;
+    });
+
+    this.filterConfig = {
+      sockets: [],
+      itemTypes: [],
+      runes: [],
+      level: {from: 13, to: 69},
+      stats: [],
+      search: "",
+      pd2ModeOn: true
+    };
+    const filter = localStorage.getItem('filter');
+    if (filter) {
+      this.filterConfig = JSON.parse(filter);
+    }
+  }
+
+  public get runewords(): Array<IRunewordUI> {
+    return this.filterConfig.pd2ModeOn ? this.runewordsPD2 : this.runewordsD2R;
+  }
+
+  public get runes(): Array<IRune> {
+    return this.filterConfig.pd2ModeOn ? this.runesPD2 : this.runesD2R;
   }
 
   sortBy(type: SortType, order: SortOrder) {
@@ -85,6 +118,7 @@ export class RunesService {
 
   filter() {
     const by = this.filterConfig;
+    localStorage.setItem('filter', JSON.stringify(by));
     this.runewords.forEach((r: IRunewordUI) => {
       r.selected = true;
     });
