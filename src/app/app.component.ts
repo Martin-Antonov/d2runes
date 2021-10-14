@@ -19,7 +19,6 @@ export class AppComponent {
   }
 
   resizeForLargeScreens() {
-    debugger;
     const ratio = window.innerWidth / 1920;
     if (ratio > 1) {
       document.body.style.transform = 'scale(' + ratio.toString() + ')';

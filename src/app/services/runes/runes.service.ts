@@ -52,7 +52,7 @@ export class RunesService {
       level: {from: 13, to: 69},
       stats: [],
       search: "",
-      pd2ModeOn: true
+      pd2ModeOn: false
     };
     const filter = localStorage.getItem('filter');
     if (filter) {

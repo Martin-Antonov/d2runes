@@ -20,7 +20,8 @@
   @include less-than(tablet) {
     width: 100%;
     top: 70px;
-    height: calc(100% - 70px);
+    height: calc(100vh - 70px);
+    position: fixed;
   }
 
   .title {
@@ -51,6 +52,7 @@
       overflow: auto;
       height: 100%;
       width: 100%;
+      overflow-x: hidden;
 
       &::-webkit-scrollbar-track {
         display: none;
@@ -239,6 +241,10 @@
   align-items: center;
   font-size: 18px;
   margin-top: 5px;
+
+  @include less-than(tablet) {
+    font-size: 14px;
+  }
 
   strong {
     margin-left: 5px;

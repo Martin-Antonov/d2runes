@@ -69,11 +69,11 @@
         @include less-than(tablet) {
           margin: 5px 1px;
           img {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
           }
           .name {
-            font-size: 12px;
+            font-size: 10px;
           }
         }
 

@@ -28,6 +28,9 @@
     @include less-than(tablet) {
       font-size: 26px;
     }
+    @include less-than(phone){
+      font-size: 20px;
+    }
 
     &:hover {
       cursor: default;
