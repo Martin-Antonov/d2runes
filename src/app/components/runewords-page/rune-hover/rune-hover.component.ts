@@ -1,13 +1,13 @@
-import {Component, HostBinding, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {RunesService} from "../../../services/runes/runes.service";
 import {animate, style, transition, trigger} from "@angular/animations";
 
 @Component({
-  selector: 'app-runeword-hover',
-  templateUrl: './runeword-hover.component.html',
-  styleUrls: ['./runeword-hover.component.scss'],
+  selector: 'app-rune-hover',
+  templateUrl: './rune-hover.component.html',
+  styleUrls: ['./rune-hover.component.scss'],
   animations: [
-    trigger('rw', [
+    trigger('r', [
       transition(':enter', [
         style({opacity: 0}),
         animate('100ms ease-out', style({opacity: 1})),
@@ -18,8 +18,9 @@ import {animate, style, transition, trigger} from "@angular/animations";
     ])
   ]
 })
-export class RunewordHoverComponent implements OnInit {
-  @HostBinding("@rw")
+export class RuneHoverComponent implements OnInit {
+
+  @HostBinding("@r")
   @HostBinding("style.transform") get transform() {
     return 'translate(' + (this.rs.mousePosition.x + 50) + 'px, ' + (this.rs.mousePosition.y - 150) + 'px)';
   }
@@ -30,7 +31,4 @@ export class RunewordHoverComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public get word(): string {
-    return this.rs.hoveredRuneword.word.split(' ').join('');
-  }
 }

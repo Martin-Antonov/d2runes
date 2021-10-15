@@ -28,7 +28,7 @@
     @include less-than(tablet) {
       font-size: 26px;
     }
-    @include less-than(phone){
+    @include less-than(phone) {
       font-size: 20px;
     }
 
@@ -41,6 +41,7 @@
       width: 33%;
       text-align: center;
       color: $gold;
+
       @include less-than(desktop) {
         margin: 0;
       }

@@ -10,14 +10,17 @@
     <div class="id">{{i + 1}}</div>
 
     <a [routerLink]="runeword.name.split(' ').join('').replace('(L)','').toLowerCase()"><strong class="runeword-info"
-                                                                                                (mouseenter)="rs.setRuneword($event,runeword)"(mouseleave)="rs.deleteRuneword()">{{runeword.name}}
+                                                                                                (mouseenter)="rs.setRuneword($event,runeword)"
+                                                                                                (mouseleave)="rs.deleteRuneword()">{{runeword.name}}
     </strong></a>
     <div class="runes-list">
-      <div class="single-rune" *ngFor="let word of runeword.word.split(' ')"
-           [ngStyle]="{'opacity': rs.filterConfig.runes.length>0 && !rs.filterConfig.runes.includes(word)? 0.3 : 1}">
-        <img class="icon" [src]="'assets/'+word.toLowerCase()+'.png'" [alt]="word">
+      <a class="single-rune" *ngFor="let word of runeword.word.split(' ')" [routerLink]="'/runes/'+word.toLowerCase()"
+         style="width: fit-content;"
+         [ngStyle]="{'opacity': rs.filterConfig.runes.length>0 && !rs.filterConfig.runes.includes(word)? 0.3 : 1}"
+         (mouseenter)="rs.setRune($event,word)"
+         (mouseleave)="rs.deleteRune()"> <img class="icon" [src]="'assets/'+word.toLowerCase()+'.png'" [alt]="word">
         <strong class="name">{{word}}</strong>
-      </div>
+      </a>
     </div>
     <strong class="type">{{runeword.itemTypeShort}}</strong>
     <div class="level">{{runeword.level}}</div>

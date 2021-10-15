@@ -112,4 +112,11 @@ export class FilterComponent implements OnInit {
 
     this.rs.filter();
   }
+
+  changeBuild(ev, build: { name: string, runewords: Array<string> }) {
+    const checked = ev.currentTarget.checked;
+    this.rs.filterConfig.build = checked ? build : null;
+    this.rs.filter();
+  }
+
 }

@@ -1,5 +1,8 @@
 <app-filter></app-filter>
 <header><h1 class="header">Runeword Explorer</h1></header>
 <app-runewords-table [runewords]="rs.runewords"></app-runewords-table>
-<app-runeword-hover *ngIf="rs.hoveredRuneword"></app-runeword-hover>
+<div class="hover-container">
+  <app-runeword-hover *ngIf="rs.hoveredRuneword"></app-runeword-hover>
+  <app-rune-hover *ngIf="rs.hoveredRune"></app-rune-hover>
+</div>
 <!--<app-ads-container></app-ads-container>-->

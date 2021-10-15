@@ -11,9 +11,14 @@
   font-family: $d2-light;
   padding: 10px 15px;
   font-size: 20px;
-  top: 0;
-  left: 0;
   z-index: 2000;
+
+
+  border-width: 10px 10px;
+  border-style: solid;
+  border-image: url("../../../../assets/table-frame.png") 10;
+  background: #0c0c0c;
+
   @include less-than(tablet) {
     display: none;
   }
@@ -22,38 +27,25 @@
     margin-bottom: 3px;
   }
 
-  .name {
-    color: $gold;
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .item-type {
-    color: $grey;
-    font-size: 22px;
-  }
-
-  .word {
-    color: $gold;
-  }
-
-  .stat {
-    color: $blue;
-  }
-
-  .builds {
-    color: white;
+  .rune-line {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    max-width: 500px;
-    margin-top: 15px;
 
-    .heroes {
-      color: $gold;
-      text-align: center;
+    img {
+      width: 40px;
+      height: 40px;
     }
+
+    .name {
+      margin-left: 5px;
+      color: $orange;
+      font-size: 24px;
+    }
+  }
+
+  strong {
+    color: white;
   }
 }

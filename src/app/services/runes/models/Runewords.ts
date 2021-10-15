@@ -2372,6 +2372,7 @@ export interface IRuneword {
   stats: Array<string>;
   itemTypeShort: string;
   sockets?: number;
+  builds?: Array<string>;
 }
 
 export interface IRunewordUI extends IRuneword {

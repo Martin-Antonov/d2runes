@@ -23,7 +23,6 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   ])]
 })
 export class RunewordsTableComponent implements OnInit {
-
   @Input() runewords: Array<IRunewordUI>;
 
   constructor(public rs: RunesService) {

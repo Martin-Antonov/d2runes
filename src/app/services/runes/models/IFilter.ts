@@ -6,4 +6,5 @@ export interface IFilterConfig {
   level?: { from: number, to: number };
   stats?: Array<string>;
   pd2ModeOn?: boolean;
+  build?: {name: string, runewords: Array<string>};
 }

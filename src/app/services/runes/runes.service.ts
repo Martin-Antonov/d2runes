@@ -1,14 +1,12 @@
 // Todo:
-//  pd2
-//  mobile
-//  opacity
-// heroes
+// toggle switch
 
 import {Injectable} from '@angular/core';
 import {IRune, RUNES_D2R, RUNES_PD2} from "./models/Runes";
 import {IRunewordUI, RUNEWORDS_D2R, RUNEWORDS_PD2} from "./models/Runewords";
 import {SortOrder, SortType} from "./models/Sorting";
 import {IFilterConfig} from "./models/IFilter";
+import {HERO_BUILDS, HeroBuild} from "./models/Builds";
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +19,10 @@ export class RunesService {
 
   filterConfig: IFilterConfig;
   hoveredRuneword: IRunewordUI;
-  hoveredRunewordPosition: { x: number, y: number };
+  mousePosition: { x: number, y: number };
+  hoveredRune: IRune;
   filterOpen: boolean;
+  heroBuilds: Array<HeroBuild>;
 
   private currentSortType: SortType;
   private currentSortOrder: SortOrder;
@@ -31,19 +31,7 @@ export class RunesService {
     this.currentSortType = null;
     this.currentSortOrder = null;
     this.filterOpen = false;
-    this.runesD2R = RUNES_D2R.slice();
-    this.runewordsD2R = RUNEWORDS_D2R.slice();
-    this.runewordsD2R.forEach((r: IRunewordUI) => {
-      r.selected = true;
-      r.sockets = r.word.split(" ").length;
-    });
-
-    this.runesPD2 = RUNES_PD2.slice();
-    this.runewordsPD2 = RUNEWORDS_PD2.slice();
-    this.runewordsPD2.forEach((r: IRunewordUI) => {
-      r.selected = true;
-      r.sockets = r.word.split(" ").length;
-    });
+    this.initRunes();
 
     this.filterConfig = {
       sockets: [],
@@ -52,13 +40,43 @@ export class RunesService {
       level: {from: 13, to: 69},
       stats: [],
       search: "",
-      pd2ModeOn: false
+      pd2ModeOn: false,
+      build: null
     };
     const filter = localStorage.getItem('filter');
     if (filter) {
       this.filterConfig = JSON.parse(filter);
       this.filter();
     }
+  }
+
+  private initRunes() {
+    this.runesD2R = RUNES_D2R.slice();
+    this.runewordsD2R = RUNEWORDS_D2R.slice();
+    this.runewordsD2R.forEach((r: IRunewordUI) => {
+      r.selected = true;
+      r.sockets = r.word.split(" ").length;
+      r.builds = [];
+    });
+
+    this.heroBuilds = HERO_BUILDS;
+    this.heroBuilds.forEach((hero) => {
+      hero.builds.forEach((build) => {
+        build.runewords.forEach((rw: string) => {
+          const runeword = this.runewordsD2R.find((r) => {
+            return r.name.toLowerCase().includes(rw.toLowerCase());
+          });
+          runeword.builds.push(hero.abbr + build.name);
+        })
+      })
+    });
+
+    this.runesPD2 = RUNES_PD2.slice();
+    this.runewordsPD2 = RUNEWORDS_PD2.slice();
+    this.runewordsPD2.forEach((r: IRunewordUI) => {
+      r.selected = true;
+      r.sockets = r.word.split(" ").length;
+    });
   }
 
   public get runewords(): Array<IRunewordUI> {
@@ -149,6 +167,10 @@ export class RunesService {
       if (by.stats.length > 0 && !this.checkRuneStatInclusion(by.stats, r.stats)) {
         r.selected = false;
       }
+      // Build
+      if (by.build && !by.build.runewords.join('').toLowerCase().includes(r.name.split(' (L)').join('').toLowerCase())) {
+        r.selected = false;
+      }
     });
 
     this.sortBy(this.currentSortType, this.currentSortOrder);
@@ -199,11 +221,22 @@ export class RunesService {
   }
 
   setRuneword(ev: any, runeword: IRunewordUI) {
-    this.hoveredRunewordPosition = {x: ev.pageX, y: ev.pageY};
+    this.mousePosition = {x: ev.pageX, y: ev.pageY};
     this.hoveredRuneword = runeword;
   }
 
   deleteRuneword() {
     this.hoveredRuneword = null;
+  }
+
+  setRune(ev: any, rune: string) {
+    this.mousePosition = {x: ev.pageX, y: ev.pageY};
+    this.hoveredRune = this.runes.find((r) => {
+      return r.key.toLowerCase() === rune.toLowerCase();
+    });
+  }
+
+  deleteRune() {
+    this.hoveredRune = null;
   }
 }

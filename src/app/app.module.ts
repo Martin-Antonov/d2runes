@@ -21,6 +21,7 @@ import { AdsContainerComponent } from './components/ads-container/ads-container.
 import {TooltipModule} from "ng2-tooltip-directive";
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { RunewordSinglePageComponent } from './components/runeword-single-page/runeword-single-page.component';
+import { RuneHoverComponent } from './components/runewords-page/rune-hover/rune-hover.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { RunewordSinglePageComponent } from './components/runeword-single-page/r
     AdsContainerComponent,
     PrivacyPolicyComponent,
     RunewordSinglePageComponent,
+    RuneHoverComponent,
   ],
   imports: [
     BrowserModule,

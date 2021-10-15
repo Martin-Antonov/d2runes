@@ -19,13 +19,11 @@ export class AppComponent {
   }
 
   resizeForLargeScreens() {
-    const ratio = window.innerWidth / 1920;
+    const ratio = window.outerWidth / 1920;
     if (ratio > 1) {
-      document.body.style.transform = 'scale(' + ratio.toString() + ')';
-      document.body.style.transformOrigin = 'top left'
+      document.body.style.zoom = ratio.toString();
     } else {
-      document.body.style.transform = 'scale(1)';
-      document.body.style.transformOrigin = ''
+      document.body.style.zoom = '';
     }
   }
 }

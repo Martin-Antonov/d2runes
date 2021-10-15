@@ -7,7 +7,7 @@ export const STAT_TYPES = [
 
   {name: "Open Wounds", searchKey: "Open Wounds"},
   {name: "Crushing Blow", searchKey: "Crushing Blow"},
-  {name: "Deadly Strike", searchKey: "Crushing Blow"},
+  {name: "Deadly Strike", searchKey: "Deadly Strike"},
   {name: "Life Stolen", searchKey: "Life Stolen"},
   {name: "Attack Speed", searchKey: "Attack Speed"},
 

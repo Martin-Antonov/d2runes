@@ -1,18 +1,36 @@
 <h2 class="title">Filter</h2>
 <div class="outer-container">
   <div class="container">
-    <h3 class="subtitle">Find by Name</h3>
-    <hr>
-    <div class="search-box">
-      <input type="text" class="search" [(ngModel)]="rs.filterConfig.search" (ngModelChange)="rs.filter()">
+    <div class="line">
+      <div class="by-name-container">
+        <h3 class="subtitle">Find by Name</h3>
+        <hr>
+        <div class="search-box">
+          <input type="text" class="search" [(ngModel)]="rs.filterConfig.search" (ngModelChange)="rs.filter()">
+        </div>
+      </div>
+      <div class="mode-container">
+        <h3 class="subtitle">Mode</h3>
+        <hr>
+        <div class="mode">
+          <img src="assets/toggle-arrow.png" alt="'toggle-arrow'"
+               (click)="rs.filterConfig.pd2ModeOn = !rs.filterConfig.pd2ModeOn" class="reversed-toggle-arrow">
+          <strong>{{rs.filterConfig.pd2ModeOn ? "PD2" : "D2R"}}</strong>
+          <img src="assets/toggle-arrow.png" alt="'toggle-arrow'"
+               (click)="rs.filterConfig.pd2ModeOn = !rs.filterConfig.pd2ModeOn">
+        </div>
+      </div>
     </div>
-    <div class="first-line">
+
+
+    <div class="line">
       <div class="sockets-container">
         <h3 class="subtitle">Sockets</h3>
         <hr>
         <div class="sockets">
           <div class="socket" *ngFor="let socket of sockets">
-            <input type="checkbox" [id]="'socket'+socket" (change)="changeSockets($event, socket)" [checked]="rs.filterConfig.sockets.includes(socket)">
+            <input type="checkbox" [id]="'socket'+socket" (change)="changeSockets($event, socket)"
+                   [checked]="rs.filterConfig.sockets.includes(socket)">
             <label [for]="'socket'+socket"></label>
             <span>{{socket}}</span>
           </div>
@@ -46,11 +64,12 @@
 
     <h3 class="subtitle">Item Type</h3>
     <hr>
-    <div class="item-types">
+    <div class="item-or-hero-type">
       <div class="column">
         <h4 class="small-title">Melee Weapons</h4>
         <div class="item" *ngFor="let weapon of meleeWeapons">
-          <input type="checkbox" [id]="weapon" (change)="changeItem($event, weapon)" [checked]="rs.filterConfig.itemTypes.includes(weapon)">
+          <input type="checkbox" [id]="weapon" (change)="changeItem($event, weapon)"
+                 [checked]="rs.filterConfig.itemTypes.includes(weapon)">
           <label [for]="weapon"></label>
           <strong>{{weapon}}</strong>
         </div>
@@ -58,13 +77,15 @@
       <div class="column">
         <h4 class="small-title">Magic Weapons</h4>
         <div class="item" *ngFor="let magic of magicWeapons">
-          <input type="checkbox" [id]="magic" (change)="changeItem($event, magic)" [checked]="rs.filterConfig.itemTypes.includes(magic)">
+          <input type="checkbox" [id]="magic" (change)="changeItem($event, magic)"
+                 [checked]="rs.filterConfig.itemTypes.includes(magic)">
           <label [for]="magic"></label>
           <strong>{{magic}}</strong>
         </div>
         <h4 class="small-title missile">Missile Weapons</h4>
         <div class="item" *ngFor="let missile of missileWeapons">
-          <input type="checkbox" [id]="missile" (change)="changeItem($event, missile)" [checked]="rs.filterConfig.itemTypes.includes(missile)">
+          <input type="checkbox" [id]="missile" (change)="changeItem($event, missile)"
+                 [checked]="rs.filterConfig.itemTypes.includes(missile)">
           <label [for]="missile"></label>
           <strong>{{missile}}</strong>
         </div>
@@ -73,7 +94,8 @@
 
         <h4 class="small-title armor">Armor</h4>
         <div class="item" *ngFor="let armor of armorTypes">
-          <input type="checkbox" [id]="armor" (change)="changeItem($event, armor)" [checked]="rs.filterConfig.itemTypes.includes(armor)">
+          <input type="checkbox" [id]="armor" (change)="changeItem($event, armor)"
+                 [checked]="rs.filterConfig.itemTypes.includes(armor)">
           <label [for]="armor"></label>
           <strong>{{armor}}</strong>
         </div>
@@ -84,9 +106,24 @@
     <hr>
     <div class="stats">
       <div class="item" *ngFor="let stat of stats">
-        <input type="checkbox" [id]="stat.name" (change)="changeStat($event, stat.searchKey)" [checked]="rs.filterConfig.stats.includes(stat.searchKey)">
+        <input type="checkbox" [id]="stat.name" (change)="changeStat($event, stat.searchKey)"
+               [checked]="rs.filterConfig.stats.includes(stat.searchKey)">
         <label [for]="stat.name"></label>
         <span>{{stat.name}}</span>
+      </div>
+    </div>
+
+    <h3 class="subtitle">Hero Builds</h3>
+    <hr style="margin-bottom: 0">
+    <div class="item-or-hero-type" style="margin-bottom: 15px;">
+      <div class="column" *ngFor="let heroBuild of rs.heroBuilds">
+        <h4 class="small-title" style="margin-top:10px;">{{heroBuild.hero}}</h4>
+        <div class="item" *ngFor="let build of heroBuild.builds">
+          <input type="checkbox" [id]="build.name" (change)="changeBuild($event, build)"
+                 [checked]="rs.filterConfig.build?.name === build.name">
+          <label [for]="build.name"></label>
+          <strong>{{build.name}}</strong>
+        </div>
       </div>
     </div>
   </div>

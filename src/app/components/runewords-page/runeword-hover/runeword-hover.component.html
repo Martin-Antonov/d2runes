@@ -4,3 +4,8 @@
 <div class="item-type">{{rs.hoveredRuneword.itemTypeShort}}</div>
 <div class="word">'{{word}}'</div>
 <div *ngFor="let stat of rs.hoveredRuneword.stats" class="stat">{{stat}}</div>
+<div class="builds" *ngIf="rs.hoveredRuneword.builds?.length>0">
+  <div>Good for:</div>
+  <div class="heroes">{{rs.hoveredRuneword.builds.join(' ')}}</div>
+</div>
+

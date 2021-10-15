@@ -11,5 +11,10 @@
     </a>
   </div>
   <strong *ngFor="let stat of currentRuneword.stats" class="stat">{{stat}}</strong>
+  <div class="builds" *ngIf="currentRuneword.builds?.length>0">
+    <div>Good for:</div>
+    <strong class="heroes">{{currentRuneword.builds.join(' ')}}</strong>
+  </div>
 </div>
+
 <!--<app-ads-container></app-ads-container>-->
