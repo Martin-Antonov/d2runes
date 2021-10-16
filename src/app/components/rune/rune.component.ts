@@ -19,6 +19,7 @@ export class RuneComponent implements OnInit {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((res: NavigationEnd) => {
+
         const urlSplit = res.urlAfterRedirects.split("/");
         const rune = urlSplit[urlSplit.length - 1];
         if (rune === "runes") {
@@ -27,8 +28,9 @@ export class RuneComponent implements OnInit {
           this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Runes');
         } else {
           const realRune = this.rs.runes.find((r: IRune) => {
-            return r.key.toLowerCase().includes(rune);
+            return r.key.toLowerCase() === rune;
           });
+
           if (realRune) {
             this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Runes | ' + realRune.key);
             this.setCurrentRune(realRune);
@@ -38,6 +40,7 @@ export class RuneComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scroll(0,0);
   }
 
   setCurrentRune(rune: IRune) {

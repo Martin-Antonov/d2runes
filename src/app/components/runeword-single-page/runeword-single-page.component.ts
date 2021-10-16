@@ -19,11 +19,14 @@ export class RunewordSinglePageComponent implements OnInit {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((res: NavigationEnd) => {
+
         const urlSplit = res.urlAfterRedirects.split("/");
         const rune = urlSplit[urlSplit.length - 1];
 
         const realRune = this.rs.runewords.find((r: IRunewordUI) => {
-          return r.name.toLowerCase().split(' ').join('').includes(rune);
+          const withoutL = r.name.toLowerCase().split('(l)').join('');
+          const withoutSpaces = withoutL.split(' ').join('')
+          return withoutSpaces === rune;
         });
         if (realRune) {
           this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Runes | ' + realRune.name);
@@ -39,6 +42,7 @@ export class RunewordSinglePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scroll(0,0);
   }
 
 }

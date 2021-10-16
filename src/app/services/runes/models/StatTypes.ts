@@ -2,7 +2,7 @@ export const STAT_TYPES = [
   {name: "Skills", searchKey: "Skill"},
   {name: "Faster Cast Rate", searchKey: "Faster Cast Rate"},
   {name: "Resistances", searchKey: "Resist"},
-  {name: "Magic Find", searchKey: "Magic Find"},
+  {name: "Magic Find", searchKey: "Better Chance"},
   {name: "Auras", searchKey: "Aura"},
 
   {name: "Open Wounds", searchKey: "Open Wounds"},

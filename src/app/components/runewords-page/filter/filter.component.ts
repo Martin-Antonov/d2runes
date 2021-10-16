@@ -119,4 +119,8 @@ export class FilterComponent implements OnInit {
     this.rs.filter();
   }
 
+  toggleMode() {
+    this.rs.filterConfig.pd2ModeOn = !this.rs.filterConfig.pd2ModeOn;
+    this.rs.filter();
+  }
 }

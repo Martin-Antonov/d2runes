@@ -14,10 +14,10 @@
         <hr>
         <div class="mode">
           <img src="assets/toggle-arrow.png" alt="'toggle-arrow'"
-               (click)="rs.filterConfig.pd2ModeOn = !rs.filterConfig.pd2ModeOn" class="reversed-toggle-arrow">
+               (click)="toggleMode()" class="reversed-toggle-arrow">
           <strong>{{rs.filterConfig.pd2ModeOn ? "PD2" : "D2R"}}</strong>
           <img src="assets/toggle-arrow.png" alt="'toggle-arrow'"
-               (click)="rs.filterConfig.pd2ModeOn = !rs.filterConfig.pd2ModeOn">
+               (click)="toggleMode()">
         </div>
       </div>
     </div>

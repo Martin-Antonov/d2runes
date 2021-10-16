@@ -9,7 +9,7 @@
   <div class="line" [ngClass]="{'inactive': !runeword.selected}" *ngFor="let runeword of runewords; index as i">
     <div class="id">{{i + 1}}</div>
 
-    <a [routerLink]="runeword.name.split(' ').join('').replace('(L)','').toLowerCase()"><strong class="runeword-info"
+    <a [routerLink]="'/runewords/'+runeword.name.split(' ').join('').replace('(L)','').toLowerCase()"><strong class="runeword-info"
                                                                                                 (mouseenter)="rs.setRuneword($event,runeword)"
                                                                                                 (mouseleave)="rs.deleteRuneword()">{{runeword.name}}
     </strong></a>
