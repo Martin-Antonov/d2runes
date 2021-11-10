@@ -3,7 +3,7 @@ export const HERO_BUILDS = [
     hero: "Sorceress", abbr: "(S)", builds: [
       {
         name: 'Blizzard',
-        runewords: ["Chains of Honor", "Spirit", "Call to Arms", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"]
+        runewords: ["Chains of Honor", "Spirit", "Call to Arms", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore", "Smoke", "Stealth"]
       },
       {
         name: 'Meteorb',

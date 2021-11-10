@@ -1,6 +1,3 @@
-// Todo:
-// toggle switch
-
 import {Injectable} from '@angular/core';
 import {IRune, RUNES_D2R, RUNES_PD2} from "./models/Runes";
 import {IRunewordUI, RUNEWORDS_D2R, RUNEWORDS_PD2} from "./models/Runewords";
@@ -47,6 +44,13 @@ export class RunesService {
     if (filter) {
       this.filterConfig = JSON.parse(filter);
       this.filter();
+    }
+
+    let visited = Boolean(localStorage.getItem('visited'));
+    console.log('visited: ' + visited)
+    if (!visited) {
+      localStorage.clear();
+      localStorage.setItem('visited', 'true');
     }
   }
 

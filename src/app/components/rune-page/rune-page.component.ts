@@ -8,10 +8,10 @@ import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-rune',
-  templateUrl: './rune.component.html',
-  styleUrls: ['./rune.component.scss']
+  templateUrl: './rune-page.component.html',
+  styleUrls: ['./rune-page.component.scss']
 })
-export class RuneComponent implements OnInit {
+export class RunePageComponent implements OnInit {
   currentRune: IRune;
   runewords: Array<IRunewordUI> = [];
 

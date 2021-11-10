@@ -1,0 +1,7 @@
+<a class="single-rune" (click)="redirect()" style="width: fit-content;"
+   [ngStyle]="{'opacity': disabled? 0.3 : 1}"
+   (mouseenter)="rs.setRune($event,name)"
+   (mouseleave)="rs.deleteRune()">
+  <img class="icon" [src]="'assets/'+name.toLowerCase()+'.png'" [alt]="name + 'rune'">
+  <strong class="name">{{name}}</strong>
+</a>

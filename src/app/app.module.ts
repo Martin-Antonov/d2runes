@@ -4,7 +4,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AdsenseModule} from "ng2-adsense";
-import {RuneComponent} from './components/rune/rune.component';
 import {NgxSliderModule} from "@angular-slider/ngx-slider";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ClickOutsideModule} from 'ng-click-outside';
@@ -16,18 +15,20 @@ import {FilterComponent} from "./components/runewords-page/filter/filter.compone
 import {RunewordHoverComponent} from "./components/runewords-page/runeword-hover/runeword-hover.component";
 import { HomeComponent } from './components/home/home.component';
 import { RunewordsTableComponent } from './components/runewords-table/runewords-table.component';
-import { RunePreviewComponent } from './components/rune/rune-preview/rune-preview.component';
 import { AdsContainerComponent } from './components/ads-container/ads-container.component';
 import {TooltipModule} from "ng2-tooltip-directive";
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { RunewordSinglePageComponent } from './components/runeword-single-page/runeword-single-page.component';
 import { RuneHoverComponent } from './components/runewords-page/rune-hover/rune-hover.component';
+import {RunePageComponent} from "./components/rune-page/rune-page.component";
+import {RunePreviewComponent} from "./components/rune-page/rune-preview/rune-preview.component";
+import { RuneComponent } from './shared/components/rune/rune.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RunewordsPageComponent,
-    RuneComponent,
+    RunePageComponent,
     FilterComponent,
     RunewordHoverComponent,
     TopNavComponent,
@@ -39,6 +40,7 @@ import { RuneHoverComponent } from './components/runewords-page/rune-hover/rune-
     PrivacyPolicyComponent,
     RunewordSinglePageComponent,
     RuneHoverComponent,
+    RuneComponent,
   ],
   imports: [
     BrowserModule,
