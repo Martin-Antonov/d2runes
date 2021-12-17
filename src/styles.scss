@@ -52,6 +52,24 @@ body {
   background-image: url("assets/arrow-hover.png");
 }
 
+.preload-images7 {
+  position: absolute;
+  visibility: hidden;
+  background-image: url("assets/trash.jpg");
+}
+
+.preload-images8 {
+  position: absolute;
+  visibility: hidden;
+  background-image: url("assets/trash-active.jpg");
+}
+
+.preload-images9 {
+  position: absolute;
+  visibility: hidden;
+  background-image: url("assets/trash-hover.jpg");
+}
+
 html {
   &::-webkit-scrollbar-track {
     display: none;

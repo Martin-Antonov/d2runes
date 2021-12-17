@@ -11,7 +11,6 @@
 
   nav {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 
     height: 100%;
@@ -36,108 +35,123 @@
       cursor: default;
     }
 
-    a {
-      margin: 0 20px;
-      width: 33%;
-      text-align: center;
-      color: $gold;
-
-      @include less-than(desktop) {
-        margin: 0;
-      }
-
-      &:hover {
-        filter: brightness(1.2);
-        cursor: pointer;
-      }
-    }
-
-    .image-container {
-      width: 33%;
-
-      img {
-        position: relative;
-        width: 180px;
-        height: 120px;
-        top: 20px;
+    .left {
+      .image-container {
+        margin-top: 30px;
         @include less-than(tablet) {
-          width: 145px;
-          height: 94px;
-          top: 5px;
+          margin-top: 5px;
         }
 
-        &:hover {
-          filter: brightness(1.2);
+        img {
+          width: 180px;
+          height: 120px;
+          @include less-than(tablet) {
+            width: 120px;
+            height: 80px;
+            margin-left: 5px;
+          }
+
+          &:hover {
+            filter: brightness(1.2);
+          }
         }
       }
     }
 
-    .donate-link {
-      position: absolute;
+    .mid {
       display: flex;
-      height: 100%;
-      align-items: center;
-      right: 15px;
-      margin: 0;
-      width: 40px;
-      @include less-than(tablet) {
-        right: 5px;
-        width: 30px;
-      }
+      margin: auto;
 
-      .beer-icon {
-        width: 40px;
-        height: 40px;
+      a {
+        margin: 0 30px;
+        text-align: center;
+        color: $gold;
+
+        @include less-than(desktop) {
+          margin: 10px;
+          font-size: 24px;
+        }
+
         @include less-than(tablet) {
-          width: 30px;
-          height: 30px;
+          font-size: 20px;
+        }
+        @include less-than(phone) {
+          font-size: 16px;
         }
 
         &:hover {
           filter: brightness(1.2);
-          animation: shake 0.5s;
-          animation-iteration-count: 1;
           cursor: pointer;
         }
       }
+    }
 
+    .right {
+      .donate-link {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin-right: 15px;
+        width: 40px;
+        @include less-than(tablet) {
+          right: 5px;
+          width: 30px;
+        }
 
-      @keyframes shake {
-        0% {
-          transform: translate(1px, 1px) rotate(0deg);
+        .beer-icon {
+          width: 40px;
+          height: 40px;
+          @include less-than(tablet) {
+            width: 30px;
+            height: 30px;
+          }
+
+          &:hover {
+            filter: brightness(1.2);
+            animation: shake 0.5s;
+            animation-iteration-count: 1;
+            cursor: pointer;
+          }
         }
-        10% {
-          transform: translate(-1px, -2px) rotate(-5deg);
-        }
-        20% {
-          transform: translate(-3px, 0px) rotate(5deg);
-        }
-        30% {
-          transform: translate(3px, 2px) rotate(0deg);
-        }
-        40% {
-          transform: translate(1px, -1px) rotate(5deg);
-        }
-        50% {
-          transform: translate(-1px, 2px) rotate(-5deg);
-        }
-        60% {
-          transform: translate(-3px, 1px) rotate(0deg);
-        }
-        70% {
-          transform: translate(3px, 1px) rotate(-5deg);
-        }
-        80% {
-          transform: translate(-1px, -1px) rotate(5deg);
-        }
-        90% {
-          transform: translate(1px, 2px) rotate(0deg);
-        }
-        100% {
-          transform: translate(1px, -2px) rotate(-5deg);
+
+        @keyframes shake {
+          0% {
+            transform: translate(1px, 1px) rotate(0deg);
+          }
+          10% {
+            transform: translate(-1px, -2px) rotate(-5deg);
+          }
+          20% {
+            transform: translate(-3px, 0px) rotate(5deg);
+          }
+          30% {
+            transform: translate(3px, 2px) rotate(0deg);
+          }
+          40% {
+            transform: translate(1px, -1px) rotate(5deg);
+          }
+          50% {
+            transform: translate(-1px, 2px) rotate(-5deg);
+          }
+          60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+          }
+          70% {
+            transform: translate(3px, 1px) rotate(-5deg);
+          }
+          80% {
+            transform: translate(-1px, -1px) rotate(5deg);
+          }
+          90% {
+            transform: translate(1px, 2px) rotate(0deg);
+          }
+          100% {
+            transform: translate(1px, -2px) rotate(-5deg);
+          }
         }
       }
     }
+
   }
 }
 

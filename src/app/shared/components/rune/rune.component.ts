@@ -12,7 +12,7 @@ export class RuneComponent implements OnInit {
   @Input() disabled: boolean = false;
   @Input() hoverInfoEnabled: boolean = false;
   @Input() name: string;
-  @Input() labelVisible: boolean;
+  @Input() labelVisible: boolean = true;
 
   showRuneInfo: boolean;
 
@@ -25,6 +25,18 @@ export class RuneComponent implements OnInit {
   redirect() {
     if (this.redirectEnabled) {
       this.router.navigate(['/runes/' + this.name])
+    }
+  }
+
+  setRune(event: any) {
+    if (this.hoverInfoEnabled) {
+      this.rs.setRune(event, this.name);
+    }
+  }
+
+  deleteRune() {
+    if (this.hoverInfoEnabled) {
+      this.rs.deleteRune();
     }
   }
 }

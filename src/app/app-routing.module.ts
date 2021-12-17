@@ -5,6 +5,7 @@ import {RunewordsPageComponent} from "./components/runewords-page/runewords-page
 import {PrivacyPolicyComponent} from "./components/privacy-policy/privacy-policy.component";
 import {RunewordSinglePageComponent} from "./components/runeword-single-page/runeword-single-page.component";
 import {RunePageComponent} from "./components/rune-page/rune-page.component";
+import {CheatSheetComponent} from "./components/cheat-sheet/cheat-sheet.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'runewords', pathMatch: "full"},
@@ -20,6 +21,7 @@ const routes: Routes = [
     path: 'runes', component: RunePageComponent, children: [
       {path: ':runeId', component: RunePageComponent},]
   },
+  {path: 'cheatsheet', component: CheatSheetComponent},
   {path: 'privacy-policy', component: PrivacyPolicyComponent},
 ];
 

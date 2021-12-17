@@ -1,6 +1,10 @@
+/**
+ * 1. Reusable rune
+ * 2. Cheatsheet page
+ *     a. adding sockets article
+ *     b. mapping article
+ *     c. Add next rune recipes*/
 import {Component} from '@angular/core';
-import {Title} from "@angular/platform-browser";
-import {SitemapGeneratorService} from "./services/sitemap-generator.service";
 import {filter} from "rxjs/operators";
 import {NavigationEnd, NavigationStart, Router} from "@angular/router";
 import {RunesService} from "./services/runes/runes.service";

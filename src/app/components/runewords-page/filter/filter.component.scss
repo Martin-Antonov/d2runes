@@ -73,6 +73,24 @@
         background-image: url(../../../../assets/thumb.jpg);
       }
 
+      .trash {
+        position: absolute;
+        top: 43px;
+        right: 20px;
+        background-image: url(../../../../assets/trash.jpg);
+        width: 46px;
+        height: 44px;
+        z-index: 100;
+
+        &:hover {
+          background-image: url(../../../../assets/trash-hover.jpg);
+        }
+
+        &:active {
+          background-image: url(../../../../assets/trash-active.jpg);
+        }
+      }
+
       .subtitle {
         color: $gold;
         font-size: 24px;

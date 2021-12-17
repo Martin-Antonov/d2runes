@@ -83,6 +83,21 @@ export class RunesService {
     });
   }
 
+  resetFilter() {
+    this.filterConfig = {
+      sockets: [],
+      itemTypes: [],
+      runes: [],
+      level: {from: 13, to: 69},
+      stats: [],
+      search: "",
+      pd2ModeOn: false,
+      build: null
+    };
+    localStorage.clear();
+    this.filter();
+  }
+
   public get runewords(): Array<IRunewordUI> {
     return this.filterConfig.pd2ModeOn ? this.runewordsPD2 : this.runewordsD2R;
   }
