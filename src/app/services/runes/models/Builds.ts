@@ -106,7 +106,7 @@ export const HERO_BUILDS = [
   {
     hero: "Druid", abbr: "(D)", builds: [
       {
-        name: 'Fire',
+        name: 'Fire ',
         runewords: ["Heart of the Oak", "Enigma", "Phoenix", "Call to Arms", "Spirit", "Leaf", "Stealth", "Ancient's pledge", "Rhyme", "Sanctuary", "Lore"]
       },
       {

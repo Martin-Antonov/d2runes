@@ -60,28 +60,6 @@
 
     .runes-list {
       display: flex;
-
-      .single-rune {
-        display: flex;
-        flex-direction: column;
-        margin: 5px;
-
-        @include less-than(tablet) {
-          margin: 5px 1px;
-          img {
-            width: 20px;
-            height: 20px;
-          }
-          .name {
-            font-size: 10px;
-            color: $orange;
-          }
-        }
-
-        .name {
-          color: $orange;
-        }
-      }
     }
 
     .type {

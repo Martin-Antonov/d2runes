@@ -4,13 +4,39 @@
 .single-rune {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $d2;
   margin: 5px;
 
-  @include less-than(tablet) {
-    margin: 5px 1px;
+  &:hover {
+    cursor: pointer;
+
     img {
-      width: 20px;
-      height: 20px;
+      filter: brightness(1.5);
+    }
+  }
+
+  .name {
+    color: $orange;
+  }
+
+
+  img {
+    width: 35px;
+    height: 35px;
+
+    &.large {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  @include less-than(tablet) {
+    margin: 3px 1px;
+    img {
+      width: 20px !important;
+      height: 20px !important;
     }
     .name {
       font-size: 10px;

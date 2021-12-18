@@ -56,11 +56,10 @@
     <h3 class="subtitle">Runes</h3>
     <hr>
     <div class="runes">
-      <div class="single-rune" [ngClass]="{'selected': this.isRuneSelected(rune.key)}" *ngFor="let rune of rs.runes"
-           (click)="changeRune(rune.key)">
-        <img class="icon" [src]="'assets/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">
-        <strong class="name">{{rune.key}}</strong>
-      </div>
+      <app-rune *ngFor="let rune of rs.runes" [name]="rune.key" [hoverInfoEnabled]="false"
+                [disabled]="!rs.filterConfig.runes.includes(rune.key)" [redirectEnabled]="false"
+                (click)="changeRune(rune.key)"
+                [isLarge]="true"></app-rune>
     </div>
 
     <h3 class="subtitle">Item Type</h3>

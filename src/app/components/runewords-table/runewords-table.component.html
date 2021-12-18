@@ -9,12 +9,14 @@
   <div class="line" [ngClass]="{'inactive': !runeword.selected}" *ngFor="let runeword of runewords; index as i">
     <div class="id">{{i + 1}}</div>
 
-    <a [routerLink]="'/runewords/'+runeword.name.split(' ').join('').replace('(L)','').toLowerCase()"><strong class="runeword-info"
-                                                                                                (mouseenter)="rs.setRuneword($event,runeword)"
-                                                                                                (mouseleave)="rs.deleteRuneword()">{{runeword.name}}
+    <a [routerLink]="'/runewords/'+runeword.name.split(' ').join('').toLowerCase()"><strong
+      class="runeword-info"
+      (mouseenter)="rs.setRuneword($event,runeword)"
+      (mouseleave)="rs.deleteRuneword()">{{runeword.name}}
     </strong></a>
     <div class="runes-list">
-     c
+      <app-rune *ngFor="let runeName of runeword.word.split(' ')" [name]="runeName" [hoverInfoEnabled]="true"
+                [disabled]="rs.filterConfig.runes.length> 0 && !rs.filterConfig.runes.includes(runeName)"></app-rune>
     </div>
     <strong class="type">{{runeword.itemTypeShort}}</strong>
     <div class="level">{{runeword.level}}</div>

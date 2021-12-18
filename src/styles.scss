@@ -126,31 +126,6 @@ strong {
   src: url('assets/exocet-light.ttf') format('woff2');
 }
 
-.single-rune {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: $d2;
-
-  .name {
-    color: $orange;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    img {
-      filter: brightness(1.5);
-    }
-  }
-
-  img {
-    width: 35px;
-    height: 35px;
-  }
-}
-
 .ngx-slider {
   height: 100% !important;
   margin: 0 !important;

@@ -1,6 +1,7 @@
 /**
- * 1. Reusable rune
- * 2. Cheatsheet page
+ * 1. Rune preview refactor and to include recipes
+ * 2. Refactor component structure with reusable components
+ * 3. Cheatsheet page
  *     a. adding sockets article
  *     b. mapping article
  *     c. Add next rune recipes*/

@@ -23,7 +23,7 @@ import { RuneHoverComponent } from './components/runewords-page/rune-hover/rune-
 import {RunePageComponent} from "./components/rune-page/rune-page.component";
 import {RunePreviewComponent} from "./components/rune-page/rune-preview/rune-preview.component";
 import { RuneComponent } from './shared/components/rune/rune.component';
-import { CheatSheetComponent } from './components/cheat-sheet/cheat-sheet.component';
+import { CheatSheetComponent } from './components/cheat-sheet-page/cheat-sheet.component';
 
 @NgModule({
   declarations: [

@@ -7,7 +7,7 @@ import {filter} from "rxjs/operators";
 import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-rune',
+  selector: 'app-rune-page',
   templateUrl: './rune-page.component.html',
   styleUrls: ['./rune-page.component.scss']
 })
@@ -16,6 +16,7 @@ export class RunePageComponent implements OnInit {
   runewords: Array<IRunewordUI> = [];
 
   constructor(public rs: RunesService, private ts: Title, private router: Router) {
+    rs.filterOpen = false;
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((res: NavigationEnd) => {
@@ -28,7 +29,7 @@ export class RunePageComponent implements OnInit {
           this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Runes');
         } else {
           const realRune = this.rs.runes.find((r: IRune) => {
-            return r.key.toLowerCase() === rune;
+            return r.key.toLowerCase() === rune.toLowerCase();
           });
 
           if (realRune) {
@@ -40,7 +41,7 @@ export class RunePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    window.scroll(0,0);
+    window.scroll(0, 0);
   }
 
   setCurrentRune(rune: IRune) {
@@ -49,5 +50,4 @@ export class RunePageComponent implements OnInit {
       return r.word.includes(rune.key);
     });
   }
-
 }

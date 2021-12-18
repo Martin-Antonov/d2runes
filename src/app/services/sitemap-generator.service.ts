@@ -15,7 +15,7 @@ export class SitemapGeneratorService {
       urls.push({url: 'runes/' + r.key.toLowerCase(), priority: 0.8});
     });
     rs.runewords.forEach((r) => {
-      urls.push({url: 'runewords/' + r.name.split(" ").join("").replace("(L)", '').toLowerCase(), priority: 0.9});
+      urls.push({url: 'runewords/' + r.name.split(" ").join("").toLowerCase(), priority: 0.9});
     });
     const result = urls.map((res) => {
       return `<url>

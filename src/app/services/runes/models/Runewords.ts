@@ -144,7 +144,7 @@ export const RUNEWORDS_D2R = [
     itemTypeShort: "Melee Weapons"
   },
   {
-    name: "Edge (L)", word: "Tir Tal Amn", itemType: "Bows/Crossbows", level: 25, stats: [
+    name: "Edge", word: "Tir Tal Amn", itemType: "Bows/Crossbows", level: 25, stats: [
       "Level 15 Thorns Aura When Equipped",
       "+35% Increased Attack Speed",
       "+320-380% Damage to Demons (varies)",
@@ -169,7 +169,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Body Armor"
   },
   {
-    name: "Spirit (L)", word: "Tal Thul Ort Amn", itemType: "Swords/Shields", level: 25, stats: [
+    name: "Spirit", word: "Tal Thul Ort Amn", itemType: "Swords/Shields", level: 25, stats: [
       '+2 to All Skills',
       '+25-35% Faster Cast Rate (varies)',
       '+55% Faster Hit Recovery,',
@@ -230,7 +230,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Helms"
   },
   {
-    name: "Insight (L)", word: "Ral Tir Tal Sol", itemType: "Polearms/Staves", level: 27, stats: [
+    name: "Insight", word: "Ral Tir Tal Sol", itemType: "Polearms/Staves", level: 27, stats: [
       'Level 12-17 Meditation Aura When Equipped',
       '+35% Faster Cast Rate',
       '+200-260% Enhanced Damage (varies)',
@@ -345,7 +345,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Harmony (L)", word: "Tir Ith Sol Ko", itemType: "Bows/Crossbows", level: 39, stats: [
+    name: "Harmony", word: "Tir Ith Sol Ko", itemType: "Bows/Crossbows", level: 39, stats: [
       "Level 10 Vigor Aura When Equipped",
       "+200-275% Enhanced Damage (varies)",
       "+9 to Minimum Damage",
@@ -374,7 +374,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Body Armor"
   },
   {
-    name: "Obedience (L)", word: "Hel Ko Thul Eth Fal", itemType: "Polearms", level: 41, stats: [
+    name: "Obedience", word: "Hel Ko Thul Eth Fal", itemType: "Polearms", level: 41, stats: [
       '30% Chance to Cast Level 21 Enchant When You Kill An Enemy',
       '40% Faster Hit Recovery',
       '+370% Enhanced Damage',
@@ -419,7 +419,7 @@ export const RUNEWORDS_D2R = [
     itemTypeShort: "All Weapons"
   },
   {
-    name: "Lawbringer (L)", word: "Amn Lem Ko", itemType: "Swords/Hammers/Scepters", level: 43, stats: [
+    name: "Lawbringer", word: "Amn Lem Ko", itemType: "Swords/Hammers/Scepters", level: 43, stats: [
       "20% Chance to Cast Level 15 Decrepify On Striking",
       "Level 16-18 Sanctuary Aura When Equipped (varies)",
       "-50% Target Defense",
@@ -433,7 +433,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Swords/Hammers/Scepters"
   },
   {
-    name: "Voice of Reason (L)", word: "Lem Ko El Eld", itemType: "Swords/Maces", level: 43, stats: [
+    name: "Voice of Reason", word: "Lem Ko El Eld", itemType: "Swords/Maces", level: 43, stats: [
       "15% Chance to Cast Level 13 Frozen Orb On Striking",
       "18% Chance to Cast Level 20 Ice Blast On Striking",
       "+50 to Attack Rating",
@@ -576,7 +576,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Shields"
   },
   {
-    name: "Oath (L)", word: "Shael Pul Mal Lum", itemType: "Swords/Axes/Maces", level: 49, stats: [
+    name: "Oath", word: "Shael Pul Mal Lum", itemType: "Swords/Axes/Maces", level: 49, stats: [
       "Indestructible",
       "30% Chance to Cast Level 20 Bone Spirit On Striking",
       "+50% Increased Attack Speed",
@@ -650,7 +650,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Swords/Axes"
   },
   {
-    name: "Rift (L)", word: "Hel Ko Lem Gul", itemType: "Polearms/Scepters", level: 53, stats: [
+    name: "Rift", word: "Hel Ko Lem Gul", itemType: "Polearms/Scepters", level: 53, stats: [
       "20% Chance to Cast Level 16 Tornado On Striking",
       "16% Chance to Cast Level 21 Frozen Orb On Attack",
       "20% Bonus to Attack Rating",
@@ -714,7 +714,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Staves/Maces"
   },
   {
-    name: "Death (L)", word: "Hel El Vex Ort Gul", itemType: "Swords/Axes", level: 55, stats: [
+    name: "Death", word: "Hel El Vex Ort Gul", itemType: "Swords/Axes", level: 55, stats: [
       "Indestructible",
       "100% Chance to Cast Level 44 Chain Lightning When You Die",
       "25% Chance to Cast Level 18 Glacial Spike On Attack",
@@ -759,7 +759,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Paladin Shields"
   },
   {
-    name: "Fortitude (L)",
+    name: "Fortitude",
     word: "El Sol Dol Lo",
     itemType: "Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws/Body Armor",
     level: 59,
@@ -834,7 +834,7 @@ export const RUNEWORDS_D2R = [
     itemTypeShort: "Melee Weapons"
   },
   {
-    name: "Dragon (L)", word: "Sur Lo Sol", itemType: "Body Armor/Shields", level: 61, stats: [
+    name: "Dragon", word: "Sur Lo Sol", itemType: "Body Armor/Shields", level: 61, stats: [
       "20% Chance to Cast Level 18 Venom When Struck",
       "12% Chance to Cast Level 15 Hydra On Striking",
       "Level 14 Holy Fire Aura When Equipped",
@@ -899,7 +899,7 @@ export const RUNEWORDS_D2R = [
     itemTypeShort: "Melee Weapons"
   },
   {
-    name: "Infinity (L)", word: "Ber Mal Ber Ist", itemType: "Polearms", level: 63, stats: [
+    name: "Infinity", word: "Ber Mal Ber Ist", itemType: "Polearms", level: 63, stats: [
       "50% Chance to Cast Level 20 Chain Lightning When You Kill An Enemy",
       "Level 12 Conviction Aura When Equipped",
       "+35% Faster Run/Walk",
@@ -913,7 +913,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Polearms"
   },
   {
-    name: "Wrath (L)", word: "Pul Lum Ber Mal", itemType: "Bows/Crossbows", level: 63, stats: [
+    name: "Wrath", word: "Pul Lum Ber Mal", itemType: "Bows/Crossbows", level: 63, stats: [
       "30% Chance to Cast Level 1 Decrepify On Striking",
       "5% Chance to Cast Level 10 Life Tap On Striking",
       "+375% Damage to Demons",
@@ -975,7 +975,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Axes/Hammers"
   },
   {
-    name: "Brand (L)", word: "Jah Lo Mal Gul", itemType: "Bows/Crossbows", level: 65, stats: [
+    name: "Brand", word: "Jah Lo Mal Gul", itemType: "Bows/Crossbows", level: 65, stats: [
       "35% Chance to Cast Level 14 Amplify Damage When Struck",
       "100% Chance to Cast Level 18 Bone Spear On Striking",
       "Fires Explosive Arrows or Bolts (15)",
@@ -989,7 +989,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Destruction (L)", word: "Vex Lo Ber Jah Ko", itemType: "Polearms/Swords", level: 65, stats: [
+    name: "Destruction", word: "Vex Lo Ber Jah Ko", itemType: "Polearms/Swords", level: 65, stats: [
       "23% Chance to Cast Level 12 Volcano On Striking",
       "5% Chance to Cast Level 23 Molten Boulder On Striking",
       "100% Chance to Cast level 45 Meteor When You Die",
@@ -1005,7 +1005,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Polearms/Swords"
   },
   {
-    name: "Dream (L)", word: "Io Jah Pul", itemType: "Helms/Shields", level: 65, stats: [
+    name: "Dream", word: "Io Jah Pul", itemType: "Helms/Shields", level: 65, stats: [
       "10% Chance to Cast Level 15 Confuse When Struck",
       "Level 15 Holy Shock Aura When Equipped",
       "+20-30% Faster Hit Recovery (varies)",
@@ -1020,7 +1020,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Helms/Shields"
   },
   {
-    name: "Faith (L)", word: "Ohm Jah Lem Eld", itemType: "Bows/Crossbows", level: 65, stats: [
+    name: "Faith", word: "Ohm Jah Lem Eld", itemType: "Bows/Crossbows", level: 65, stats: [
       "Level 12-15 Fanaticism Aura When Equipped (varies)",
       "+1-2 to All Skills (varies)",
       "+330% Enhanced Damage",
@@ -1035,7 +1035,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Ice (L)", word: "Amn Shael Jah Lo", itemType: "Bows/Crossbows", level: 65, stats: [
+    name: "Ice", word: "Amn Shael Jah Lo", itemType: "Bows/Crossbows", level: 65, stats: [
       "100% Chance to Cast Level 40 Blizzard When You Level-up",
       "25% Chance to Cast Level 22 Frost Nova On Striking",
       "Level 18 Holy Freeze Aura When Equipped",
@@ -1050,7 +1050,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Last Wish (L)", word: "Jah Mal Jah Sur Jah Ber", itemType: "Swords/Hammers", level: 65, stats: [
+    name: "Last Wish", word: "Jah Mal Jah Sur Jah Ber", itemType: "Swords/Hammers", level: 65, stats: [
       "6% Chance to Cast Level 11 Fade When Struck",
       "10% Chance to Cast Level 18 Life Tap On Striking",
       "20% Chance to Cast Level 20 Charged Bolt On Attack",
@@ -1064,7 +1064,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Swords/Hammers"
   },
   {
-    name: "Phoenix (L)",
+    name: "Phoenix",
     word: "Vex Vex Lo Jah",
     itemType: "Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws/Shields",
     level: 65,
@@ -1121,7 +1121,7 @@ export const RUNEWORDS_D2R = [
     itemTypeShort: "Weapons"
   },
   {
-    name: "Pride (L)", word: "Cham Sur Io Lo", itemType: "Polearms", level: 67, stats: [
+    name: "Pride", word: "Cham Sur Io Lo", itemType: "Polearms", level: 67, stats: [
       "25% Chance to Cast Level 17 Fire Wall When Struck",
       "Level 16-20 Concentration Aura When Equipped (varies)",
       "260-300% Bonus to Attack Rating (varies)",
@@ -1319,7 +1319,7 @@ export const RUNEWORDS_PD2 = [
     itemTypeShort: "Melee Weapons"
   },
   {
-    name: "Edge (L)", word: "Tir Tal Amn", itemType: "Bows/Crossbows", level: 25, stats: [
+    name: "Edge", word: "Tir Tal Amn", itemType: "Bows/Crossbows", level: 25, stats: [
       "Level 15 Thorns Aura When Equipped",
       "+35% Increased Attack Speed",
       "+320-380% Damage to Demons (varies)",
@@ -1346,7 +1346,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Body Armor"
   },
   {
-    name: "Spirit (L)", word: "Tal Thul Ort Amn", itemType: "Swords/Shields", level: 25, stats: [
+    name: "Spirit", word: "Tal Thul Ort Amn", itemType: "Swords/Shields", level: 25, stats: [
       '+2 to All Skills (Staves)',
       '+1 to All Skills (Swords)',
       '+1 to All Skills (Shields)',
@@ -1409,7 +1409,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Helms"
   },
   {
-    name: "Insight (L)", word: "Ral Tir Tal Sol", itemType: "Polearms/Staves", level: 27, stats: [
+    name: "Insight", word: "Ral Tir Tal Sol", itemType: "Polearms/Staves", level: 27, stats: [
       'Level 12-17 Meditation Aura When Equipped',
       '+35% Faster Cast Rate',
       '+120-180% Enhanced Damage (varies)',
@@ -1523,7 +1523,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Harmony (L)", word: "Tir Ith Sol Ko", itemType: "Bows/Crossbows", level: 39, stats: [
+    name: "Harmony", word: "Tir Ith Sol Ko", itemType: "Bows/Crossbows", level: 39, stats: [
       "Level 10 Vigor Aura When Equipped",
       "+200-275% Enhanced Damage (varies)",
       "+9 to Minimum Damage",
@@ -1551,7 +1551,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Body Armor"
   },
   {
-    name: "Obedience (L)", word: "Hel Ko Thul Eth Fal", itemType: "Polearms/Spears", level: 41, stats: [
+    name: "Obedience", word: "Hel Ko Thul Eth Fal", itemType: "Polearms/Spears", level: 41, stats: [
       '30% Chance to Cast Level 21 Enchant When You Kill An Enemy',
       '40% Faster Hit Recovery',
       '+370% Enhanced Damage',
@@ -1595,7 +1595,7 @@ export const RUNEWORDS_PD2 = [
     itemTypeShort: "All Weapons"
   },
   {
-    name: "Lawbringer (L)", word: "Amn Lem Ko", itemType: "Swords/Hammers/Scepters/Claws", level: 43, stats: [
+    name: "Lawbringer", word: "Amn Lem Ko", itemType: "Swords/Hammers/Scepters/Claws", level: 43, stats: [
       "20% Chance to Cast Level 15 Amplify Damage On Striking",
       "Level 16-18 Sanctuary Aura When Equipped (varies)",
       "-50% Target Defense",
@@ -1609,7 +1609,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Swords/Hammers/Scepters/Claws"
   },
   {
-    name: "Voice of Reason (L)", word: "Lem Ko El Eld", itemType: "Swords/Maces", level: 43, stats: [
+    name: "Voice of Reason", word: "Lem Ko El Eld", itemType: "Swords/Maces", level: 43, stats: [
       "15% Chance to Cast Level 16 Frozen Orb On Striking",
       "18% Chance to Cast Level 20 Ice Blast On Striking",
       "+50 to Attack Rating",
@@ -1756,7 +1756,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Shields"
   },
   {
-    name: "Oath (L)", word: "Shael Pul Mal Lum", itemType: "Swords/Axes/Maces", level: 49, stats: [
+    name: "Oath", word: "Shael Pul Mal Lum", itemType: "Swords/Axes/Maces", level: 49, stats: [
       "Indestructible",
       "30% Chance to Cast Level 20 Bone Spirit On Striking",
       "+50% Increased Attack Speed",
@@ -1829,7 +1829,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Swords/Axes"
   },
   {
-    name: "Rift (L)", word: "Hel Ko Lem Gul", itemType: "Polearms/Scepters/Spears", level: 53, stats: [
+    name: "Rift", word: "Hel Ko Lem Gul", itemType: "Polearms/Scepters/Spears", level: 53, stats: [
       "20% Chance to Cast Level 21 Tornado On Striking",
       "16% Chance to Cast Level 21 Frozen Orb On Attack",
       "20% Bonus to Attack Rating",
@@ -1895,7 +1895,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Staves/Maces"
   },
   {
-    name: "Death (L)", word: "Hel El Vex Ort Gul", itemType: "Swords/Axes", level: 55, stats: [
+    name: "Death", word: "Hel El Vex Ort Gul", itemType: "Swords/Axes", level: 55, stats: [
       "Indestructible",
       "100% Chance to Cast Level 44 Chain Lightning When You Die",
       "25% Chance to Cast Level 18 Glacial Spike On Attack",
@@ -1940,7 +1940,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Paladin Shields"
   },
   {
-    name: "Fortitude (L)",
+    name: "Fortitude",
     word: "El Sol Dol Lo",
     itemType: "Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws/Body Armor",
     level: 59,
@@ -2013,7 +2013,7 @@ export const RUNEWORDS_PD2 = [
     itemTypeShort: "Melee Weapons"
   },
   {
-    name: "Dragon (L)", word: "Sur Lo Sol", itemType: "Body Armor/Shields", level: 61, stats: [
+    name: "Dragon", word: "Sur Lo Sol", itemType: "Body Armor/Shields", level: 61, stats: [
       "You May Summon 1 Additional Hydra",
       "12% Chance to Cast Level 28 Hydra On Striking",
       "Level 12 Holy Fire Aura When Equipped",
@@ -2079,7 +2079,7 @@ export const RUNEWORDS_PD2 = [
     itemTypeShort: "Melee Weapons"
   },
   {
-    name: "Infinity (L)", word: "Ber Mal Ber Ist", itemType: "Polearms/Spears/Staves", level: 63, stats: [
+    name: "Infinity", word: "Ber Mal Ber Ist", itemType: "Polearms/Spears/Staves", level: 63, stats: [
       "50% Chance to Cast Level 20 Lightning When You Kill An Enemy",
       "Level 12 Conviction Aura When Equipped",
       "+35% Faster Run/Walk",
@@ -2094,7 +2094,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Polearms/Spears/Staves"
   },
   {
-    name: "Wrath (L)", word: "Pul Lum Ber Mal", itemType: "Bows/Crossbows", level: 63, stats: [
+    name: "Wrath", word: "Pul Lum Ber Mal", itemType: "Bows/Crossbows", level: 63, stats: [
       "60% Chance to Cast Level 18 Amplify Damage On Striking",
       "+30-45% Increased Attack Speed (varies)",
       "+375% Damage to Demons",
@@ -2156,7 +2156,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Axes/Hammers/Swords"
   },
   {
-    name: "Brand (L)", word: "Jah Lo Mal Gul", itemType: "Bows/Crossbows", level: 65, stats: [
+    name: "Brand", word: "Jah Lo Mal Gul", itemType: "Bows/Crossbows", level: 65, stats: [
       "65% Chance to Cast Level 14 Amplify Damage When Struck",
       "50% Chance to Cast Level 50 Bone Spear On Striking",
       "Fires Explosive Arrows or Bolts (15)",
@@ -2170,7 +2170,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Destruction (L)", word: "Vex Lo Ber Jah Ko", itemType: "Polearms/Swords/Spears", level: 65, stats: [
+    name: "Destruction", word: "Vex Lo Ber Jah Ko", itemType: "Polearms/Swords/Spears", level: 65, stats: [
       "23% Chance to Cast Level 22 Frost Nova on Striking",
       "5% Chance to Cast Level 33 Molten Boulder on Striking",
       "5% Chance to Cast level 45 Meteor on Striking",
@@ -2185,7 +2185,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Polearms/Swords/Spears"
   },
   {
-    name: "Dream (L)", word: "Io Jah Pul", itemType: "Helms/Shields", level: 65, stats: [
+    name: "Dream", word: "Io Jah Pul", itemType: "Helms/Shields", level: 65, stats: [
       "10% Chance to Cast Level 15 Confuse When Struck",
       "Level 13 Holy Shock Aura When Equipped",
       "+20-30% Faster Hit Recovery (varies)",
@@ -2200,7 +2200,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Helms/Shields"
   },
   {
-    name: "Faith (L)", word: "Ohm Jah Lem Eld", itemType: "Bows/Crossbows", level: 65, stats: [
+    name: "Faith", word: "Ohm Jah Lem Eld", itemType: "Bows/Crossbows", level: 65, stats: [
       "Level 12-15 Fanaticism Aura When Equipped (varies)",
       "+250-300% Enhanced Damage",
       "Ignore Target's Defense",
@@ -2214,7 +2214,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Ice (L)", word: "Amn Shael Jah Lo", itemType: "Bows/Crossbows", level: 65, stats: [
+    name: "Ice", word: "Amn Shael Jah Lo", itemType: "Bows/Crossbows", level: 65, stats: [
       "100% Chance to Cast Level 40 Blizzard When You Level-up",
       "20% Chance to Cast Level 32 Frost Nova On Striking",
       "Level 18 Holy Freeze Aura When Equipped",
@@ -2229,7 +2229,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Last Wish (L)", word: "Jah Mal Jah Sur Jah Ber", itemType: "Swords/Hammers", level: 65, stats: [
+    name: "Last Wish", word: "Jah Mal Jah Sur Jah Ber", itemType: "Swords/Hammers", level: 65, stats: [
       "6% Chance to Cast Level 11 Fade When Struck",
       "10% Chance to Cast Level 18 Life Tap On Striking",
       "20% Chance to Cast Level 40 Charged Bolt On Attack",
@@ -2243,7 +2243,7 @@ export const RUNEWORDS_PD2 = [
     ], itemTypeShort: "Swords/Hammers"
   },
   {
-    name: "Phoenix (L)",
+    name: "Phoenix",
     word: "Vex Vex Lo Jah",
     itemType: "Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws/Shields",
     level: 65,
@@ -2270,17 +2270,17 @@ export const RUNEWORDS_PD2 = [
     itemType: "Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws",
     level: 67,
     stats: [
-    "25% Chance to Cast Level 15 Poison Nova on Striking",
-    "20% Chance to Cast Level 12 Lower Resist when Struck",
-    "Level 13-17 Cleansing Aura when Equipped (varies)",
-    "+1-2 to All Skills",
-    "+260-380% Damage to Demons (varies)",
-    "-20% to Enemy Poison Resistance",
-    "0-37% Deadly Strike (0.375% per Character Level)",
-    "25% Chance of Open Wounds",
-    "Freezes Target +3",
-    "+10 to Strength",
-    "+20% Faster Cast Rate",
+      "25% Chance to Cast Level 15 Poison Nova on Striking",
+      "20% Chance to Cast Level 12 Lower Resist when Struck",
+      "Level 13-17 Cleansing Aura when Equipped (varies)",
+      "+1-2 to All Skills",
+      "+260-380% Damage to Demons (varies)",
+      "-20% to Enemy Poison Resistance",
+      "0-37% Deadly Strike (0.375% per Character Level)",
+      "25% Chance of Open Wounds",
+      "Freezes Target +3",
+      "+10 to Strength",
+      "+20% Faster Cast Rate",
     ],
     itemTypeShort: "Weapons"
   },
@@ -2326,7 +2326,7 @@ export const RUNEWORDS_PD2 = [
     itemTypeShort: "Weapons"
   },
   {
-    name: "Pride (L)", word: "Cham Sur Io Lo", itemType: "Polearms/Spears", level: 67, stats: [
+    name: "Pride", word: "Cham Sur Io Lo", itemType: "Polearms/Spears", level: 67, stats: [
       "25% Chance to Cast Level 17 Fire Wall When Struck",
       "Level 16-20 Concentration Aura When Equipped (varies)",
       "260-300% Bonus to Attack Rating (varies)",
@@ -2373,6 +2373,7 @@ export interface IRuneword {
   itemTypeShort: string;
   sockets?: number;
   builds?: Array<string>;
+  ladderOnly?: boolean;
 }
 
 export interface IRunewordUI extends IRuneword {

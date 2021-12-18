@@ -13,8 +13,7 @@ export class RuneComponent implements OnInit {
   @Input() hoverInfoEnabled: boolean = false;
   @Input() name: string;
   @Input() labelVisible: boolean = true;
-
-  showRuneInfo: boolean;
+  @Input() isLarge: boolean = false;
 
   constructor(private router: Router, public rs: RunesService) {
   }

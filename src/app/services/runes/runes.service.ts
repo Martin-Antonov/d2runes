@@ -68,7 +68,7 @@ export class RunesService {
       hero.builds.forEach((build) => {
         build.runewords.forEach((rw: string) => {
           const runeword = this.runewordsD2R.find((r) => {
-            return r.name.toLowerCase().includes(rw.toLowerCase());
+            return r.name.toLowerCase() === rw.toLowerCase();
           });
           runeword.builds.push(hero.abbr + build.name);
         })
@@ -187,7 +187,7 @@ export class RunesService {
         r.selected = false;
       }
       // Build
-      if (by.build && !by.build.runewords.join('').toLowerCase().includes(r.name.split(' (L)').join('').toLowerCase())) {
+      if (by.build && !this.checkBuildInclusion(by, r)) {
         r.selected = false;
       }
     });
@@ -237,6 +237,12 @@ export class RunesService {
     }
 
     return true;
+  }
+
+  private checkBuildInclusion(by: IFilterConfig, r: IRunewordUI) {
+    return Boolean(by.build.runewords.find((runeword) => {
+      return runeword.toLowerCase() === r.name.toLowerCase()
+    }));
   }
 
   setRuneword(ev: any, runeword: IRunewordUI) {

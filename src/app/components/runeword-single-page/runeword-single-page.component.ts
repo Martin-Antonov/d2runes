@@ -24,8 +24,7 @@ export class RunewordSinglePageComponent implements OnInit {
         const rune = urlSplit[urlSplit.length - 1];
 
         const realRune = this.rs.runewords.find((r: IRunewordUI) => {
-          const withoutL = r.name.toLowerCase().split('(l)').join('');
-          const withoutSpaces = withoutL.split(' ').join('')
+          const withoutSpaces = r.name.toLowerCase().split(' ').join('')
           return withoutSpaces === rune;
         });
         if (realRune) {
