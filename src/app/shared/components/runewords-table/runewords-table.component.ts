@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {RunesService} from "../../services/runes/runes.service";
-import {IRunewordUI} from "../../services/runes/models/Runewords";
+import {RunesService} from "../../../services/runes/runes.service";
+import {IRunewordUI} from "../../../services/runes/models/Runewords";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({

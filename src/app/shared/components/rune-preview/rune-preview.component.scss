@@ -1,0 +1,95 @@
+@import "../../constants";
+@import "../../responsive";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
+  font-family: $d2-light;
+  padding: 10px 15px;
+  font-size: 20px;
+  z-index: 2000;
+
+  border-width: 10px 10px;
+  border-style: solid;
+  border-image: url("../../../../assets/table-frame.png") 10;
+  background: #0c0c0c;
+
+  @include less-than(tablet) {
+    position: static;
+    margin: 20px 0;
+  }
+
+  div:not(:last-child) {
+    margin-bottom: 3px;
+  }
+
+  .rune-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .name {
+      margin-left: 5px;
+      color: $orange;
+      font-size: 24px;
+    }
+  }
+
+  strong {
+    color: white;
+  }
+
+  .recipes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .recipe {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-top: -10px;
+
+      .plus {
+        font-family: $d2;
+        font-size: 40px;
+        margin-left: -10px;
+      }
+
+      .gem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        strong {
+          font-size: 14px;
+          font-family: $d2
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      app-rune {
+        transform: scale(0.9);
+
+        .single-rune {
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+}

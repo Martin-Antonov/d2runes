@@ -6,7 +6,7 @@
   <strong class="item-type">{{currentRuneword.itemTypeShort}}</strong>
   <div class="runes">
     <a class="single-rune" *ngFor="let rune of runes" [routerLink]="'/runes/'+rune.key.toLowerCase()">
-      <img class="icon" [src]="'assets/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">
+      <img class="icon" [src]="'assets/runes/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">
       <strong class="name">{{rune.key}}</strong>
     </a>
   </div>

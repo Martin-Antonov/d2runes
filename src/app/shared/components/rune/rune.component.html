@@ -2,6 +2,6 @@
    [ngStyle]="{'opacity': disabled? 0.3 : 1}"
    (mouseenter)="setRune($event)"
    (mouseleave)="deleteRune()">
-  <img class="icon" [src]="'assets/'+name.toLowerCase()+'.png'" [alt]="name + 'rune'" [ngClass]="{'large':isLarge}">
+  <img class="icon" [src]="'assets/runes/'+name.toLowerCase()+'.png'" [alt]="name + 'rune'" [ngClass]="{'large':isLarge}">
   <strong *ngIf="labelVisible" class="name">{{name}}</strong>
 </a>

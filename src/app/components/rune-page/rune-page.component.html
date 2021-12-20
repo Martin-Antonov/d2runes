@@ -1,10 +1,6 @@
 <header><h1 class="header">Runes</h1></header>
 <div class="runes">
   <app-rune *ngFor="let rune of rs.runes" [name]="rune.key" [isLarge]="true"></app-rune>
-<!--  <a class="single-rune" *ngFor="let rune of rs.runes" [routerLink]="rune.key.toLowerCase()" (click)="setCurrentRune(rune)">-->
-<!--    <img class="icon" [src]="'assets/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">-->
-<!--    <strong class="name">{{rune.key}}</strong>-->
-<!--  </a>-->
 </div>
 <app-rune-preview *ngIf="currentRune" [rune]="currentRune"></app-rune-preview>
 <app-runewords-table *ngIf="runewords.length>0" [runewords]="runewords"></app-runewords-table>

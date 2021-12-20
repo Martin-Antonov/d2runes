@@ -14,14 +14,13 @@ import {RunewordsPageComponent} from "./components/runewords-page/runewords-page
 import {FilterComponent} from "./components/runewords-page/filter/filter.component";
 import {RunewordHoverComponent} from "./components/runewords-page/runeword-hover/runeword-hover.component";
 import { HomeComponent } from './components/home/home.component';
-import { RunewordsTableComponent } from './components/runewords-table/runewords-table.component';
+import { RunewordsTableComponent } from './shared/components/runewords-table/runewords-table.component';
 import { AdsContainerComponent } from './components/ads-container/ads-container.component';
 import {TooltipModule} from "ng2-tooltip-directive";
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { RunewordSinglePageComponent } from './components/runeword-single-page/runeword-single-page.component';
-import { RuneHoverComponent } from './components/runewords-page/rune-hover/rune-hover.component';
 import {RunePageComponent} from "./components/rune-page/rune-page.component";
-import {RunePreviewComponent} from "./components/rune-page/rune-preview/rune-preview.component";
+import {RunePreviewComponent} from "./shared/components/rune-preview/rune-preview.component";
 import { RuneComponent } from './shared/components/rune/rune.component';
 import { CheatSheetComponent } from './components/cheat-sheet-page/cheat-sheet.component';
 
@@ -40,7 +39,6 @@ import { CheatSheetComponent } from './components/cheat-sheet-page/cheat-sheet.c
     AdsContainerComponent,
     PrivacyPolicyComponent,
     RunewordSinglePageComponent,
-    RuneHoverComponent,
     RuneComponent,
     CheatSheetComponent,
   ],

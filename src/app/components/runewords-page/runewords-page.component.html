@@ -3,6 +3,7 @@
 <app-runewords-table [runewords]="rs.runewords"></app-runewords-table>
 <div class="hover-container">
   <app-runeword-hover *ngIf="rs.hoveredRuneword"></app-runeword-hover>
-  <app-rune-hover *ngIf="rs.hoveredRune"></app-rune-hover>
+  <app-rune-preview *ngIf="rs.hoveredRune" [rune]="rs.hoveredRune" [@r]
+                    [style.transform]="runeHoverTransform"></app-rune-preview>
 </div>
 <!--<app-ads-container></app-ads-container>-->

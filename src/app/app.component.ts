@@ -1,6 +1,6 @@
 /**
  * 1. Rune preview refactor and to include recipes
- * 2. Refactor component structure with reusable components
+ * 2. Refactor runeword preview to be reusable.
  * 3. Cheatsheet page
  *     a. adding sockets article
  *     b. mapping article

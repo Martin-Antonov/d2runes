@@ -1,5 +1,5 @@
-@import "../../shared/constants";
-@import "../../shared/responsive";
+@import "../../constants";
+@import "../../responsive";
 
 .table {
   box-sizing: border-box;
@@ -15,7 +15,7 @@
   background-color: #111;
   border-width: 30px 30px;
   border-style: solid;
-  border-image: url("../../../assets/table-frame.png") 30;
+  border-image: url("../../../../assets/table-frame.png") 30;
   color: white;
   z-index: 2;
 
