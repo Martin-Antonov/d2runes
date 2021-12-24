@@ -1,0 +1,26 @@
+<h2 [routerLink]="'charts'">FCR, FHR, FBR Charts</h2>
+<div class="content">
+  <p>Here, we give tables for <strong>Faster Cast Rate</strong> (FCR), <strong>Faster Hit Recovery</strong> (FHR) and
+    <strong>Faster Block Rate</strong> (FBR). <br><br> Abbreviations: <strong>L/CL</strong> - Lightning/Chain Lightning,
+    <strong>OHW</strong> - one handed weapon, <strong>OW</strong> - other weapons, <strong>SP/ST</strong> - Spears/Staves, <strong>HS</strong> - Holy Shield</p>
+  <ng-container *ngFor="let hero of tables">
+    <h3>{{hero.hero}}</h3>
+    <div class="line" *ngFor="let table of hero.tables">
+      <strong class="title">{{table.key}}</strong>
+      <div class="grid">
+        <div class="a-line">
+          <strong class="line-title">Frames</strong>
+          <div class="separator"></div>
+          <div *ngFor="let frame of table.frames" class="cell">{{frame}}</div>
+        </div>
+        <div class="a-line">
+          <strong class="line-title">Percentage</strong>
+          <div class="separator"></div>
+          <div *ngFor="let percentage of table.percentage" class="cell">{{percentage}}%</div>
+        </div>
+      </div>
+    </div>
+
+  </ng-container>
+
+</div>

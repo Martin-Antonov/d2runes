@@ -23,6 +23,13 @@ import {RunePageComponent} from "./components/rune-page/rune-page.component";
 import {RunePreviewComponent} from "./shared/components/rune-preview/rune-preview.component";
 import { RuneComponent } from './shared/components/rune/rune.component';
 import { CheatSheetComponent } from './components/cheat-sheet-page/cheat-sheet.component';
+import { SocketingComponent } from './components/cheat-sheet-page/socketing/socketing.component';
+import { UsefulRecipesComponent } from './components/cheat-sheet-page/useful-recipes/useful-recipes.component';
+import { LowerKurastComponent } from './components/cheat-sheet-page/lower-kurast/lower-kurast.component';
+import { FChartsComponent } from './components/cheat-sheet-page/f-charts/f-charts.component';
+import { IndexComponent } from './components/cheat-sheet-page/index/index.component';
+import { MappingComponent } from './components/cheat-sheet-page/mapping/mapping.component';
+import { GamblingComponent } from './components/cheat-sheet-page/gambling/gambling.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +48,13 @@ import { CheatSheetComponent } from './components/cheat-sheet-page/cheat-sheet.c
     RunewordSinglePageComponent,
     RuneComponent,
     CheatSheetComponent,
+    SocketingComponent,
+    UsefulRecipesComponent,
+    LowerKurastComponent,
+    FChartsComponent,
+    IndexComponent,
+    MappingComponent,
+    GamblingComponent,
   ],
   imports: [
     BrowserModule,

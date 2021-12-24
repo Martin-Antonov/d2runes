@@ -6,6 +6,10 @@ import {PrivacyPolicyComponent} from "./components/privacy-policy/privacy-policy
 import {RunewordSinglePageComponent} from "./components/runeword-single-page/runeword-single-page.component";
 import {RunePageComponent} from "./components/rune-page/rune-page.component";
 import {CheatSheetComponent} from "./components/cheat-sheet-page/cheat-sheet.component";
+import {SocketingComponent} from "./components/cheat-sheet-page/socketing/socketing.component";
+import {UsefulRecipesComponent} from "./components/cheat-sheet-page/useful-recipes/useful-recipes.component";
+import {LowerKurastComponent} from "./components/cheat-sheet-page/lower-kurast/lower-kurast.component";
+import {FChartsComponent} from "./components/cheat-sheet-page/f-charts/f-charts.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'runewords', pathMatch: "full"},
@@ -19,9 +23,21 @@ const routes: Routes = [
   },
   {
     path: 'runes', component: RunePageComponent, children: [
-      {path: ':runeId', component: RunePageComponent},]
+      {path: ':runeId', component: RunePageComponent},
+    ]
   },
-  {path: 'cheatsheet', component: CheatSheetComponent},
+  {
+    path: 'cheatsheet', children: [
+
+      {path: '', component: CheatSheetComponent},
+      {path: 'socketing', component: SocketingComponent},
+      {path: 'useful-recipes', component: UsefulRecipesComponent},
+      {path: 'lk-farming', component: LowerKurastComponent},
+      {path: 'charts', component: FChartsComponent},
+      // {path: 'mapping', component: MappingComponent},
+      // {path: 'gambling', component: GamblingComponent},
+    ]
+  },
   {path: 'privacy-policy', component: PrivacyPolicyComponent},
 ];
 

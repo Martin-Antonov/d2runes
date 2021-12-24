@@ -5,7 +5,10 @@ $grey: #7d7d7d;
 $blue: #8282ff;
 $orange: #ffb600;
 $gold-hover: #e9c964;
-$text: 'Alegreya Sans', sans-serif;
+$green: #00ff00;
+$yellow: #ffff7f;
+$text: 'Montserrat', sans-serif;
+$code: 'Inconsolata', monospace;
 
 @mixin removeSelection {
   -webkit-touch-callout: none;

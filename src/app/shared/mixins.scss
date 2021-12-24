@@ -1,3 +1,7 @@
+@import "constants";
+@import "responsive";
+
+
 @mixin center($horizontally, $vertically) {
   @if $horizontally {
     left: 50%;
@@ -68,5 +72,23 @@
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+@mixin articleContainer() {
+  margin-top: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: $d2;
+  width: 940px;
+  background-color: #111;
+  border-width: 30px 30px;
+  border-style: solid;
+  border-image: url("../../assets/table-frame.png") 30;
+  color: white;
+  z-index: 2;
+
+  @include less-than(tableMin) {
+    width: 100%;
   }
 }

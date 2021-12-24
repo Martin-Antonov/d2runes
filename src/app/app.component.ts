@@ -1,10 +1,10 @@
 /**
- * 1. Rune preview refactor and to include recipes
  * 2. Refactor runeword preview to be reusable.
  * 3. Cheatsheet page
  *     a. adding sockets article
  *     b. mapping article
- *     c. Add next rune recipes*/
+ *     c. FCR/FHR/FBR article
+ *     */
 import {Component} from '@angular/core';
 import {filter} from "rxjs/operators";
 import {NavigationEnd, NavigationStart, Router} from "@angular/router";

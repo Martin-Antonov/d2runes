@@ -11,24 +11,20 @@
 <strong>Required Level: {{rune.lvl}}</strong>
 
 <div class="recipes">
-  <div class="recipe" *ngIf="index>0">{{index > 20 ? '2x' : '3x'}}
-    <app-rune [name]="rs.runes[index-1].key"></app-rune>
-    <span *ngIf="index>9" class="plus">+</span>
-    <div class="gem" *ngIf="index>9">
-      <img [src]="'assets/gems/'+(index-9)+'.png'" [alt]="getFullName(index-9)">
-      <strong>{{getShortName(index - 9)}}</strong>
-    </div>
-    =
-    <app-rune [name]="rune.key"></app-rune>
+  <div class="recipe" *ngIf="index>0">
+    <app-rune [name]="rs.runes[index-1].key" [labelVisible]="false"></app-rune>
+    <app-rune [name]="rs.runes[index-1].key" [labelVisible]="false"></app-rune>
+    <app-rune *ngIf="index <= 20" [name]="rs.runes[index-1].key" [labelVisible]="false"></app-rune>
+    <img *ngIf="index>9" [src]="'assets/gems/'+(index-9)+'.png'" [alt]="getFullName(index-9)">
+    <span>=</span>
+    <app-rune [name]="rune.key" [labelVisible]="false"></app-rune>
   </div>
-  <div class="recipe" *ngIf="index < rs.runes.length-1">{{index > 20 ? '2x' : '3x'}}
-    <app-rune [name]="rune.key"></app-rune>
-    <span *ngIf="index>8" class="plus">+</span>
-    <div class="gem" *ngIf="index>8">
-      <img [src]="'assets/gems/'+(index-8)+'.png'" [alt]="getFullName(index-8)">
-      <strong>{{getShortName(index - 8)}}</strong>
-    </div>
-    =
-    <app-rune [name]="rs.runes[index+1].key"></app-rune>
+  <div class="recipe" *ngIf="index < rs.runes.length-1">
+    <app-rune [name]="rune.key" [labelVisible]="false"></app-rune>
+    <app-rune [name]="rune.key" [labelVisible]="false"></app-rune>
+    <app-rune *ngIf="index <= 19" [name]="rune.key" [labelVisible]="false"></app-rune>
+    <img *ngIf="index>8" [src]="'assets/gems/'+(index-8)+'.png'" [alt]="getFullName(index-8)">
+    <span>=</span>
+    <app-rune [name]="rs.runes[index+1].key" [labelVisible]="false"></app-rune>
   </div>
 </div>
