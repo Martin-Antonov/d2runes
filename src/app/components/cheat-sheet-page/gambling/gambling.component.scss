@@ -16,4 +16,10 @@
   background-repeat: repeat-y;
 
   @include articleContainer();
+  h2{
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 }

@@ -17,6 +17,13 @@
 
   @include articleContainer();
 
+  h2 {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
   .explanation, ul {
     font-family: $text;
   }
@@ -45,6 +52,28 @@
         width: 100%;
       }
 
+      .explanation {
+        margin-bottom: 10px;
+
+        strong {
+          color: $gold;
+
+          &.magical {
+            color: $blue;
+          }
+        }
+      }
+
+      li {
+        strong {
+          color: $gold;
+
+          &.magical {
+            color: $blue;
+          }
+        }
+      }
+
       .image-text {
         display: flex;
         align-items: center;
@@ -57,11 +86,7 @@
           box-shadow: 0 0 20px black;
         }
 
-        .explanation {
-          margin-bottom: 10px;
-        }
-
-        p {
+        .recipe {
           width: 50%;
           text-align: center;
           font-size: 20px;

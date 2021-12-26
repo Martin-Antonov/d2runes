@@ -16,6 +16,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://d2runes.io/#/cheatsheet</loc>
+    <lastmod>2021-08-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://d2runes.io/#/cheatsheet/socketing</loc>
+    <lastmod>2021-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://d2runes.io/#/cheatsheet/useful-recipes</loc>
+    <lastmod>2021-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://d2runes.io/#/cheatsheet/lk-farming</loc>
+    <lastmod>2021-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://d2runes.io/#/cheatsheet/charts</loc>
+    <lastmod>2021-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://d2runes.io/#/runes/el</loc>
     <lastmod>2021-08-10</lastmod>
     <priority>0.8</priority>

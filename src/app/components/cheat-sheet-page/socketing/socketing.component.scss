@@ -17,6 +17,13 @@
 
   @include articleContainer();
 
+  h2 {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
   .content {
     width: 100%;
     display: flex;

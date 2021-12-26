@@ -9,6 +9,7 @@ import {Component} from '@angular/core';
 import {filter} from "rxjs/operators";
 import {NavigationEnd, NavigationStart, Router} from "@angular/router";
 import {RunesService} from "./services/runes/runes.service";
+import {SitemapGeneratorService} from "./services/sitemap-generator.service";
 
 @Component({
   selector: 'app-root',

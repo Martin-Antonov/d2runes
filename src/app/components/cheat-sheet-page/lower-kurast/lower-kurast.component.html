@@ -1,6 +1,7 @@
 <h2 [routerLink]="'lk-farming'">Lower Kurast Rune Farming</h2>
 <div class="content">
-  <p>Lower Kurast (LK for short) is a great place to farm <strong>high runes</strong> in Single Player. There are 3 or 6
+  <p>Lower Kurast (LK for short) is a great place to farm <strong>high runes</strong> in <strong>Single Player, Hell
+    difficulty</strong>. There are 3 or 6
     <strong>super
       chests</strong> and each of them has only <strong>65536 combinations</strong> (2^16). Some of these combinations
     contain high runes. You can roll a decent map and have 30-60 second runs where you check all 6 chests. On
@@ -15,8 +16,9 @@
     available
     in those chests depends on the <strong>player setting</strong> (e.g. type <span class="code">'/player 7'</span>
     command in chat or go to settings). Your chance of getting runes does <strong>NOT</strong> depend on MF. The table
-    below shows the runes per player setting, probability to hit a
-    specific rune and total probability when farming all 6 chests.</p>
+    below shows the <strong>number of combinations</strong> (out of 65536 total combinations) that contain runes, for
+    each player setting, along with some
+    probabilities when farming all 6 chests.</p>
   <div class="grid">
     <div *ngFor="let rune of runes">
       <app-rune *ngIf="rune!==''" [name]="rune"></app-rune>
@@ -25,43 +27,45 @@
       <div *ngFor="let item of row" [ngClass]="{'player':item.includes('/p')}" class="not-rune">{{item}}</div>
     </ng-container>
   </div>
-  <p>From the table, we can see that is best to farm the chests on players 3-4 or 7-8.<br><br> Let us now take a look at
+  <p>From the table, we can see that is best to <strong>farm the chests</strong> on <strong>players 7-8</strong>, unless
+    you are farming specifically for <strong class="rune">Lo</strong> rune, which is slightly better farmed on <strong>player
+      5-6</strong>.<br><br>
+    Let us now take a look at
     some
     probabilities. <em>Probability</em> is defined as <strong>P</strong>, we assume 6 chests are farmed at 30 seconds
     per
-    run. <br><br>For players 3-4 or 7-8:</p>
+    run. <br><br>For players 7-8:</p>
   <ul>
-    <li><strong>P(Getting at least one <strong class="rune">Pul+</strong> rune) = 0.00128</strong> or expected <strong>1
+    <li><strong>P(Getting at least one <strong class="rune">Pul+</strong> rune) =0.009</strong> or expected <strong>1
       rune
-      every 781 runs</strong>, appr. <strong>6.5 hours</strong>.
+      every 111 runs</strong>, appr. <strong>0.9 hours</strong>.
     </li>
-    <li><strong>P(Getting at least one <strong class="rune">Ist+</strong> rune) = 0.00055</strong> or expected <strong>1
+    <li><strong>P(Getting at least one <strong class="rune">Ist+</strong> rune) = 0.00448</strong> or expected <strong>1
       rune
-      every 1820 runs</strong>, appr. <strong>15 hours</strong>.
+      every 223 runs</strong>, appr. <strong>1.9 hours</strong>.
     </li>
     <li><strong>P(Getting at least one <strong class="rune">Sur</strong> or <strong class="rune">Ber</strong>) =
-      0.000183</strong>
+      0.001372</strong>
       or expected <strong> 1
         rune
-        every 5460 runs</strong>, appr. <strong>45 hours</strong>.
-    </li>
-    <li><strong>P(Getting a specific rune) = 0.00009155</strong>
-      or expected <strong> 1
-        rune
-        every 10923 runs</strong>, appr. <strong>91 hours</strong>.
+        every 729 runs</strong>, appr. <strong>6.1 hours</strong>.
     </li>
   </ul>
   <h3>Finding Super Chests</h3>
-  <p>In Lower Kurast you are looking for a campfire. There are two huts, one is to the left, the other is on top. The
-    first contains 2 super chests, the second 1 super chest. This is illustrated in the image below:</p>
+  <p>In Lower Kurast you are looking for a <strong>campfire</strong>. There are <strong>two huts</strong>, one is to the
+    left, the other is on top. The
+    <strong>first</strong> contains <strong>2 super chests</strong>, the <strong>second</strong> - <strong>1 super
+      chest</strong>. This is illustrated in the image below:</p>
   <img class="map" src="assets/cheat-sheet/lk-map.jpg" alt="Lower Kurast Campfire">
   <h3>A Perfect Map</h3>
-  <p>Lower Kurast maps can spawn 2 campfires for a total of 6 super chests. In a perfect map, you will have the waypoint
+  <p>Lower Kurast <strong>maps can spawn 2 campfires</strong> for a total of <strong>6 super chests</strong>. In a
+    perfect map, you will have the waypoint
     and the two campfires very close to it. <br><br>Start from the waypoint, go through the chests and come back to the
     waypoint. Teleport to Act 4, save and exit and repeat. <br><br>Take your time to find a good map, because a few
     seconds save over
     thousands of runs could mean hours. An example of a good (not perfect) map is given below:</p>
   <img src="assets/cheat-sheet/lk-minimap.jpg" alt="Lower Kurast good map">
   <br>
-  <p>Reference <a style="display: inline-block" href="https://www.diabloii.net/forums/threads/lower-kurast-lk-faq.720492/">here</a>.</p>
+  <p>Reference <a style="display: inline-block"
+                  href="https://www.diabloii.net/forums/threads/1-13-lk-patterns.764531/page-35">here</a>.</p>
 </div>
