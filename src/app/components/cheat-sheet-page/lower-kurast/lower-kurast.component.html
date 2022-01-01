@@ -17,11 +17,14 @@
     of high runes
     available
     in those chests depends on the <strong>player setting</strong> (e.g. type <span class="code">'/player 7'</span>
-    command in chat or go to settings). Your chance of getting runes does <strong>NOT</strong> depend on MF. The table
-    below shows the <strong>number of combinations</strong> (out of {{lk.TOTAL_COMBINATIONS}} total combinations) that
-    contain runes, for
-    each player setting, along with some
-    probabilities when farming all 6 chests.</p>
+    command in chat or go to settings) and whether the chest is <strong>locked</strong> or <strong>unlocked</strong>.
+    Your chance of getting runes does <strong>NOT</strong> depend on MF.
+    <br><br>The table below shows the <strong>number of combinations</strong> (out of {{lk.TOTAL_COMBINATIONS}} total
+    combinations) that contain runes, for each player setting, along with some probabilities when farming all 6 chests.
+    <br><br> Note that there is a <strong class="gold">19% chance</strong> that a chest is <strong
+      class="gold">locked</strong> and
+    <strong class="gold">81% chance</strong> that it is <strong class="gold">unlocked</strong>. There are slightly
+    different rune combinations for both cases, so they have been <strong class="gold">averaged out</strong>.</p>
   <div class="grid">
     <div *ngFor="let rune of lk.runes">
       <app-rune *ngIf="rune!==''" [name]="rune"></app-rune>
@@ -57,7 +60,7 @@
     </li>
   </ul>
   <h3>Runes Probability Calculator</h3>
-  <p>You can input the players setting and your desired runes to get a probability calculation for your selection</p>
+  <p>You can input the players setting and your desired runes to get a probability calculation for your selection.</p>
   <div class="outer-calculator-container">
     <div class="calculator-container">
       <div class="player-input-container">
@@ -86,7 +89,8 @@
           <strong class="gold">{{lk.probablity.probability}}</strong>
         </strong> or expected <strong>1
           rune
-          every <strong class="gold">{{lk.probablity.runs}}</strong> runs</strong>, appr. <strong><strong class="gold">{{lk.probablity.time}}</strong> hours</strong>.
+          every <strong class="gold">{{lk.probablity.runs}}</strong> runs</strong>, appr. <strong><strong
+          class="gold">{{lk.probablity.time}}</strong> hours</strong>.
         </li>
       </ul>
     </div>
@@ -109,5 +113,6 @@
   <img src="assets/cheat-sheet/lk-minimap.jpg" alt="Lower Kurast good map">
   <br>
   <p>Reference <a style="display: inline-block"
-                  href="https://www.diabloii.net/forums/threads/1-13-lk-patterns.764531/page-35">here</a>.</p>
+                  href="https://www.purediablo.com/forums/threads/guide-regular-special-and-sparkly-chests.380/">here</a>.
+  </p>
 </div>
