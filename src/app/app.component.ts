@@ -1,15 +1,18 @@
 /**
- * 2. Refactor runeword preview to be reusable.
- * 3. Cheatsheet page
- *     a. adding sockets article
- *     b. mapping article
- *     c. FCR/FHR/FBR article
+1. Refactor Runeword preview to be reusable.
+ 2. Add uniques filter https://www.youtube.com/watch?v=r8SClkQB5_k
+ 3. Add set items builder
+ 4. SSR - twitter cards, tutorial - https://fireship.io/lessons/angular-universal-firebase/
+ 5. instagram page
+ 6. FB page
+ 7. twitter page
  *     */
 import {Component} from '@angular/core';
 import {filter} from "rxjs/operators";
 import {NavigationEnd, NavigationStart, Router} from "@angular/router";
 import {RunesService} from "./services/runes/runes.service";
-import {SitemapGeneratorService} from "./services/sitemap-generator.service";
+import {LkService} from "./services/lk/lk.service";
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +22,7 @@ import {SitemapGeneratorService} from "./services/sitemap-generator.service";
 export class AppComponent {
   title = 'd2r-runes';
 
-  constructor(private router: Router, private rs: RunesService) {
+  constructor(private router: Router, private rs: RunesService, private lk: LkService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationStart))
       .subscribe((res: NavigationEnd) => {

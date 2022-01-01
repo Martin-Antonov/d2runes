@@ -158,27 +158,6 @@
           @include less-than(tablet) {
             align-self: center;
           }
-
-          img {
-            &:hover {
-              filter: brightness(1.2);
-              cursor: pointer;
-            }
-
-            &:active {
-              transform: scale(0.8);
-              filter: brightness(1.5);
-            }
-
-            &.reversed-toggle-arrow {
-              transform: rotate(180deg);
-
-              &:active {
-                transform: rotate(180deg) scale(0.8);
-                filter: brightness(1.5);
-              }
-            }
-          }
         }
       }
 
