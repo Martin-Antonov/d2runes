@@ -10,6 +10,7 @@ import {SocketingComponent} from "./components/cheat-sheet-page/socketing/socket
 import {UsefulRecipesComponent} from "./components/cheat-sheet-page/useful-recipes/useful-recipes.component";
 import {LowerKurastComponent} from "./components/cheat-sheet-page/lower-kurast/lower-kurast.component";
 import {FChartsComponent} from "./components/cheat-sheet-page/f-charts/f-charts.component";
+import {UniquesPageComponent} from "./components/uniques-page/uniques-page.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'runewords', pathMatch: "full"},
@@ -25,6 +26,9 @@ const routes: Routes = [
     path: 'runes', component: RunePageComponent, children: [
       {path: ':runeId', component: RunePageComponent},
     ]
+  },
+  {
+    path: 'uniques', component: UniquesPageComponent
   },
   {
     path: 'cheatsheet', children: [

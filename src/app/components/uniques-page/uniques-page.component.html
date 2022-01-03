@@ -1,0 +1,8 @@
+<div *ngFor="let item of items">
+  {{item.itemType}} {{item.items.length}}
+  <div *ngFor="let specificItem of item.items" class="specific-item">
+    <img [src]="specificItem.img" [alt]="specificItem.name + ' image'">
+    <div>{{specificItem.name}}</div>
+    <div>{{specificItem.type}}</div>
+  </div>
+</div>

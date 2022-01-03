@@ -30,6 +30,7 @@ import { FChartsComponent } from './components/cheat-sheet-page/f-charts/f-chart
 import { IndexComponent } from './components/cheat-sheet-page/index/index.component';
 import { MappingComponent } from './components/cheat-sheet-page/mapping/mapping.component';
 import { GamblingComponent } from './components/cheat-sheet-page/gambling/gambling.component';
+import { UniquesPageComponent } from './components/uniques-page/uniques-page.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { GamblingComponent } from './components/cheat-sheet-page/gambling/gambli
     IndexComponent,
     MappingComponent,
     GamblingComponent,
+    UniquesPageComponent,
   ],
   imports: [
     BrowserModule,
