@@ -654,7 +654,7 @@ export const ALL_ITEMS: Array<IItem> = [
         magicStats: []
       },
       {
-        name: 'Tarnheim',
+        name: 'Tarnhelm',
         type: 'Skull Cap',
         quality: QualityType.NORMAL,
         img: 'assets/items/unique/helms/tarnhelm.jpg',
@@ -891,7 +891,7 @@ export const ALL_ITEMS: Array<IItem> = [
         hero: Hero.BARBARIAN
       },
       {
-        name: 'Cerebus\'s Bite',
+        name: 'Cerebus\' Bite',
         type: 'Blood Spirit',
         quality: QualityType.ELITE,
         img: 'assets/items/unique/helms/cerebus\'-bite.jpg',
@@ -1692,7 +1692,7 @@ export const ALL_ITEMS: Array<IItem> = [
         magicStats: [],
       },
       {
-        name: 'Rogues\'s Bow',
+        name: 'Rogue\'s Bow',
         type: 'Composite Bow',
         quality: QualityType.NORMAL,
         img: 'assets/items/unique/weapons/bows/rogue\'s-bow.jpg',

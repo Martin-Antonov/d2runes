@@ -1,6 +1,7 @@
 <h2 class="title">Filter</h2>
 <div class="outer-container">
   <div class="container">
+    <ng-content></ng-content>
   </div>
 </div>
 <div class="arrow" [ngClass]="opened && 'reversed'" (click)="toggle.emit()"></div>

@@ -6,7 +6,7 @@ import {STAT_TYPES} from "../../../services/runes/models/StatTypes";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
-  selector: 'app-filter',
+  selector: 'app-filter-rw',
   templateUrl: './filter-rw.component.html',
   styleUrls: ['./filter-rw.component.scss'],
   animations: [trigger('host', [
