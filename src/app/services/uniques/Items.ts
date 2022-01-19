@@ -1445,101 +1445,6 @@ export const ALL_ITEMS: Array<IItem> = [
       },
     ]
   },
-
-  // {
-  //   itemType: ItemType.WEAPONS, itemSubtype: SubType.BOW, items: [
-  //     {
-  //       name: 'Bartuc\'s Cut-Throat',
-  //       type: 'Greater Talons',
-  //       quality: QualityType.EXCEPTIONAL,
-  //       img: 'assets/items/unique/weapons/bartuc\'s-cut-throat.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.ASSASSIN
-  //       //katar
-  //     },
-  //     {
-  //       name: 'The Oculus',
-  //       type: 'Swirling Crystal',
-  //       quality: QualityType.EXCEPTIONAL,
-  //       img: 'assets/items/unique/weapons/death\'s-fathom-the-oculus.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.SORCERESS
-  //       //staff
-  //     },
-  //     {
-  //       name: 'Stoneraven',
-  //       type: 'Matriarchal Spear',
-  //       quality: QualityType.ELITE,
-  //       img: 'assets/items/unique/weapons/stoneraven.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.AMAZON
-  //       //spear
-  //     },
-
-  //     {
-  //       name: 'Jade Talon',
-  //       type: 'Wrist Sword',
-  //       quality: QualityType.ELITE,
-  //       img: 'assets/items/unique/weapons/jade-talon.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.ASSASSIN
-  //       //katar
-  //     },
-  //     {
-  //       name: 'Shadow Killer',
-  //       type: 'Battle Cestus',
-  //       quality: QualityType.ELITE,
-  //       img: 'assets/items/unique/weapons/shadow-killer.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.ASSASSIN
-  //       //katar
-  //     },
-  //     {
-  //       name: 'Firelizard\'s Talons',
-  //       type: 'Feral Claws',
-  //       quality: QualityType.ELITE,
-  //       img: 'assets/items/unique/weapons/firelizard\'s-talons.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.ASSASSIN
-  //     },
-  //     {
-  //       name: 'Eschuta\'s Temper',
-  //       type: 'Eldrich Orb',
-  //       quality: QualityType.ELITE,
-  //       img: 'assets/items/unique/weapons/eschuta\'s-temper.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.SORCERESS
-  //       // staff
-  //     },
-  //     {
-  //       name: 'Death\'s Fathom',
-  //       type: 'Dimensional Shard',
-  //       quality: QualityType.ELITE,
-  //       img: 'assets/items/unique/weapons/death\'s-fathom-the-oculus.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.SORCERESS
-  //       //staff
-  //     },
-  //     {
-  //       name: 'Astreon\'s Iron Ward',
-  //       type: 'Caduceus',
-  //       quality: QualityType.ELITE,
-  //       img: 'assets/items/unique/weapons/astreon\'s-iron-ward.jpg',
-  //       stats: [],
-  //       magicStats: [],
-  //       hero: Hero.SORCERESS
-  //       //staff
-  //     },
-  //   ]
-  // },
   {
     itemType: ItemType.WEAPONS, itemSubtype: SubType.AXE, items: [
       {
@@ -2654,6 +2559,16 @@ export const ALL_ITEMS: Array<IItem> = [
         magicStats: [],
         hero: Hero.AMAZON
       },
+      {
+        name: 'Stoneraven',
+        type: 'Matriarchal Spear',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/spears/stoneraven.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.AMAZON
+        //spear
+      },
     ]
   },
   {
@@ -2753,6 +2668,33 @@ export const ALL_ITEMS: Array<IItem> = [
         img: 'assets/items/unique/weapons/staves/mang-song\'s-lesson.jpg',
         stats: [],
         magicStats: [],
+      },
+      {
+        name: 'Eschuta\'s Temper',
+        type: 'Eldrich Orb',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/staves/eschuta\'s-temper.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.SORCERESS
+      },
+      {
+        name: 'The Oculus',
+        type: 'Swirling Crystal',
+        quality: QualityType.EXCEPTIONAL,
+        img: 'assets/items/unique/weapons/staves/death\'s-fathom-the-oculus.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.SORCERESS
+      },
+      {
+        name: 'Death\'s Fathom',
+        type: 'Dimensional Shard',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/staves/death\'s-fathom-the-oculus.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.SORCERESS
       },
     ]
   },
@@ -3129,7 +3071,47 @@ export const ALL_ITEMS: Array<IItem> = [
         hero: Hero.AMAZON
       },
     ]
-  }
+  },
+  {
+    itemType: ItemType.WEAPONS, itemSubtype: SubType.KATAR, items: [
+      {
+        name: 'Bartuc\'s Cut-Throat',
+        type: 'Greater Talons',
+        quality: QualityType.EXCEPTIONAL,
+        img: 'assets/items/unique/weapons/katars/bartuc\'s-cut-throat.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.ASSASSIN
+      },
+      {
+        name: 'Jade Talon',
+        type: 'Wrist Sword',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/katars/jade-talon.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.ASSASSIN
+      },
+      {
+        name: 'Shadow Killer',
+        type: 'Battle Cestus',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/katars/shadow-killer.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.ASSASSIN
+      },
+      {
+        name: 'Firelizard\'s Talons',
+        type: 'Feral Claws',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/katars/firelizard\'s-talons.jpg',
+        stats: [],
+        magicStats: [],
+        hero: Hero.ASSASSIN
+      },
+    ]
+  },
 ]
 
-
+export const ALL_UNIQUES = "Alma Negra, Amulet of the Viper, Andariel's Visage, Annihilus, Arachnid Mesh, Arioc's Needle, Arkaine's Valor, Arm of King Leoric, Arreat's Face, Astreon's Iron Ward, Athena's Wrath, Atma's Scarab, Atma's Wail, Axe of Fechmar, Azurewrath, Azurewrath, Baezil's Vortex, Bane Ash, Baranar's Star, Bartuc's Cut-Throat, Biggin's Bonnet, Bing Sz Wang, Black Hades, Blackbog's Sharp, Blackhand Key, Blackhorn's Face, Blackleach Blade, Blackoak Shield, Blacktongue, Blade of Ali Baba, Bladebone, Bladebuckle, Blastbark, Blinkbat's Form, Blood Crescent, Blood Raven's Charge, Bloodfist, Bloodletter, Bloodmoon, Bloodrise, Bloodthief, Bloodtree Stump, Boneflame, Boneflesh, Bonehew, Boneshade, Boneslayer Blade, Bonesnap, Brainhew, Bul-Kathos' Wedding Band, Buriza-Do Kyanon, Butcher's Pupil, Bverrit Keep, Carin Shard, Carrion Wind, Cerebus' Bite, Chance Guards, Chromatic Ire, Cliffkiller, Cloudcrack, Coif of Glory, Coldkill, Coldsteel Eye, Constricting Ring, Corpsemourn, Crainte Vomir, Cranebeak, Crescent Moon, Crow Caw, Crown of Ages, Crown of Thieves, Crushflange, Culwen's Point, Dark Clan Crusher, Darkfear, Darkforce Spawn, Darkglow, Darksight Helm, Death Cleaver, Death's Fathom, Death's Web, Deathbit, Deathspade, Demon Limb, Demon Machine, Demon's Arch, Demonhorn's Edge, Dimoak's Hew, Djinn Slayer, Doombringer, Doomslinger, Dracul's Grasp, Dragonscale, Duriel's Shell, Duskdeep, Dwarf Star, Eaglehorn, Earth Shifter, Earthshaker, Endlesshail, Eschuta's Temper, Ethereal Edge, Executioner's Justice, Felloak, Firelizard's Talons, Flamebellow, Fleshrender, Fleshripper, Frostburn, Frostwind, Gargoyle's Bite, Gerke's Sanctuary, Gheed's Fortune, Ghostflame, Ghoulhide, Giant Maimer, Giant Skull, Gimmershred, Ginther's Rift, Gleamscythe, Gloom's Trap, Goblin Toe, Goldskin, Goldstrike Arch, Goldwrap, Gore Rider, Gore Ripper, Gorefoot, Goreshovel, Gravenspine, Gravepalm, Greyform, Griffon's Eye, Grim's Burning Dead, Griswold's Edge, Guardian Angel, Guardian Naga, Gull, Gut Siphon, Halaberd's Reign, Hand of Blessed Light, Harlequin Crest, Hawkmail, Head Hunter's Glory, Headstriker, Heart Carver, Heaven's Light, Heavenly Garb, Hell Forge Hammer, Hellcast, Hellclap, Hellfire Torch, Hellmouth, Hellplague, Hellrack, Hellslayer, Herald of Zakarum, Hexfire, Highlord's Wrath, Homunculus, Hone Sundan, Horadric Staff, Horizon's Tornado, Hotspur, Howltusk, Humongous, Husoldal Evo, Iceblink, Ichorsting, Infernostride, Iron Pelt, Ironstone, Islestrike, Jade Talon, Jalal's Mane, Kelpie Snare, Khalim's Flail, Khalim's Will, Kinemil's Awl, Kira's Guardian, Knell Striker, Kuko Shakaku, Lacerator, Lance Guard, Lance of Yaggai, Langer Briser, Larzuk's Champion, Lava Gout, Leadcrow, Lenymo, Leviathan, Lidless Wall, Lightsabre, Lycander's Aim, Lycander's Flank, Maelstrom, Magefist, Magewrath, Manald Heal, Mang Song's Lesson, Mara's Kaleidoscope, Marrowwalk, Medusa's Gaze, Merman's Sprocket, Messerschmidt's Reaver, Metalgrid, Moonfall, Moser's Blessed Circle, Nagelring, Nature's Peace, Nethercrow, Nightsmoke, Nightwing's Veil, Nokozan Relic, Nord's Tenderizer, Nosferatu's Coil, Odium, Ondal's Wisdom, Ormus' Robes, Peasant Crown, Pelta Lunata, Pierre Tombale Couant, Plague Bearer, Pluckeye, Pompeii's Wrath, Pus Spitter, Que-Hegan's Wisdom, Radament's Sphere, Rainbow Facet, Rainbow Facet, Rainbow Facet, Rainbow Facet, Rainbow Facet, Rainbow Facet, Rainbow Facet, Rainbow Facet, Rakescar, Rattlecage, Raven Claw, Raven Frost, Ravenlore, Razor's Edge, Razorswitch, Razortail, Razortine, Ribcracker, Riphook, Ripsaw, Rixot's Keen, Rockfleece, Rockstopper, Rogue's Bow, Rune Master, Rusthandle, Sandstorm Trek, Saracen's Chance, Schaefer's Hammer, Seraph's Hymn, Serpent Lord, Shadow Dancer, Shadow Killer, Shadowfang, Shaftstop, Siggard's Stealth, Silks of the Victor, Silkweave, Skewer of Krintiz, Skin of the Flayed One, Skin of the Vipermagi, Skull Collector, Skull Splitter, Skullder's Ire, Skystrike, Snakecord, Snowclash, Soul Drainer, Soul Harvest, Soulfeast Tine, Soulflay, Sparking Mail, Spectral Shard, Spellsteel, Spike Thorn, Spineripper, Spire of Honor, Spire of Lazarus, Spirit Forge, Spirit Keeper, Spirit Ward, Staff of Kings, Stealskull, Steel Carapace, Steel Pillar, Steel Shade, Steelclash, Steeldriver, Steelgoad, Steelrend, Stone Crusher, Stoneraven, Stormchaser, Stormeye, Stormguild, Stormlash, Stormrider, Stormshield, Stormspike, Stormspire, Stormstrike, Stoutnail, String of Ears, Suicide Branch, Sureshrill Frost, Swordback Hold, Swordguard, Tarnhelm, Tearhaunch, Templar's Might, The Atlantean, The Battlebranch, The Cat's Eye, The Centurion, The Chieftain, The Cranium Basher, The Diggler, The Dragon Chang, The Eye of Etlich, The Face of Horror, The Fetid Sprinkler, The Gavel of Pain, The General's Tan Do Li Ga, The Gladiator's Bane, The Gnasher, The Grandfather, The Grim Reaper, The Hand of Broc, The Impaler, The Iron Jang Bong, The Jade Tan Do, The Mahim-Oak Curio, The Meat Scraper, The Minotaur, The Oculus, The Patriarch, The Reaper's Toll, The Redeemer, The Rising Sun, The Salamander, The Scalper, The Spirit Shroud, The Stone of Jordan, The Tannr Gorerod, The Vile Husk, The Ward, Thundergod's Vigor, Thunderstroke, Tiamat's Rebuke, Titan's Revenge, Todesfaelle Flamme, Tomb Reaver, Toothrow, Torch of Iro, Treads of Cthon, Twitchthroe, Tyrael's Might, Umbral Disk, Ume's Lament, Undead Crown, Valkyrie Wing, Vampire Gaze, Veil of Steel, Venom Grip, Venom Ward, Verdungo's Hearty Cord, Viperfork, Visceratuant, Wall of the Eyeless, War Traveler, Warlord's Trust, Warpspear, Warriv's Warder, Warshrike, Waterwalk, Widowmaker, Windforce, Windhammer, Wisp Projector, Witchwild String, Witherstring, Wizardspike, Wizendraw, Woestave, Wolfhowl, Wormskull, Wraith Flight, Zakarum's Hand, Zakarum's Salvation";

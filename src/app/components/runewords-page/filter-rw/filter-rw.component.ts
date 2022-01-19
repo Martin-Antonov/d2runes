@@ -7,8 +7,8 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-filter',
-  templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.scss'],
+  templateUrl: './filter-rw.component.html',
+  styleUrls: ['./filter-rw.component.scss'],
   animations: [trigger('host', [
     state('open', style({
       left: window.innerWidth > 780 ? "10px" : "0"
@@ -24,7 +24,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
     ]),
   ])]
 })
-export class FilterComponent implements OnInit {
+export class FilterRwComponent implements OnInit {
   @HostBinding("@host") get state(): string {
     return this.rs.filterOpen ? "open" : "closed";
   }

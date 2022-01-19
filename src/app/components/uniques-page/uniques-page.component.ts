@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ALL_ITEMS} from "../../services/uniques/Items";
+import {ALL_ITEMS, ALL_UNIQUES} from "../../services/uniques/Items";
 
 @Component({
   selector: 'app-uniques-page',
@@ -10,11 +10,17 @@ export class UniquesPageComponent implements OnInit {
   items = ALL_ITEMS;
 
   constructor() {
-    let sum = 0;
+    const allUniques = ALL_UNIQUES.split(', ').map((item) => {
+      return item.toLowerCase()
+    });
+    console.log(allUniques.length);
     this.items.forEach((item) => {
-      sum += item.items.length;
+      item.items.forEach((item2) => {
+        if (!allUniques.includes(item2.name.toLowerCase())) {
+          console.log(item2.name);
+        }
+      })
     })
-    console.log(sum);
   }
 
   ngOnInit(): void {

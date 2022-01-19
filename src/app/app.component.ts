@@ -1,6 +1,6 @@
 /**
 1. Refactor Runeword preview to be reusable.
- 2. Add uniques filter https://www.youtube.com/watch?v=r8SClkQB5_k
+ 2. Add uniques filter-rw https://www.youtube.com/watch?v=r8SClkQB5_k
  3. Add set items builder
  4. SSR - twitter cards, tutorial - https://fireship.io/lessons/angular-universal-firebase/
  5. instagram page

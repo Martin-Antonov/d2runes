@@ -11,7 +11,7 @@ import {TopNavComponent} from './components/top-nav/top-nav.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms";
 import {RunewordsPageComponent} from "./components/runewords-page/runewords-page.component";
-import {FilterComponent} from "./components/runewords-page/filter/filter.component";
+import {FilterRwComponent} from "./components/runewords-page/filter-rw/filter-rw.component";
 import {RunewordHoverComponent} from "./components/runewords-page/runeword-hover/runeword-hover.component";
 import { HomeComponent } from './components/home/home.component';
 import { RunewordsTableComponent } from './shared/components/runewords-table/runewords-table.component';
@@ -31,13 +31,14 @@ import { IndexComponent } from './components/cheat-sheet-page/index/index.compon
 import { MappingComponent } from './components/cheat-sheet-page/mapping/mapping.component';
 import { GamblingComponent } from './components/cheat-sheet-page/gambling/gambling.component';
 import { UniquesPageComponent } from './components/uniques-page/uniques-page.component';
+import { FilterComponent } from './shared/components/filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RunewordsPageComponent,
     RunePageComponent,
-    FilterComponent,
+    FilterRwComponent,
     RunewordHoverComponent,
     TopNavComponent,
     FooterComponent,
@@ -57,6 +58,7 @@ import { UniquesPageComponent } from './components/uniques-page/uniques-page.com
     MappingComponent,
     GamblingComponent,
     UniquesPageComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,
