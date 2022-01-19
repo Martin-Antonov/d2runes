@@ -1,0 +1,13 @@
+@import "../../../constants";
+@import "../../../responsive";
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 210px;
+
+    @include less-than(tablet) {
+      align-self: center;
+    }
+}

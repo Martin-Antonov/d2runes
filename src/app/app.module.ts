@@ -33,6 +33,7 @@ import { GamblingComponent } from './components/cheat-sheet-page/gambling/gambli
 import { UniquesPageComponent } from './components/uniques-page/uniques-page.component';
 import { FilterComponent } from './shared/components/filter/filter.component';
 import { InputComponent } from './shared/components/form-elements/input/input.component';
+import { SliderComponent } from './shared/components/form-elements/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { InputComponent } from './shared/components/form-elements/input/input.co
     UniquesPageComponent,
     FilterComponent,
     InputComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

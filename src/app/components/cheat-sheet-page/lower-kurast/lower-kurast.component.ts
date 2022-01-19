@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {LkService} from "../../../services/lk/lk.service";
 
 @Component({
@@ -6,12 +6,8 @@ import {LkService} from "../../../services/lk/lk.service";
   templateUrl: './lower-kurast.component.html',
   styleUrls: ['./lower-kurast.component.scss']
 })
-export class LowerKurastComponent implements OnInit {
+export class LowerKurastComponent {
 
   constructor(public lk: LkService) {
   }
-
-  ngOnInit(): void {
-  }
-
 }

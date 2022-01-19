@@ -123,17 +123,6 @@
           justify-content: center;
           align-items: center;
         }
-
-        .mode {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 210px;
-
-          @include less-than(tablet) {
-            align-self: center;
-          }
-        }
       }
 
       .line {
