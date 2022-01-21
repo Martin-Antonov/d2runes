@@ -1,6 +1,4 @@
-<h2 class="title">Filter</h2>
-<div class="outer-container">
-  <div class="container">
+<app-filter [opened]="rs.filterOpen" (toggle)="rs.filterOpen = !rs.filterOpen">
     <div tooltip="Reset filter" class="trash" (click)="rs.resetFilter()"></div>
     <div class="line">
       <div class="by-name-container">
@@ -124,6 +122,4 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="arrow" [ngClass]="rs.filterOpen && 'reversed'" (click)="rs.filterOpen = !rs.filterOpen"></div>
+</app-filter>

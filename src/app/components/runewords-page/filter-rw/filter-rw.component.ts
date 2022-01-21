@@ -9,26 +9,8 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   selector: 'app-filter-rw',
   templateUrl: './filter-rw.component.html',
   styleUrls: ['./filter-rw.component.scss'],
-  animations: [trigger('host', [
-    state('open', style({
-      left: window.innerWidth > 780 ? "10px" : "0"
-    })),
-    state('closed', style({
-      left: window.innerWidth > 780 ? "-690px" : "-100%"
-    })),
-    transition('closed -> open', [
-      animate('200ms ease-out', style({left: window.innerWidth > 780 ? "10px" : "0"})),
-    ]),
-    transition('open -> closed', [
-      animate('200ms ease-in', style({left: window.innerWidth > 780 ? "-690px" : "-100%"}))
-    ]),
-  ])]
 })
 export class FilterRwComponent implements OnInit {
-  @HostBinding("@host") get state(): string {
-    return this.rs.filterOpen ? "open" : "closed";
-  }
-
   options: Options = {
     floor: 13, ceil: 69, rightToLeft: false
   }
@@ -39,21 +21,13 @@ export class FilterRwComponent implements OnInit {
   sockets: Array<number>;
   stats: Array<{ name: string, searchKey: string }>;
 
-  constructor(public rs: RunesService, private host: ElementRef) {
+  constructor(public rs: RunesService) {
     this.meleeWeapons = MELEE_WEAPONS;
     this.magicWeapons = MAGIC_WEAPONS;
     this.missileWeapons = MISSILE_WEAPONS;
     this.armorTypes = ARMOR_TYPES;
     this.sockets = [2, 3, 4, 5, 6];
     this.stats = STAT_TYPES;
-
-    window.addEventListener('resize', () => {
-      if (this.rs.filterOpen) {
-        this.host.nativeElement.style.left = window.innerWidth > 780 ? '10px' : 0;
-      } else {
-        this.host.nativeElement.style.left = window.innerWidth > 780 ? '-690px' : '-100%';
-      }
-    });
   }
 
   ngOnInit(): void {
@@ -70,10 +44,6 @@ export class FilterRwComponent implements OnInit {
     }
 
     this.rs.filter();
-  }
-
-  isRuneSelected(key: string) {
-    return this.rs.filterConfig.runes.includes(key);
   }
 
   changeRune(key: string) {

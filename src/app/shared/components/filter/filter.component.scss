@@ -2,6 +2,7 @@
 @import "../../../shared/responsive";
 
 :host {
+  display: block;
   @include removeSelection();
   position: fixed;
   top: 125px;

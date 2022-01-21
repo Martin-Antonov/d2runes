@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ALL_ITEMS, ALL_UNIQUES} from "../../services/uniques/Items";
+import {UniquesService} from "../../services/uniques/uniques.service";
 
 @Component({
   selector: 'app-uniques-page',
@@ -9,7 +10,7 @@ import {ALL_ITEMS, ALL_UNIQUES} from "../../services/uniques/Items";
 export class UniquesPageComponent implements OnInit {
   items = ALL_ITEMS;
 
-  constructor() {
+  constructor(public us: UniquesService) {
     const allUniques = ALL_UNIQUES.split(', ').map((item) => {
       return item.toLowerCase()
     });
