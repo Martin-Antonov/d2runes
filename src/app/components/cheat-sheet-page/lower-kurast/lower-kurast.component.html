@@ -65,13 +65,7 @@
     <div class="calculator-container">
       <div class="player-input-container">
         <h4>Players Setting</h4>
-        <div class="input">
-          <img src="assets/toggle-arrow.png" alt="'toggle-arrow'"
-               (click)="lk.changeSelectedPlayers(-1)" class="toggle-arrow reversed">
-          <strong>{{lk.players[lk.selectedIndex]}}</strong>
-          <img src="assets/toggle-arrow.png" alt="'toggle-arrow'"
-               (click)="lk.changeSelectedPlayers(1)" class="toggle-arrow">
-        </div>
+        <app-slider [values]="lk.players" (onValueChange)="lk.changeSelectedPlayers($event)"></app-slider>
       </div>
       <div class="runes-container">
         <h4>Runes</h4>

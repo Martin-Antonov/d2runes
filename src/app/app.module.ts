@@ -32,6 +32,8 @@ import { MappingComponent } from './components/cheat-sheet-page/mapping/mapping.
 import { GamblingComponent } from './components/cheat-sheet-page/gambling/gambling.component';
 import { UniquesPageComponent } from './components/uniques-page/uniques-page.component';
 import { FilterComponent } from './shared/components/filter/filter.component';
+import { InputComponent } from './shared/components/form-elements/input/input.component';
+import { SliderComponent } from './shared/components/form-elements/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { FilterComponent } from './shared/components/filter/filter.component';
     GamblingComponent,
     UniquesPageComponent,
     FilterComponent,
+    InputComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

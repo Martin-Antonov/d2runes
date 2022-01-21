@@ -72,8 +72,8 @@ export class LkService {
     return {sum, probability, runs, time};
   }
 
-  changeSelectedPlayers(increment: number) {
-    this.selectedIndex = (this.selectedIndex + increment + this.players.length) % this.players.length;
+  changeSelectedPlayers(index: number): void {
+    this.selectedIndex = index;
   }
 
   toggleRuneVisibility(rune: string) {

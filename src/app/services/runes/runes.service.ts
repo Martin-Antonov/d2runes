@@ -154,8 +154,11 @@ export class RunesService {
     return Math.round(includedRunes.length / words.length * 100) / 100;
   }
 
-  filter() {
+  filter(ev?: any) {
     const by = this.filterConfig;
+    if (ev) {
+      by.search = ev;
+    }
     localStorage.setItem('filter', JSON.stringify(by));
     this.runewords.forEach((r: IRunewordUI) => {
       r.selected = true;

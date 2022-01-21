@@ -1,0 +1,26 @@
+@import "../../../constants";
+@import "../../../responsive";
+
+:host {
+    @include less-than(tablet) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .search {
+      height: 30px;
+      width: 180px;
+      background: transparent;
+      color: white;
+      font-family: $d2-light;
+
+      border: 2px solid #383a3a;
+      caret-color: #767676;
+      padding: 0 10px;
+      font-size: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+}
