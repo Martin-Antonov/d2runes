@@ -116,6 +116,21 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
+    name: "Pattern", word: "Tal Ort Thul", itemType: "Claws", level: 23, stats: [
+      "+30% Faster Block Rate",
+      "+40-80% Enhanced Damage (varies)",
+      "10% Bonus to Attack Rating",
+      "Adds 17-62 Fire Damage",
+      "Adds 1-50 Lightning Damage",
+      "Adds 3-14 Cold Damage",
+      "+75 Poison Damage Over 5 Seconds",
+      "+6 to Strength",
+      "+6 to Dexterity",
+      "All Resistances +15",
+    ], itemTypeShort: "Claws",
+    ladderOnly: true,
+  },
+  {
     name: "King's Grace", word: "Amn Ral Thul", itemType: "Swords/Scepters", level: 25, stats: [
       '+100% Enhanced Damage',
       '+150 to Attack Rating',
@@ -390,6 +405,26 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Polearms"
   },
   {
+    name: "Unbending Will", word: "Fal Io Ith Eld El Hel", itemType: "Swords", level: 41, stats: [
+      "18% Chance to cast Level 18 Taunt on striking",
+      "+3 To Combat Skills (Barbarian Only)",
+      "+20-30% Increased Attack Speed (varies)",
+      "+300-350% Enhanced Damage (varies)",
+      "+9 To Maximum Damage",
+      "+50 To Attack Rating",
+      "+75% Damage to Undead",
+      "+50 Attack Rating Against Undead",
+      "8-10% Life Stolen Per Hit (varies)",
+      "Prevent Monster Heal",
+      "+10 To Strength",
+      "+10 To Vitality",
+      "Damage Reduced By 8",
+      "+1 Light Radius",
+      "Requirements -20%",
+    ], itemTypeShort: "Swords",
+    ladderOnly: true
+  },
+  {
     name: "Wealth", word: "Lem Ko Tir", itemType: "Body Armor", level: 43, stats: [
       "+10 to Dexterity",
       "+2 to Mana After Each Kill",
@@ -469,6 +504,20 @@ export const RUNEWORDS_D2R = [
       "Fire Resist +30%",
       "Damage Reduced by 7",
     ], itemTypeShort: "Body Armor"
+  },
+  {
+    name: "Wisdom", word: "Pul Ith Eld", itemType: "Helms", level: 45, stats: [
+      "+33% Piercing Attack",
+      "+15-25% Bonus to Attack Rating (varies)",
+      "4-8% Mana Stolen Per Hit (varies)",
+      "+30% Enhanced Defense",
+      "+10 Energy",
+      "15% Slower Stamina Drain",
+      "Cannot Be Frozen",
+      "+5 Mana After Each Kill",
+      "15% Damage Taken Goes to Mana",
+    ], itemTypeShort: "Helms",
+    ladderOnly: true
   },
   {
     name: "Crescent Moon", word: "Shael Um Tir", itemType: "Axes/Swords/Polearms", level: 47, stats: [
@@ -729,6 +778,19 @@ export const RUNEWORDS_D2R = [
       "Level 22 Blood Golem (15 Charges)",
       "Requirements -20%",
     ], itemTypeShort: "Swords/Axes"
+  },
+  {
+    name: "Flickering Flame", word: "Nef Pul Vex", itemType: "Helms", level: 55, stats: [
+      "Level 4-8 Resist Fire Aura When Equipped (varies)",
+      "+3 To Fire Skills",
+      "-10-15% to Enemy Fire Resistance (varies)",
+      "+30% Enhanced Defense",
+      "+30 Defense Vs. Missile",
+      "+50-75 To Mana (varies)",
+      "Half Freeze Duration",
+      "+5% To Maximum Fire Resist",
+      "Poison Length Reduced by 50%",
+    ], itemTypeShort: "Helms", ladderOnly: true
   },
   {
     name: "Chaos", word: "Fal Ohm Um", itemType: "Claws", level: 57, stats: [
@@ -1134,6 +1196,61 @@ export const RUNEWORDS_D2R = [
       "Replenish Life +8",
       "(1.875*Clvl)% Extra Gold From Monsters (Based on Character Level)",
     ], itemTypeShort: "Polearms"
+  },
+  {
+    name: "Plague", word: "Cham Shael Um", itemType: "Swords", level: 67, stats: [
+      "20% Chance to cast level 12 Lower Resist when struck",
+      "25% Chance to cast level 15 Poison Nova on striking",
+      "Level 13-17 Cleansing Aura When Equipped (varies)",
+      "+1-2 All Skills",
+      "+20% Increased Attack Speed",
+      "+220-320% Enhanced Damage (varies)",
+      "-23% To Enemy Poison Resistance",
+      "0.3% (0-29.7) Deadly Strike (Based on Character Level)",
+      "+25% Chance of Open Wounds",
+      "Freezes Target +3",
+    ],
+    ladderOnly: true,
+    itemTypeShort: "Swords"
+
+  },
+  {
+    name: "Obsession",
+    word: "Zod Ist Lem Lum Io Nef",
+    itemType: "Staves",
+    level: 69,
+    stats: [
+      "Indestructible",
+      "24% Chance to cast level 10 Weaken when struck",
+      "+4 To All Skills",
+      "+65% Faster Cast Rate",
+      "+60% Faster Hit Recovery",
+      "Knockback",
+      "+10 To Vitality",
+      "+10 To Energy",
+      "Increase Maximum Life 15-25% (varies)",
+      "Regenerate Mana 15-30% (varies)",
+      "All Resistances +60-70 (varies)",
+      "75% Extra Gold from Monsters",
+      "30% Better Chance of Getting Magic Items",
+    ],
+    ladderOnly: true,
+    itemTypeShort: "Staves"
+  },
+  {
+    name: "Mist", word: "Cham Shael Gul Thul Ith", itemType: "Bows/Crossbows", level: 67, stats: [
+      "Level 8-12 Concentration Aura When Equipped (varies)",
+      "+3 To All Skills",
+      "20% Increased Attack Speed",
+      "+100% Piercing Attack",
+      "+325-375% Enhanced Damage (varies)",
+      "+9 To Maximum Damage",
+      "20% Bonus to Attack Rating",
+      "Adds 3-14 Cold Damage",
+      "Freeze Target +3",
+      "+24 Vitality",
+      "All Resistances +40",
+    ], itemTypeShort: "Missile Weapons", ladderOnly: true
   },
   {
     name: "Breath of the Dying",

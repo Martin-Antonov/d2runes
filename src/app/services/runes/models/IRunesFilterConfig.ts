@@ -1,4 +1,4 @@
-export interface IFilterConfig {
+export interface IRunesFilterConfig {
   search?: string;
   sockets?: Array<number>;
   runes?: Array<string>;
@@ -6,5 +6,6 @@ export interface IFilterConfig {
   level?: { from: number, to: number };
   stats?: Array<string>;
   pd2ModeOn?: boolean;
-  build?: {name: string, runewords: Array<string>};
+  build?: { name: string, runewords: Array<string> };
+  ladderOnly?: boolean;
 }

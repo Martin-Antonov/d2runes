@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {IRune, RUNES_D2R, RUNES_PD2} from "./models/Runes";
 import {IRunewordUI, RUNEWORDS_D2R, RUNEWORDS_PD2} from "./models/Runewords";
 import {SortOrder, SortType} from "./models/Sorting";
-import {IFilterConfig} from "./models/IFilter";
+import {IRunesFilterConfig} from "./models/IRunesFilterConfig";
 import {HERO_BUILDS, HeroBuild} from "./models/Builds";
 
 @Injectable({
@@ -14,7 +14,7 @@ export class RunesService {
   private runesPD2: Array<IRune>;
   private runewordsPD2: Array<IRunewordUI>;
 
-  filterConfig: IFilterConfig;
+  filterConfig: IRunesFilterConfig;
   hoveredRuneword: IRunewordUI;
   mousePosition: { x: number, y: number };
   hoveredRune: IRune;
@@ -38,7 +38,8 @@ export class RunesService {
       stats: [],
       search: "",
       pd2ModeOn: false,
-      build: null
+      build: null,
+      ladderOnly: false,
     };
     const filter = localStorage.getItem('filter');
     if (filter) {
@@ -92,7 +93,8 @@ export class RunesService {
       stats: [],
       search: "",
       pd2ModeOn: false,
-      build: null
+      build: null,
+      ladderOnly: false,
     };
     localStorage.clear();
     this.filter();
@@ -193,6 +195,10 @@ export class RunesService {
       if (by.build && !this.checkBuildInclusion(by, r)) {
         r.selected = false;
       }
+      // Ladder Only
+      if (by.ladderOnly && !r.ladderOnly) {
+        r.selected = false;
+      }
     });
 
     this.sortBy(this.currentSortType, this.currentSortOrder);
@@ -242,7 +248,7 @@ export class RunesService {
     return true;
   }
 
-  private checkBuildInclusion(by: IFilterConfig, r: IRunewordUI) {
+  private checkBuildInclusion(by: IRunesFilterConfig, r: IRunewordUI) {
     return Boolean(by.build.runewords.find((runeword) => {
       return runeword.toLowerCase() === r.name.toLowerCase()
     }));

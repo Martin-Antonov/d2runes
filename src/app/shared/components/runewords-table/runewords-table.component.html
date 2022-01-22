@@ -12,7 +12,7 @@
     <a [routerLink]="'/runewords/'+runeword.name.split(' ').join('').toLowerCase()"><strong
       class="runeword-info"
       (mouseenter)="rs.setRuneword($event,runeword)"
-      (mouseleave)="rs.deleteRuneword()">{{runeword.name}}
+      (mouseleave)="rs.deleteRuneword()">{{runeword.name + (runeword.ladderOnly? ' (L)':'')}}
     </strong></a>
     <div class="runes-list">
       <app-rune *ngFor="let runeName of runeword.word.split(' ')" [name]="runeName" [hoverInfoEnabled]="true"

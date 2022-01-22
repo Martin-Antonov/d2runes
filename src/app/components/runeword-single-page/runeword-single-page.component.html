@@ -5,11 +5,9 @@
   </h2>
   <strong class="item-type">{{currentRuneword.itemTypeShort}}</strong>
   <div class="runes">
-    <a class="single-rune" *ngFor="let rune of runes" [routerLink]="'/runes/'+rune.key.toLowerCase()">
-      <img class="icon" [src]="'assets/runes/'+rune.key.toLowerCase()+'.png'" [alt]="rune.key">
-      <strong class="name">{{rune.key}}</strong>
-    </a>
+    <app-rune *ngFor="let rune of runes" [name]="rune.key.toLowerCase()" [labelVisible]="false"></app-rune>
   </div>
+  <div class="word">'{{currentRuneword.word.split(' ').join('')}}'</div>
   <strong *ngFor="let stat of currentRuneword.stats" class="stat">{{stat}}</strong>
   <div class="builds" *ngIf="currentRuneword.builds?.length>0">
     <div>Good for:</div>

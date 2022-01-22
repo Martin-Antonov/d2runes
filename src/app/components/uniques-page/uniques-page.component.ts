@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ALL_ITEMS} from "../../services/uniques/Items";
+import {ALL_ITEMS} from "../../services/uniques/models/Items";
 import {UniquesService} from "../../services/uniques/uniques.service";
 
 @Component({

@@ -70,6 +70,12 @@ export class FilterRwComponent implements OnInit {
     this.rs.filter();
   }
 
+  changeLadderOnly(ev) {
+    const checked = ev.currentTarget.checked;
+    this.rs.filterConfig.ladderOnly = checked;
+    this.rs.filter();
+  }
+
   changeStat(ev, stat: string) {
     const checked = ev.currentTarget.checked;
     const stats = this.rs.filterConfig.stats;
