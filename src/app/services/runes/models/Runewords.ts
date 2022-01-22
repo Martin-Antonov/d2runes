@@ -245,7 +245,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Helms"
   },
   {
-    name: "Insight", word: "Ral Tir Tal Sol", itemType: "Polearms/Staves", level: 27, stats: [
+    name: "Insight", word: "Ral Tir Tal Sol", itemType: "Polearms/Staves/Bows/Crossbows", level: 27, stats: [
       'Level 12-17 Meditation Aura When Equipped',
       '+35% Faster Cast Rate',
       '+200-260% Enhanced Damage (varies)',
@@ -257,7 +257,7 @@ export const RUNEWORDS_D2R = [
       '+5 to All Attributes',
       '+2 to Mana After Each Kill',
       '23% Better Chance of Getting Magic Items'
-    ], itemTypeShort: "Polearms/Staves"
+    ], itemTypeShort: "Polearms/Staves/Bows/Crossbows"
   },
   {
     name: "Rhyme", word: "Shael Eth", itemType: "Shields", level: 29, stats: [
