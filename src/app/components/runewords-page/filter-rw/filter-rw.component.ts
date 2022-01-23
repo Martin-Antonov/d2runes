@@ -1,9 +1,8 @@
-import {Component, ElementRef, HostBinding, HostListener, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RunesService} from "../../../services/runes/runes.service";
 import {Options} from "@angular-slider/ngx-slider";
 import {ARMOR_TYPES, MAGIC_WEAPONS, MELEE_WEAPONS, MISSILE_WEAPONS} from "../../../services/runes/models/WeaponTypes";
 import {STAT_TYPES} from "../../../services/runes/models/StatTypes";
-import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-filter-rw',
@@ -34,6 +33,7 @@ export class FilterRwComponent implements OnInit {
   }
 
   changeSockets(ev, socket: number) {
+    debugger;
     const checked = ev.currentTarget.checked;
     const sockets = this.rs.filterConfig.sockets;
     if (checked && !sockets.includes(socket)) {

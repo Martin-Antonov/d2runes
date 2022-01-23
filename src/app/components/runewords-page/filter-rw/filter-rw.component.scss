@@ -103,18 +103,6 @@
       @include less-than(tablet) {
         justify-content: center;
       }
-
-      .socket {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-right: 10px;
-
-        span {
-          margin-top: 5px;
-        }
-      }
     }
 
     .level-container {

@@ -1,0 +1,49 @@
+@import "../../../constants";
+@import "../../../responsive";
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    span {
+      margin-top: 5px;
+    }
+
+    input {
+        display: none;
+      }
+      
+      input + label {
+        background: url(../../../../../assets/unchecked.jpg);
+        height: 33px;
+        width: 33px;
+        display: inline-block;
+      
+        &:active {
+          background: url(../../../../../assets/unchecked-active.jpg);
+        }
+      
+        &:hover {
+          filter: brightness(1.2);
+          cursor: pointer;
+        }
+      }
+      
+      input:checked + label {
+        background: url(../../../../../assets/checked.jpg);
+        height: 33px;
+        width: 33px;
+        display: inline-block;
+      
+        &:active {
+          background: url(../../../../../assets/checked-active.jpg);
+        }
+      
+        &:hover {
+          filter: brightness(1.2);
+        }
+    }
+}
+

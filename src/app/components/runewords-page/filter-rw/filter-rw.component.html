@@ -24,12 +24,14 @@
       <h3 class="subtitle">Sockets</h3>
       <hr>
       <div class="sockets">
-        <div class="socket" *ngFor="let socket of sockets">
-          <input type="checkbox" [id]="'socket'+socket" (change)="changeSockets($event, socket)"
-                 [checked]="rs.filterConfig.sockets.includes(socket)">
-          <label [for]="'socket'+socket"></label>
-          <span>{{socket}}</span>
-        </div>
+          <app-checkbox
+            *ngFor="let socket of sockets"
+            name="socket"
+            [label]="socket"
+            labelPosition="vertical"
+            [checked]="rs.filterConfig.sockets.includes(socket)"
+            (checkboxChange)="changeSockets($event, socket)">
+          </app-checkbox>
       </div>
     </div>
 
