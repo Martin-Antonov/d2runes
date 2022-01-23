@@ -3,7 +3,7 @@
 
 :host {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-right: 10px;
 
@@ -12,38 +12,47 @@
     }
 
     input {
-        display: none;
+      display: none;
+    }
+      
+    input + label {
+      background: url(../../../../../assets/unchecked.jpg);
+      height: 33px;
+      width: 33px;
+      display: inline-block;
+    
+      &:active {
+        background: url(../../../../../assets/unchecked-active.jpg);
       }
-      
-      input + label {
-        background: url(../../../../../assets/unchecked.jpg);
-        height: 33px;
-        width: 33px;
-        display: inline-block;
-      
-        &:active {
-          background: url(../../../../../assets/unchecked-active.jpg);
-        }
-      
-        &:hover {
-          filter: brightness(1.2);
-          cursor: pointer;
-        }
+    
+      &:hover {
+        filter: brightness(1.2);
+        cursor: pointer;
       }
-      
-      input:checked + label {
-        background: url(../../../../../assets/checked.jpg);
-        height: 33px;
-        width: 33px;
-        display: inline-block;
-      
-        &:active {
-          background: url(../../../../../assets/checked-active.jpg);
-        }
-      
-        &:hover {
-          filter: brightness(1.2);
-        }
+    }
+    
+    input:checked + label {
+      background: url(../../../../../assets/checked.jpg);
+      height: 33px;
+      width: 33px;
+      display: inline-block;
+    
+      &:active {
+        background: url(../../../../../assets/checked-active.jpg);
+      }
+    
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    strong {
+      margin-left: 5px;
+      font-size: 18px;
+    }
+
+    @include less-than(tablet) {
+      font-size: 14px;
     }
 }
 

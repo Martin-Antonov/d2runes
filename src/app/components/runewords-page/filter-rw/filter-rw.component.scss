@@ -154,11 +154,6 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
-
-    strong {
-      margin-left: 5px;
-      font-size: 18px;
-    }
   }
 
   .item-or-hero-type {
@@ -183,23 +178,6 @@
     span {
       margin-left: 5px;
     }
-  }
-
-
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  margin-top: 5px;
-
-  @include less-than(tablet) {
-    font-size: 14px;
-  }
-
-  strong {
-    margin-left: 5px;
   }
 }
 
