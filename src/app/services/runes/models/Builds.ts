@@ -1,29 +1,47 @@
+export const BUDGET_BUILD = ["Spectral Shard", "Suicide Branch", "Skullder\'s Ire", "Skin of the Vipermagi", "Nightsmoke", "Goldwrap", "Snowclash",
+  "Moser\'s Blessed Circle", "Peasant Crown", "Tarnhelm", "Rockstopper", "Magefist", "Frostburn", "Chance Guards", "Bloodfist", "Waterwalk"];
+
 export const HERO_BUILDS = [
   {
     hero: "Sorceress", abbr: "(S)", builds: [
       {
         name: 'Blizzard',
-        runewords: ["Chains of Honor", "Spirit", "Call to Arms", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore", "Smoke", "Stealth"]
+        runewords: ["Chains of Honor", "Spirit", "Call to Arms", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore", "Smoke", "Stealth"],
+        items: ["Death\'s Fathom", "Nightwing\'s Veil", "Mara\'s Kaleidoscope", "The Stone of Jordan",
+          "Bul-Kathos' Wedding Band", "Arachnid Mesh", "Sandstorm Trek", "The Oculus", "Shako", "War Traveler", "Nagelring", "Hellfire Torch", "Annihilus"]
       },
       {
         name: 'Meteorb',
-        runewords: ["Heart of the Oak", "Chains of Honor", "Spirit", "Leaf", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"]
+        runewords: ["Heart of the Oak", "Chains of Honor", "Spirit", "Leaf", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
+        items: ["Shako", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Arachnid Mesh", "The Stone of Jordan", "Bul-Kathos\'s Wedding Band",
+          "Magefist", "War Traveler", "Chance Guards", "Goldwrap", "Nagelring", "Hellfire Torch", "Annihilus"]
       },
       {
         name: 'Fire',
-        runewords: ["Spirit", "Chains Of Honor", "Leaf", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore", "Call to Arms"]
+        runewords: ["Spirit", "Chains Of Honor", "Leaf", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore", "Call to Arms"],
+        items: ["Eschuta\'s Temper", "Shako", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Arachnid Mesh", "The Stone of Jordan", "Bul-Kathos\'s Wedding Band",
+          "Magefist", "Ormus\' Robes", "Hellfire Torch", "Annihilus",
+          "War Traveler", "Chance Guards", "Goldwrap", "Nagelring",]
       },
       {
         name: 'Lightning',
-        runewords: ["Spirit", "Chains of Honor", "Memory", "Call to Arms", "Heart of the Oak", "Crescent Moon", "Infinity", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Nadir", "Lore"]
-      },
+        runewords: ["Spirit", "Chains of Honor", "Memory", "Call to Arms", "Heart of the Oak", "Crescent Moon", "Infinity", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Nadir", "Lore"],
+        items: ["Eschuta\'s Temper", "Griffon\'s Eye", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Arachnid Mesh", "Frostburn", "The Stone of Jordan", "Bul-Kathos\'s Wedding Band",
+          "Ormus\' Robes", "Hellfire Torch", "Annihilus",
+          "Shako", "War Traveler", "Chance Guards", "Goldwrap", "Nagelring",]},
       {
         name: 'Enchantress',
-        runewords: ["Call to Arms", "Spirit", "Passion", "Phoenix", "Chains of Honor", "Heart of the Oak", "Leaf", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"]
+        runewords: ["Call to Arms", "Spirit", "Passion", "Phoenix", "Chains of Honor", "Heart of the Oak", "Leaf", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
+        items: ["Griffon\'s Eye", "Shako", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Arachnid Mesh", "The Stone of Jordan", "Bul-Kathos\'s Wedding Band",
+          "Magefist", "Ormus\' Robes", "Hellfire Torch", "Annihilus",
+          "War Traveler", "Chance Guards", "Goldwrap", "Nagelring",]
       },
       {
         name: 'Bear',
-        runewords: ["Spirit", "Beast", "Dream", "Chains of honor", "Call to Arms"]
+        runewords: ["Spirit", "Beast", "Dream", "Chains of honor", "Call to Arms"],
+        items: ["Dracul\'s Grasp", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Verdungo\'s Hearty Cord", "The Stone of Jordan", "Bul-Kathos\'s Wedding Band", "Raven Frost",
+          "Magefist", "Ormus\' Robes", "Gore Rider", "Hellfire Torch", "Annihilus",
+         ]
       },
     ]
   },
@@ -31,23 +49,30 @@ export const HERO_BUILDS = [
     hero: "Paladin", abbr: "(P)", builds: [
       {
         name: 'Smiter',
-        runewords: ["Grief", "Chains of Honor", "Exile", "Call to Arms", "Spirit", "Last Wish", "Strength", "Steel", "Black", "Duress", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary"]
+        runewords: ["Grief", "Chains of Honor", "Exile", "Call to Arms", "Spirit", "Last Wish", "Strength", "Steel", "Black", "Duress", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary"],
+        items: ["Mara\'s Kaleidoscope", "Highlord\'s Wrath", "Kira\'s Guardian", "Herald of Zakarum", "Dracul\'s Grasp", "Raven Frost", "Verdungo\'s Hearty Cord", "Thundergod\'s Vigor", "Dwarf Star", "Gore Rider", "Goblin Toe", "Hellfire Torch", "Annihilus",]
       },
       {
         name: 'Hammerdin',
-        runewords: ["Enigma", "Call to Arms", "Spirit", "Heart of the oak", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"]
+        runewords: ["Enigma", "Call to Arms", "Spirit", "Heart of the oak", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
+        items: ["Shako", "Mara\'s Kaleidoscope", "Herald of Zakarum","Sandstorm Trek", "Arachnid Mesh", "The Stone of Jordan", "Bul-Kathos\'s Wedding Band",
+           "War Traveler", "Chance Guards", "Nagelring", "Hellfire Torch", "Annihilus"]
       },
       {
         name: 'Zealot',
-        runewords: ["Grief", "Exile", "Fortitude", "Last Wish", "Phoenix", "Malice", "Strength", "Steel", "Honor", "Stealth", "Duress", "Treachery", "Ancient's Pledge", "Rhyme", "Sanctuary"]
+        runewords: ["Grief", "Exile", "Fortitude", "Last Wish", "Phoenix", "Malice", "Strength", "Steel", "Honor", "Stealth", "Duress", "Treachery", "Ancient's Pledge", "Rhyme", "Sanctuary"],
+        items: ["Highlord\'s Wrath", "Herald of Zakarum", "Raven Frost", "Kira\'s Guardian", "Verdungo\'s Hearty Cord", "Dracul\'s Grasp", "Gore Rider", "Goblin Toe", "Hellfire Torch", "Annihilus",]
       },
       {
         name: 'Tesladin',
-        runewords: ["Grief", "Dream", "Fortitude", "Crescent Moon", "Call to Arms", "Spirit", "Honor", "Black", "Strength", "Duress", "Treachery", "Rhyme", "Ancient's Pledge", "Sanctuary", "Lore"]
+        runewords: ["Grief", "Dream", "Fortitude", "Crescent Moon", "Call to Arms", "Spirit", "Honor", "Black", "Strength", "Duress", "Treachery", "Rhyme", "Ancient's Pledge", "Sanctuary", "Lore"],
+        items: ["Highlord\'s Wrath", "Dwarf Star", "Raven Frost", "Verdungo\'s Hearty Cord", "Dracul\'s Grasp", "Gore Rider", "Goblin Toe",
+          "War Traveler", "Chance Guards", "Goldwrap", "Nagelring","Hellfire Torch", "Annihilus", "Thundergod\'s Vigor"]
       },
       {
         name: 'Holy Freeze Zealot',
-        runewords: ["Doom", "Exile", "Fortitude", "Grief", "Last Wish", "Phoenix", "Oath", "Honor", "Malice", "Steel", "Strength", "Stealth", "Duress", "Treachery", "Smoke", "Sanctuary", "Rhyme", "Ancient's Pledge", "Spirit", "Lore"]
+        runewords: ["Doom", "Exile", "Fortitude", "Grief", "Last Wish", "Phoenix", "Oath", "Honor", "Malice", "Steel", "Strength", "Stealth", "Duress", "Treachery", "Smoke", "Sanctuary", "Rhyme", "Ancient's Pledge", "Spirit", "Lore"],
+        items: ["Highlord\'s Wrath", "Herald of Zakarum", "Raven Frost", "Kira\'s Guardian", "Verdungo\'s Hearty Cord", "Dracul\'s Grasp", "Gore Rider", "Goblin Toe", "Hellfire Torch", "Annihilus",]
       },
       {
         name: 'Avenger',
@@ -162,7 +187,8 @@ export const HERO_BUILDS = [
   {
     hero: "Mercenary", abbr: '(MERC)', builds: [
       {
-        name: "Mercenary", runewords: ["Obedience", "Fortitude", "Infinity", "Insight", "Treachery", "Duress", "Breath of the Dying"]
+        name: "Mercenary",
+        runewords: ["Obedience", "Fortitude", "Infinity", "Insight", "Treachery", "Duress", "Breath of the Dying"]
       }
     ]
   }
