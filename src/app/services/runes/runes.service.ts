@@ -157,8 +157,9 @@ export class RunesService {
   }
 
   filter(ev?: any) {
+    debugger;
     const by = this.filterConfig;
-    if (ev) {
+    if (ev || ev === "") {
       by.search = ev;
     }
     localStorage.setItem('filter', JSON.stringify(by));
