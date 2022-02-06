@@ -1,0 +1,12 @@
+<header><h1 class="header">{{currentItem ? currentItem.quality : ''}} Item</h1></header>
+<div class="container" *ngIf="currentItem">
+  <img *ngIf="currentItem" [src]="currentItem.img" [alt]="currentItem.name">
+  <h2 class="title first-title">{{currentItem.name}}</h2>
+  <h3 class="title">{{currentItem.type}}</h3>
+  <strong *ngFor="let stat of currentItem.stats.split('\n')" class="stat">{{stat}}</strong>
+  <strong *ngFor="let stat of currentItem.magicStats.split('\n')" class="magic-stat">{{stat}}</strong>
+  <div class="builds" *ngIf="currentItem.builds?.length>0">
+    <div>Good for:</div>
+    <strong class="heroes">{{currentItem.builds.join(' ')}}</strong>
+  </div>
+</div>

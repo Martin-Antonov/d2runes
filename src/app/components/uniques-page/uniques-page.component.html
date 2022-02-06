@@ -8,6 +8,7 @@
       <div class="specific-items-container" [ngStyle]="{'justify-content': item.itemType === 'Charms'?'center':''}">
         <ng-container *ngFor="let specificItem of item.items">
           <div *ngIf="specificItem.selected" class="specific-item"
+               [routerLink]="specificItem.name.toLowerCase().split(' ').join('-').split('\'').join('')"
           >
             <h3 class="name">{{specificItem.name}}</h3>
             <h3 class="type">{{specificItem.type}}</h3>

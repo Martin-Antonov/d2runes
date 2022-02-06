@@ -47,6 +47,12 @@
         justify-content: center;
         align-items: center;
         width: 25%;
+
+        &:hover {
+          cursor: pointer;
+          filter: brightness(1.5);
+        }
+
         @include less-than(tablet) {
           width: 33%;
         }

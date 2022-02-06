@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UniquesService} from "../../../services/uniques/uniques.service";
-import {ItemType, QualityType, SubType} from "../../../services/uniques/models/Items";
+import {Hero, ItemType, QualityType, SubType} from "../../../services/uniques/models/Items";
+import {STAT_TYPES} from "../../../services/runes/models/StatTypes";
 
 @Component({
   selector: 'app-filter-items',
@@ -11,6 +12,8 @@ export class FilterItemsComponent implements OnInit {
   qualitiesArr: Array<QualityType> = [QualityType.NONE, QualityType.NORMAL, QualityType.EXCEPTIONAL, QualityType.ELITE];
   typesArr: Array<ItemType> = [ItemType.CHARMS, ItemType.JEWELS, ItemType.AMULETS, ItemType.RINGS, ItemType.BELTS, ItemType.BOOTS, ItemType.GLOVES, ItemType.HELMS, ItemType.ARMORS, ItemType.SHIELDS, ItemType.WEAPONS,]
   weaponTypesArr: Array<SubType> = [SubType.AXE, SubType.BOW, SubType.CROSSBOW, SubType.DAGGER, SubType.MACE, SubType.POLEARM, SubType.SCEPTER, SubType.SPEAR, SubType.JAVELIN, SubType.STAFF, SubType.SWORD, SubType.THROW, SubType.KATAR, SubType.WAND,]
+  heroesArr: Array<Hero> = [Hero.AMAZON, Hero.ASSASSIN, Hero.NECROMANCER, Hero.SORCERESS, Hero.BARBARIAN, Hero.DRUID, Hero.PALADIN]
+  stats = STAT_TYPES;
 
   constructor(public us: UniquesService) {
   }
@@ -60,6 +63,25 @@ export class FilterItemsComponent implements OnInit {
   changeBuild(ev: any, build: { name: string; runewords: Array<string>; items: Array<string> }) {
     const checked = ev.currentTarget.checked;
     this.us.filterConfig.build = checked ? build : null;
+    this.us.filter();
+  }
+
+  changeHero(ev: any, hero: Hero) {
+    const checked = ev.currentTarget.checked;
+    this.us.filterConfig.hero = checked ? hero : null;
+    this.us.filter();
+  }
+
+  changeStat(ev, stat: string) {
+    const checked = ev.currentTarget.checked;
+    const stats = this.us.filterConfig.stats;
+    if (checked && !stats.includes(stat)) {
+      stats.push(stat);
+    }
+    if (!checked && stats.includes(stat)) {
+      stats.splice(stats.indexOf(stat), 1);
+    }
+
     this.us.filter();
   }
 }

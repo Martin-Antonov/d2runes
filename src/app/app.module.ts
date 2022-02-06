@@ -38,6 +38,7 @@ import { CheckboxComponent } from './shared/components/form-elements/checkbox/ch
 import { RangesliderComponent } from './shared/components/form-elements/rangeslider/rangeslider.component';
 import { ItemPreviewComponent } from './components/uniques-page/item-preview/item-preview.component';
 import { FilterItemsComponent } from './components/uniques-page/filter-items/filter-items.component';
+import { ItemPageComponent } from './components/item-page/item-page.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { FilterItemsComponent } from './components/uniques-page/filter-items/fil
     RangesliderComponent,
     ItemPreviewComponent,
     FilterItemsComponent,
+    ItemPageComponent,
   ],
   imports: [
     BrowserModule,

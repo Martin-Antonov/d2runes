@@ -16,7 +16,7 @@
       <hr>
       <app-checkbox
         *ngFor="let quality of qualitiesArr"
-        name="socket"
+        name="quality"
         [label]="quality"
         [checked]="us.filterConfig.qualities.includes(quality)"
         (checkboxChange)="changeQuality($event, quality)">
@@ -37,6 +37,17 @@
     </div>
   </div>
   <div class="line">
+    <div class="hero-class-container">
+      <h3 class="subtitle">Hero Skills</h3>
+      <hr>
+      <app-checkbox
+        *ngFor="let hero of heroesArr"
+        name="hero"
+        [label]="hero"
+        [checked]="us.filterConfig.hero === hero"
+        (checkboxChange)="changeHero($event, hero)">
+      </app-checkbox>
+    </div>
     <div class="item-type-container">
       <h3 class="subtitle">Weapon Type</h3>
       <hr>
@@ -52,17 +63,28 @@
     </div>
   </div>
 
-    <h3 class="subtitle">Hero Builds</h3>
-    <hr style="margin-bottom: 0">
-    <div class="item-or-hero-type" style="margin-bottom: 15px;">
-      <div class="column" *ngFor="let heroBuild of us.heroBuilds">
-        <h4 class="small-title" style="margin-top:10px;">{{heroBuild.hero}}</h4>
-        <app-checkbox
-          *ngFor="let build of heroBuild.builds"
-          [label]="build.name"
-          [checked]="us.filterConfig.build?.name === build.name"
-          (checkboxChange)="changeBuild($event, build)">
-        </app-checkbox>
-      </div>
+  <h3 class="subtitle">Stats</h3>
+  <hr>
+  <div class="stats">
+    <app-checkbox
+      *ngFor="let stat of stats"
+      [label]="stat.name"
+      [checked]="us.filterConfig.stats.includes(stat.searchKey)"
+      (checkboxChange)="changeStat($event, stat.searchKey)">
+    </app-checkbox>
+  </div>
+
+  <h3 class="subtitle">Hero Builds</h3>
+  <hr style="margin-bottom: 0">
+  <div class="item-or-hero-type" style="margin-bottom: 15px;">
+    <div class="column" *ngFor="let heroBuild of us.heroBuilds">
+      <h4 class="small-title" style="margin-top:10px;">{{heroBuild.hero}}</h4>
+      <app-checkbox
+        *ngFor="let build of heroBuild.builds"
+        [label]="build.name"
+        [checked]="us.filterConfig.build?.name === build.name"
+        (checkboxChange)="changeBuild($event, build)">
+      </app-checkbox>
+    </div>
   </div>
 </app-filter>

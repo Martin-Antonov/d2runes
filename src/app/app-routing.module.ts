@@ -11,13 +11,13 @@ import {UsefulRecipesComponent} from "./components/cheat-sheet-page/useful-recip
 import {LowerKurastComponent} from "./components/cheat-sheet-page/lower-kurast/lower-kurast.component";
 import {FChartsComponent} from "./components/cheat-sheet-page/f-charts/f-charts.component";
 import {UniquesPageComponent} from "./components/uniques-page/uniques-page.component";
+import {ItemPageComponent} from "./components/item-page/item-page.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'runewords', pathMatch: "full"},
   {path: 'home', component: HomeComponent},
   {
     path: 'runewords', children: [
-
       {path: '', component: RunewordsPageComponent},
       {path: ':runewordId', component: RunewordSinglePageComponent},
     ]
@@ -28,7 +28,10 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'uniques', component: UniquesPageComponent
+    path: 'uniques', children: [
+      {path: '', component: UniquesPageComponent},
+      {path: ':item', component: ItemPageComponent}
+    ]
   },
   {
     path: 'cheatsheet', children: [

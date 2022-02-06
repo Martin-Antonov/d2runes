@@ -25,7 +25,7 @@ export class UniquesService {
       itemSubtypes: [],
       qualities: [],
       stats: [],
-      heroSpecific: [],
+      hero: null,
       build: null,
     }
     const filter = localStorage.getItem('uniques-filter');
@@ -59,7 +59,7 @@ export class UniquesService {
             }
           }
           foundItem.builds = foundItem.builds ?? [];
-          foundItem.builds.push(build.name);
+          foundItem.builds.push(hb.abbr + build.name);
         });
       });
     });
@@ -72,7 +72,7 @@ export class UniquesService {
       itemSubtypes: [],
       qualities: [],
       stats: [],
-      heroSpecific: [],
+      hero: null,
       build: null,
     }
     localStorage.setItem("uniques-filter", null);
@@ -105,6 +105,10 @@ export class UniquesService {
           if (by.qualities.length > 0 && !by.qualities.includes(i.quality)) {
             i.selected = false;
           }
+          //heroes
+          if (by.hero && !(i.stats.includes(by.hero + ' Only') || i.magicStats.includes(by.hero))) {
+            i.selected = false;
+          }
           // Stat
           if (by.stats.length > 0 && !this.checkItemStatsInclusion(by.stats, i.magicStats)) {
             i.selected = false;
@@ -133,8 +137,8 @@ export class UniquesService {
     return by.itemTypes.length > 0 && !by.itemTypes.includes(iG.itemType) || (by.itemSubtypes.length > 0 && iG.itemSubtype && !by.itemSubtypes.includes(iG.itemSubtype))
   }
 
-  private checkItemStatsInclusion(stats: Array<string>, itemStats: Array<string>) {
-    const itemStatsToLower = itemStats.join(", ").toLowerCase();
+  private checkItemStatsInclusion(stats: Array<string>, itemStats: string) {
+    const itemStatsToLower = itemStats.toLowerCase();
     for (let i = 0; i < stats.length; i++) {
       const currentStat = stats[i].toLowerCase();
       if (currentStat === "skill") {

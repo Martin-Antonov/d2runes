@@ -41,6 +41,27 @@
     }
   }
 
+  .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 100%;
+
+    @include less-than(tablet) {
+      height: 280px;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  .hero-class-container {
+    margin-bottom: 20px;
+  }
+
   .item-or-hero-type {
     display: flex;
     flex-direction: row;

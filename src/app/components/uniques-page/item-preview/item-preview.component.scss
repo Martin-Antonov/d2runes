@@ -15,4 +15,20 @@
   .magic-stat {
     color: $blue;
   }
+
+  .builds {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    max-width: 500px;
+    margin-top: 15px;
+
+    .heroes {
+      color: $gold;
+      text-align: center;
+    }
+  }
 }

@@ -11,7 +11,9 @@ import {PREVIEW_ANIMATION} from "../../../shared/Animations";
 export class ItemPreviewComponent implements OnInit {
   @HostBinding("@i")
   @Input() item: ISpecificItem;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
