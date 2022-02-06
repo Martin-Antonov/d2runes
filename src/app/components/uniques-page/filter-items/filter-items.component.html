@@ -1,0 +1,68 @@
+<app-filter [opened]="us.filterOpen" (toggle)="us.filterOpen = !us.filterOpen">
+  <div tooltip="Reset filter" class="trash" (click)="us.resetFilter()"></div>
+  <div class="line">
+    <div class="by-name-container">
+      <h3 class="subtitle">Find by Name</h3>
+      <hr>
+      <app-input
+        [value]="us.filterConfig.search"
+        (valueChange)="us.filter($event)">
+      </app-input>
+    </div>
+  </div>
+  <div class="line">
+    <div class="quality-container">
+      <h3 class="subtitle">Quality</h3>
+      <hr>
+      <app-checkbox
+        *ngFor="let quality of qualitiesArr"
+        name="socket"
+        [label]="quality"
+        [checked]="us.filterConfig.qualities.includes(quality)"
+        (checkboxChange)="changeQuality($event, quality)">
+      </app-checkbox>
+    </div>
+    <div class="item-type-container">
+      <h3 class="subtitle">Type</h3>
+      <hr>
+      <div class="item-types">
+        <app-checkbox
+          *ngFor="let type of typesArr"
+          name="socket"
+          [label]="type"
+          [checked]="us.filterConfig.itemTypes.includes(type)"
+          (checkboxChange)="changeType($event, type)">
+        </app-checkbox>
+      </div>
+    </div>
+  </div>
+  <div class="line">
+    <div class="item-type-container">
+      <h3 class="subtitle">Weapon Type</h3>
+      <hr>
+      <div class="item-types weapons">
+        <app-checkbox
+          *ngFor="let type of weaponTypesArr"
+          name="socket"
+          [label]="type"
+          [checked]="us.filterConfig.itemSubtypes.includes(type)"
+          (checkboxChange)="changeWeaponType($event, type)">
+        </app-checkbox>
+      </div>
+    </div>
+  </div>
+
+    <h3 class="subtitle">Hero Builds</h3>
+    <hr style="margin-bottom: 0">
+    <div class="item-or-hero-type" style="margin-bottom: 15px;">
+      <div class="column" *ngFor="let heroBuild of us.heroBuilds">
+        <h4 class="small-title" style="margin-top:10px;">{{heroBuild.hero}}</h4>
+        <app-checkbox
+          *ngFor="let build of heroBuild.builds"
+          [label]="build.name"
+          [checked]="us.filterConfig.build?.name === build.name"
+          (checkboxChange)="changeBuild($event, build)">
+        </app-checkbox>
+      </div>
+  </div>
+</app-filter>

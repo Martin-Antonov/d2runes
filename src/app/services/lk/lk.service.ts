@@ -53,7 +53,6 @@ export class LkService {
         return runes.indexOf(rune1) > runes.indexOf(rune2) ? 1 : -1;
       })
     })
-    console.log(this.probablity);
   }
 
   public get probablity(): { sum: number, probability: number, runs: number, time: number } {

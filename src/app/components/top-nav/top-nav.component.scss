@@ -46,8 +46,8 @@
           width: 180px;
           height: 120px;
           @include less-than(tablet) {
-            width: 120px;
-            height: 80px;
+            width: 60px;
+            height: 40px;
             margin-left: 5px;
           }
 
@@ -66,6 +66,9 @@
         margin: 0 30px;
         text-align: center;
         color: $gold;
+        display:flex;
+        justify-content: center;
+        align-items: center;
 
         @include less-than(desktop) {
           margin: 10px;

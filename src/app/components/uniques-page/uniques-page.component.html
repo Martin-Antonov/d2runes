@@ -1,12 +1,25 @@
-<app-filter [opened]="us.filterOpen" (toggle)="us.filterOpen = !us.filterOpen"></app-filter>
-<div class="table-container">
-  <div *ngFor="let item of items">
-    {{item.itemType}} {{item.items.length}}
-    <div *ngFor="let specificItem of item.items" class="specific-item">
-      <img [src]="specificItem.img" [alt]="specificItem.name + ' image'">
-      <div>{{specificItem.name}}</div>
-      <div>{{specificItem.type}}</div>
+<app-filter-items></app-filter-items>
+<h1>Uniques Explorer</h1>
+<div class="table-container" [@table]="animationCondition">
+  <ng-container *ngFor="let item of us.items">
+    <div *ngIf="item.selected">
+      <h2>{{item.itemSubtype ? item.itemSubtype : item.itemType}}</h2>
+      <hr>
+      <div class="specific-items-container" [ngStyle]="{'justify-content': item.itemType === 'Charms'?'center':''}">
+        <ng-container *ngFor="let specificItem of item.items">
+          <div *ngIf="specificItem.selected" class="specific-item"
+          >
+            <h3 class="name">{{specificItem.name}}</h3>
+            <h3 class="type">{{specificItem.type}}</h3>
+            <img [src]="specificItem.img" [alt]="specificItem.name + ' image'"
+                 (mouseenter)="us.setHoveredItem($event, specificItem)"
+                 (mouseleave)="us.removeHoveredItem()">
+          </div>
+        </ng-container>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </div>
 
+<app-item-preview *ngIf="us.hoveredItem" [item]="us.hoveredItem"
+                  [style.transform]="runeHoverTransform"></app-item-preview>

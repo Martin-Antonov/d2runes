@@ -1,9 +1,9 @@
 export enum ItemType {
-  BELTS = 'Belts',
-  RINGS = 'Rings',
-  AMULETS = 'Amulets',
   CHARMS = 'Charms',
   JEWELS = 'Jewels',
+  AMULETS = 'Amulets',
+  RINGS = 'Rings',
+  BELTS = 'Belts',
   BOOTS = 'Boots',
   GLOVES = 'Gloves',
   HELMS = 'Helms',
@@ -13,27 +13,27 @@ export enum ItemType {
 }
 
 export enum QualityType {
-  NONE,
-  NORMAL,
-  EXCEPTIONAL,
-  ELITE
+  NONE = 'None',
+  NORMAL = 'Normal',
+  EXCEPTIONAL = 'Exceptional',
+  ELITE = 'Elite'
 }
 
 export enum SubType {
-  AXE = 'Axe',
-  BOW = 'Bow',
-  CROSSBOW = 'Crossbow',
-  DAGGER = 'Dagger',
-  MACE = 'Mace',
-  POLEARM = 'Polearm',
-  SCEPTER = 'Scepter',
-  SPEAR = 'Spear',
-  JAVELIN = 'Javelin',
-  STAFF = 'Staff',
-  SWORD = 'Sword',
+  AXE = 'Axes',
+  BOW = 'Bows',
+  CROSSBOW = 'Crossbows',
+  DAGGER = 'Daggers',
+  MACE = 'Maces',
+  POLEARM = 'Polearms',
+  SCEPTER = 'Scepters',
+  SPEAR = 'Spears',
+  JAVELIN = 'Javelins',
+  STAFF = 'Staves',
+  SWORD = 'Swords',
   THROW = 'Throw',
-  WAND = 'Wand',
-  KATAR = 'Katar'
+  WAND = 'Wands',
+  KATAR = 'Katars'
 }
 
 export enum Hero {
@@ -66,6 +66,263 @@ export interface ISpecificItem {
 }
 
 export const ALL_ITEMS: Array<IItemGroup> = [
+
+  {
+    itemType: ItemType.CHARMS, items: [
+      {
+        name: 'Annihilus',
+        type: 'Small Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/annihilus.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Hellfire Torch',
+        type: 'Large Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/torch.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Gheed\'s Fortune',
+        type: 'Grand Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/gheed\'s-fortune.jpg',
+        stats: [],
+        magicStats: []
+      },
+    ]
+  },
+  {
+    itemType: ItemType.JEWELS, items: [
+      {
+        name: 'Rainbow Facet',
+        type: 'Jewel',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Rainbow Facet',
+        type: 'Jewel',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Rainbow Facet',
+        type: 'Jewel',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Rainbow Facet',
+        type: 'Jewel',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Rainbow Facet',
+        type: 'Jewel',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Rainbow Facet',
+        type: 'Jewel',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+    ]
+  },
+  {
+    itemType: ItemType.AMULETS, items: [
+      {
+        name: 'Nokozan Relic',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'The Eye of Etlich',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'The Mahim-Oak Curio',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Saracen\'s Chance',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'The Cat\'s Eye',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Crescent Moon',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Atma\'s Scarab',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'The Rising Sun',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Highlord\'s Wrath',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Mara\'s Kaleidoscope',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Seraph\'s Hymn',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Metalgrid',
+        type: 'Amulet',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+    ]
+  },
+  {
+    itemType: ItemType.RINGS, items: [
+      {
+        name: 'Nagelring',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Manald Heal',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Stone of Jordan',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Dwarf Star',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Raven Frost',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Bul-Kathos\' Wedding Band',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Carrion Wind',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Nature\'s Peace',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Wisp Projector',
+        type: 'Ring',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
+        stats: [],
+        magicStats: []
+      },
+    ]
+  },
   {
     itemType: ItemType.BELTS, items: [
       {
@@ -174,262 +431,7 @@ export const ALL_ITEMS: Array<IItemGroup> = [
       },
     ]
   },
-  {
-    itemType: ItemType.RINGS, items: [
-      {
-        name: 'Nagelring',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Manald Heal',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Stone of Jordan',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Dwarf Star',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Raven Frost',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Bul-Kathos\' Wedding Band',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Carrion Wind',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Nature\'s Peace',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Wisp Projector',
-        type: 'Ring',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/rings/' + Math.floor(Math.random() * 5) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-    ]
-  },
-  {
-    itemType: ItemType.AMULETS, items: [
-      {
-        name: 'Nokozan Relic',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'The Eye of Etlich',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'The Mahim-Oak Curio',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Saracen\'s Chance',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'The Cat\'s Eye',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Crescent Moon',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Atma\'s Scarab',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'The Rising Sun',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Highlord\'s Wrath',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Mara\'s Kaleidoscope',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Seraph\'s Hymn',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Metalgrid',
-        type: 'Amulet',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/amulets/' + Math.floor(Math.random() * 3) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-    ]
-  },
-  {
-    itemType: ItemType.CHARMS, items: [
-      {
-        name: 'Annihilus',
-        type: 'Small Charm',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/charms/annihilus.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Hellfire Torch',
-        type: 'Large Charm',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/charms/torch.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Gheed\'s Fortune',
-        type: 'Grand Charm',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/charms/gheed\'s-fortune.jpg',
-        stats: [],
-        magicStats: []
-      },
-    ]
-  },
-  {
-    itemType: ItemType.JEWELS, items: [
-      {
-        name: 'Rainbow Facet',
-        type: 'Jewel',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Rainbow Facet',
-        type: 'Jewel',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Rainbow Facet',
-        type: 'Jewel',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Rainbow Facet',
-        type: 'Jewel',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Rainbow Facet',
-        type: 'Jewel',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-      {
-        name: 'Rainbow Facet',
-        type: 'Jewel',
-        quality: QualityType.NONE,
-        img: 'assets/items/unique/jewels/' + Math.floor(Math.random() * 6) + '.jpg',
-        stats: [],
-        magicStats: []
-      },
-    ]
-  },
+
   {
     itemType: ItemType.BOOTS, items: [
       {
@@ -1142,7 +1144,7 @@ export const ALL_ITEMS: Array<IItemGroup> = [
       },
       {
         name: 'Atma\'s Wail',
-        type: 'Embossed Playe',
+        type: 'Embossed Plate',
         quality: QualityType.EXCEPTIONAL,
         img: 'assets/items/unique/armors/atma\'s-wail.jpg',
         stats: [],
@@ -1161,6 +1163,14 @@ export const ALL_ITEMS: Array<IItemGroup> = [
         type: 'Ornate Plate',
         quality: QualityType.EXCEPTIONAL,
         img: 'assets/items/unique/armors/corpsemourn.jpg',
+        stats: [],
+        magicStats: []
+      },
+      {
+        name: 'Ormus\' Robes',
+        type: 'Dusk Shroud',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/armors/ormus\'-robes.jpg',
         stats: [],
         magicStats: []
       },
@@ -3112,6 +3122,90 @@ export const ALL_ITEMS: Array<IItemGroup> = [
         stats: [],
         magicStats: [],
         hero: Hero.ASSASSIN
+      },
+    ]
+  },
+  {
+    itemType: ItemType.WEAPONS, itemSubtype: SubType.WAND, items: [
+      {
+        name: 'Torch of Iro',
+        type: 'Wand',
+        quality: QualityType.NORMAL,
+        img: 'assets/items/unique/weapons/wands/torch-of-iro.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Maelstrom',
+        type: 'Yew Wand',
+        quality: QualityType.NORMAL,
+        img: 'assets/items/unique/weapons/wands/maelstrom.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Gravenspine',
+        type: 'Bone Wand',
+        quality: QualityType.NORMAL,
+        img: 'assets/items/unique/weapons/wands/arm-of-king-leoric-gravenspine.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Ume\'s Lament',
+        type: 'Grim Wand',
+        quality: QualityType.NORMAL,
+        img: 'assets/items/unique/weapons/wands/ume\'s-lament.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Suicide Branch',
+        type: 'Burnt Wand',
+        quality: QualityType.EXCEPTIONAL,
+        img: 'assets/items/unique/weapons/wands/suicide-branch.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Carin Shard',
+        type: 'Petrified Wand',
+        quality: QualityType.EXCEPTIONAL,
+        img: 'assets/items/unique/weapons/wands/carin-shard.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Arm of King Leoric',
+        type: 'Tomb Wand',
+        quality: QualityType.EXCEPTIONAL,
+        img: 'assets/items/unique/weapons/wands/arm-of-king-leoric-gravenspine.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Blackhand Key',
+        type: 'Grave Wand',
+        quality: QualityType.EXCEPTIONAL,
+        img: 'assets/items/unique/weapons/wands/blackhand-key.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Boneshade',
+        type: 'Lich Wand',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/wands/boneshade.jpg',
+        stats: [],
+        magicStats: [],
+      },
+      {
+        name: 'Death\'s Web',
+        type: 'Unearthed Wand',
+        quality: QualityType.ELITE,
+        img: 'assets/items/unique/weapons/wands/death\'s-web.jpg',
+        stats: [],
+        magicStats: [],
       },
     ]
   },

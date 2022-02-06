@@ -1,41 +1,14 @@
 @import "../../../shared/constants";
 @import "../../../shared/responsive";
+@import "../../../shared/mixins";
 
 :host {
   .trash {
-    position: absolute;
-    top: 43px;
-    right: 20px;
-    background-image: url(../../../../assets/trash.jpg);
-    width: 46px;
-    height: 44px;
-    z-index: 100;
-
-    &:hover {
-      cursor: pointer;
-      background-image: url(../../../../assets/trash-hover.jpg);
-    }
-
-    &:active {
-      background-image: url(../../../../assets/trash-active.jpg);
-    }
+    @include filter-trash();
   }
 
   .subtitle {
-    color: $gold;
-    font-size: 24px;
-    width: 100%;
-    display: flex;
-    font-weight: normal;
-
-    font-family: $d2;
-    margin-top: 10px;
-
-    @include less-than(tablet) {
-      text-align: center;
-      display: block;
-      margin-top: 20px;
-    }
+    @include filter-subtitle();
   }
 
   hr {
@@ -92,11 +65,7 @@
   }
 
   .line {
-    display: flex;
-    justify-content: space-between;
-    @include less-than(tablet) {
-      flex-direction: column;
-    }
+    @include filter-line();
 
     .sockets {
       display: flex;

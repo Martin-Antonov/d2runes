@@ -5,7 +5,7 @@
 @mixin center($horizontally, $vertically) {
   @if $horizontally {
     left: 50%;
-     -webkit-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
@@ -90,5 +90,67 @@
 
   @include less-than(tableMin) {
     width: 100%;
+  }
+}
+
+@mixin item-preview-container() {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
+  font-family: $d2-light;
+  padding: 10px 15px;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  @include less-than(tablet) {
+    display: none;
+  }
+}
+
+@mixin filter-trash() {
+  position: absolute;
+  top: 43px;
+  right: 20px;
+  background-image: url(../../assets/trash.jpg);
+  width: 46px;
+  height: 44px;
+  z-index: 100;
+
+  &:hover {
+    cursor: pointer;
+    background-image: url(../../assets/trash-hover.jpg);
+  }
+
+  &:active {
+    background-image: url(../../assets/trash-active.jpg);
+  }
+}
+
+@mixin filter-line() {
+  display: flex;
+  justify-content: space-between;
+  @include less-than(tablet) {
+    flex-direction: column;
+  }
+}
+
+@mixin filter-subtitle() {
+  color: $gold;
+  font-size: 24px;
+  width: 100%;
+  display: flex;
+  font-weight: normal;
+
+  font-family: $d2;
+  margin-top: 10px;
+
+  @include less-than(tablet) {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
   }
 }

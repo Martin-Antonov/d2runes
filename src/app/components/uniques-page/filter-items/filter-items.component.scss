@@ -1,0 +1,70 @@
+@import "../../../shared/constants";
+@import "../../../shared/responsive";
+@import "../../../shared/mixins";
+
+:host {
+  .trash {
+    @include filter-trash();
+  }
+
+  hr {
+    @include less-than(tablet) {
+      background-position: center;
+    }
+  }
+
+  .subtitle {
+    @include filter-subtitle();
+  }
+
+  .line {
+    @include filter-line();
+
+    .item-type-container {
+      width: 60%;
+      @include less-than(tablet) {
+        width: 100%;
+      }
+
+      .item-types {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 150px;
+        width: 100%;
+      }
+
+      .weapons {
+        height: 200px;
+      }
+    }
+  }
+
+  .item-or-hero-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 33%;
+
+      @include less-than(tablet) {
+        width: 50%;
+      }
+
+      .small-title {
+        font-size: 18px;
+        color: $grey;
+        margin-bottom: 5px;
+        width: 100%;
+        font-weight: normal;
+      }
+    }
+  }
+
+}

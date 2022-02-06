@@ -48,7 +48,6 @@ export class RunesService {
     }
 
     let visited = Boolean(localStorage.getItem('visited'));
-    console.log('visited: ' + visited)
     if (!visited) {
       localStorage.clear();
       localStorage.setItem('visited', 'true');
@@ -96,7 +95,7 @@ export class RunesService {
       build: null,
       ladderOnly: false,
     };
-    localStorage.clear();
+    localStorage.setItem('filter', null);
     this.filter();
   }
 
@@ -157,7 +156,6 @@ export class RunesService {
   }
 
   filter(ev?: any) {
-    debugger;
     const by = this.filterConfig;
     if (ev || ev === "") {
       by.search = ev;
