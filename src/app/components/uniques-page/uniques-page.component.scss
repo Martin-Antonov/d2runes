@@ -56,6 +56,9 @@
         @include less-than(tablet) {
           width: 33%;
         }
+        @include less-than(phone) {
+          width: 50%;
+        }
 
         h3 {
           margin: 0;

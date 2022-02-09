@@ -1,11 +1,10 @@
 /**
-1. Refactor Runeword preview to be reusable.
- 2. Add uniques filter-rw https://www.youtube.com/watch?v=r8SClkQB5_k
- 3. Add set items builder
- 4. SSR - twitter cards, tutorial - https://fireship.io/lessons/angular-universal-firebase/
- 5. instagram page
- 6. FB page
- 7. twitter page
+ 0. Top nav hamburger menu
+ 1. Add set items builder
+ 2. SSR - twitter cards, tutorial - https://fireship.io/lessons/angular-universal-firebase/
+ 3. instagram page
+ 4. FB page
+ 5. twitter page
  *     */
 import {Component} from '@angular/core';
 import {filter} from "rxjs/operators";
