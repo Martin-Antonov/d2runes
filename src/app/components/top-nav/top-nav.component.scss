@@ -1,5 +1,6 @@
 @import "../../shared/constants";
 @import "../../shared/responsive";
+@import "../../shared/mixins";
 
 :host {
   position: relative;
@@ -12,7 +13,7 @@
   nav {
     display: flex;
     align-items: center;
-
+    @include removeSelection();
     height: 100%;
     width: 100%;
     --size-700: 42px;
@@ -35,21 +36,41 @@
       cursor: default;
     }
 
+    .hamburger {
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+
+      @include more-than(desktop) {
+        display: none;
+      }
+
+      .material-icons {
+        margin-left: 15px;
+        font-size: 40px;
+
+        &:hover {
+          cursor: pointer;
+          filter: brightness(1.2);
+        }
+      }
+    }
+
     .left {
+      @include less-than(desktop) {
+        margin: auto;
+      }
+
       .image-container {
         margin-top: 30px;
-        @include less-than(tablet) {
-          margin-top: 5px;
+        @include less-than(desktop) {
+          margin-top: -10px;
         }
 
         img {
           width: 180px;
           height: 120px;
-          @include less-than(tablet) {
-            width: 60px;
-            height: 40px;
-            margin-left: 5px;
-          }
 
           &:hover {
             filter: brightness(1.2);
@@ -62,11 +83,15 @@
       display: flex;
       margin: auto;
 
+      @include less-than(desktop) {
+        display: none;
+      }
+
       a {
         margin: 0 30px;
         text-align: center;
         color: $gold;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
 

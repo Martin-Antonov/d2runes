@@ -1,6 +1,7 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {ISpecificItem} from "../../../services/uniques/models/Items";
 import {PREVIEW_ANIMATION} from "../../../shared/Animations";
+import {UniquesService} from "../../../services/uniques/uniques.service";
 
 @Component({
   selector: 'app-item-preview',
@@ -12,7 +13,7 @@ export class ItemPreviewComponent implements OnInit {
   @HostBinding("@i")
   @Input() item: ISpecificItem;
 
-  constructor() {
+  constructor(private us: UniquesService) {
   }
 
   ngOnInit(): void {

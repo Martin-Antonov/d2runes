@@ -16,7 +16,7 @@ export class RunewordsPageComponent implements OnInit {
   }
 
   constructor(public rs: RunesService, private ts: Title) {
-    this.ts.setTitle('Diablo 2 Resurrected Runeword Explorer | Runewords');
+    this.ts.setTitle('Diablo 2 Resurrected Explorer | Runewords');
   }
 
   ngOnInit(): void {

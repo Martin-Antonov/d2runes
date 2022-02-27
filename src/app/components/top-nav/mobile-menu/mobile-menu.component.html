@@ -1,0 +1,12 @@
+<div class="menu" [@menu]>
+  <div class="material-icons close" (click)="closeClick()">close</div>
+  <a routerLink="/runewords" class="page" (click)="closeClick()">Runewords</a>
+  <hr>
+  <a routerLink="/runes" class="page" (click)="closeClick()">Runes</a>
+  <hr>
+  <a routerLink="/uniques" class="page" (click)="closeClick()">Uniques</a>
+  <hr>
+  <a routerLink="/cheatsheet" class="page" (click)="closeClick()">Cheatsheet / FAQ</a>
+  <hr>
+</div>
+<div class="bg" [@bg] (click)="closeClick()"></div>

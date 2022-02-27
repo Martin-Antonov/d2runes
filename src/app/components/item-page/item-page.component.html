@@ -1,4 +1,4 @@
-<header><h1 class="header">{{currentItem ? currentItem.quality : ''}} Item</h1></header>
+<header><h1 class="header">{{quality}} Item</h1></header>
 <div class="container" *ngIf="currentItem">
   <img *ngIf="currentItem" [src]="currentItem.img" [alt]="currentItem.name">
   <h2 class="title first-title">{{currentItem.name}}</h2>

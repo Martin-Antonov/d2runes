@@ -1,10 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {filter} from "rxjs/operators";
 import {NavigationEnd, Router} from "@angular/router";
-import {IRunewordUI} from "../../services/runes/models/Runewords";
-import {IRune} from "../../services/runes/models/Runes";
 import {UniquesService} from "../../services/uniques/uniques.service";
-import {IItemGroup, ISpecificItem} from "../../services/uniques/models/Items";
+import {IItemGroup, ISpecificItem, QualityType} from "../../services/uniques/models/Items";
 import {Title} from "@angular/platform-browser";
 
 @Component({
@@ -32,13 +30,18 @@ export class ItemPageComponent implements OnInit {
           });
         });
         if (realItem) {
-          this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Items | ' + realItem.name);
+          this.ts.setTitle('Diablo II Resurrected Explorer | Items | ' + realItem.name);
           this.currentItem = realItem;
         }
       });
   }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
+
+  public get quality(): string {
+    return this.currentItem && this.currentItem.quality !== QualityType.NONE ? this.currentItem.quality : ''
   }
 
 }

@@ -28,7 +28,7 @@ export class RunewordSinglePageComponent implements OnInit {
           return withoutSpaces === rune;
         });
         if (realRune) {
-          this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Runes | ' + realRune.name);
+          this.ts.setTitle('Diablo II Resurrected Explorer | Runes | ' + realRune.name);
           this.currentRuneword = realRune;
           const runes = this.currentRuneword.word.split(' ');
           this.runes = runes.map((r) => {

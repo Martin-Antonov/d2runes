@@ -4,6 +4,7 @@
 
 :host {
   @include item-preview-container();
+
   .title {
     color: $gold;
   }
@@ -13,6 +14,7 @@
   }
 
   .magic-stat {
+    text-align: center;
     color: $blue;
   }
 

@@ -8,6 +8,9 @@
 
   app-rune-preview {
     position: fixed;
+    @include less-than(tableMin) {
+      position: static;
+    }
     left: 0;
     top: 150px;
   }

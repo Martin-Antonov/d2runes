@@ -7,6 +7,7 @@ import {RunesService} from "../../services/runes/runes.service";
   styleUrls: ['./top-nav.component.scss']
 })
 export class TopNavComponent implements OnInit {
+  mobileMenuOpen: boolean = false;
 
   constructor(public rs: RunesService) {
   }

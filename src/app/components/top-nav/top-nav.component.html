@@ -1,7 +1,8 @@
 <nav>
+  <div class="hamburger" (click)="mobileMenuOpen=!mobileMenuOpen">
+    <div class="material-icons">menu</div>
+  </div>
   <div class="left">
-    <span class="material-icons">menu</span>
-<!--    close-->
     <a class="image-container" routerLink="/home">
       <img src="assets/logo.png" alt="logo">
     </a>
@@ -20,7 +21,7 @@
     </a>
   </div>
 </nav>
-
+<app-mobile-menu *ngIf="mobileMenuOpen" (close)="mobileMenuOpen=false"></app-mobile-menu>
 
 
 

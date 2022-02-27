@@ -9,7 +9,7 @@ import {Title} from "@angular/platform-browser";
 export class HomeComponent implements OnInit {
 
   constructor(private ts: Title) {
-    this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Welcome');
+    this.ts.setTitle('Diablo II Resurrected Explorer | Welcome');
   }
 
   ngOnInit(): void {

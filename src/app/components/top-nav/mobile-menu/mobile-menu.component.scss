@@ -1,0 +1,54 @@
+@import "../../../shared/constants";
+@import "../../../shared/responsive";
+@import "../../../shared/mixins";
+
+:host {
+  @include removeSelection();
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    background-image: url(../../../../assets/article-bg.jpg);
+    background-position: top center;
+    background-repeat: repeat-y;
+    padding: 10px;
+    z-index: 2001;
+
+    .close {
+      color: $gold;
+      font-size: 30px;
+      margin-bottom: 10px;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(1.2);
+      }
+    }
+
+    a {
+      font-family: $d2;
+      font-size: 26px;
+      color: white;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+
+    hr {
+      margin: 15px 0;
+    }
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

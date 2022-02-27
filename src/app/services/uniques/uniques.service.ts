@@ -12,6 +12,7 @@ export class UniquesService {
   hoveredItem: ISpecificItem;
   filterOpen: boolean = false;
   heroBuilds: Array<HeroBuild>;
+  counter: number = 0;
 
   mousePosition: { x: number, y: number };
 
@@ -84,38 +85,46 @@ export class UniquesService {
     if (ev || ev === "") {
       by.search = ev;
     }
+    this.counter = 0;
     localStorage.setItem('uniques-filter', JSON.stringify(by));
     this.items.forEach((iG: IItemGroup) => {
       iG.selected = true;
       iG.items.forEach((i: ISpecificItem) => {
         i.selected = true;
+        this.counter++;
       });
     });
 
     this.items.forEach((iG: IItemGroup) => {
       if (this.checkItemTypeAndSubtypeInclusion(by, iG)) {
         iG.selected = false;
+        this.counter -= iG.items.length;
       } else {
         iG.items.forEach((i: ISpecificItem) => {
           // Search
           if (by.search.length !== 0 && !i.name.toLowerCase().includes(by.search.toLowerCase()) && !i.type.toLowerCase().includes(by.search.toLowerCase())) {
             i.selected = false;
+            this.counter--;
           }
           // Qualities
           if (by.qualities.length > 0 && !by.qualities.includes(i.quality)) {
             i.selected = false;
+            this.counter--;
           }
           //heroes
           if (by.hero && !(i.stats.includes(by.hero + ' Only') || i.magicStats.includes(by.hero))) {
             i.selected = false;
+            this.counter--;
           }
           // Stat
           if (by.stats.length > 0 && !this.checkItemStatsInclusion(by.stats, i.magicStats)) {
             i.selected = false;
+            this.counter--;
           }
           // Build
           if (by.build && !this.checkBuildInclusion(by, i)) {
             i.selected = false;
+            this.counter--;
           }
         });
       }
@@ -166,6 +175,6 @@ export class UniquesService {
   }
 
   removeHoveredItem() {
-    this.hoveredItem = null;
+    // this.hoveredItem = null;
   }
 }

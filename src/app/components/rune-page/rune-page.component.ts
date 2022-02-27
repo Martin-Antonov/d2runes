@@ -26,14 +26,14 @@ export class RunePageComponent implements OnInit {
         if (rune === "runes") {
           this.currentRune = null;
           this.runewords = [];
-          this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Runes');
+          this.ts.setTitle('Diablo II Resurrected Explorer | Runes');
         } else {
           const realRune = this.rs.runes.find((r: IRune) => {
             return r.key.toLowerCase() === rune.toLowerCase();
           });
 
           if (realRune) {
-            this.ts.setTitle('Diablo II Resurrected Runeword Explorer | Runes | ' + realRune.key);
+            this.ts.setTitle('Diablo II Resurrected Explorer | Runes | ' + realRune.key);
             this.setCurrentRune(realRune);
           }
         }

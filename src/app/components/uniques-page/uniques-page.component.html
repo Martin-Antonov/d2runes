@@ -1,5 +1,5 @@
 <app-filter-items></app-filter-items>
-<h1>Uniques Explorer</h1>
+<h1>Uniques Explorer <br> ({{us.counter}})</h1>
 <div class="table-container" [@table]="animationCondition">
   <ng-container *ngFor="let item of us.items">
     <div *ngIf="item.selected">
@@ -23,4 +23,4 @@
 </div>
 
 <app-item-preview *ngIf="us.hoveredItem" [item]="us.hoveredItem"
-                  [style.transform]="runeHoverTransform"></app-item-preview>
+                  [style.transform]="transform" [style.left]="left" [style.top]="top"></app-item-preview>

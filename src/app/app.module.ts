@@ -39,6 +39,7 @@ import { RangesliderComponent } from './shared/components/form-elements/rangesli
 import { ItemPreviewComponent } from './components/uniques-page/item-preview/item-preview.component';
 import { FilterItemsComponent } from './components/uniques-page/filter-items/filter-items.component';
 import { ItemPageComponent } from './components/item-page/item-page.component';
+import { MobileMenuComponent } from './components/top-nav/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { ItemPageComponent } from './components/item-page/item-page.component';
     ItemPreviewComponent,
     FilterItemsComponent,
     ItemPageComponent,
+    MobileMenuComponent,
   ],
   imports: [
     BrowserModule,

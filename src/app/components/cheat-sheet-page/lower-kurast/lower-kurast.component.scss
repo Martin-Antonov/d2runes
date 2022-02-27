@@ -68,6 +68,10 @@
     li {
       font-family: $text;
       height: 25px;
+
+      @include less-than(tableMin) {
+        height: fit-content;
+      }
     }
 
     img {
@@ -123,6 +127,11 @@
         justify-content: space-between;
         margin-bottom: 20px;
 
+        @include less-than(tableMin) {
+          flex-direction: column;
+          align-items: center;
+        }
+
         .player-input-container {
           width: 25%;
           display: flex;
@@ -130,8 +139,13 @@
           justify-content: center;
           align-items: center;
 
+          @include less-than(tableMin) {
+            margin-bottom: 20px;
+          }
+
           h4 {
             margin-bottom: 20px;
+            text-align: center;
           }
         }
 
