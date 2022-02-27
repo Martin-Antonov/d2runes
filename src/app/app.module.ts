@@ -16,7 +16,6 @@ import {RunewordHoverComponent} from "./components/runewords-page/runeword-hover
 import { HomeComponent } from './components/home/home.component';
 import { RunewordsTableComponent } from './shared/components/runewords-table/runewords-table.component';
 import { AdsContainerComponent } from './components/ads-container/ads-container.component';
-import {TooltipModule} from "ng2-tooltip-directive";
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { RunewordSinglePageComponent } from './components/runeword-single-page/runeword-single-page.component';
 import {RunePageComponent} from "./components/rune-page/rune-page.component";
@@ -40,6 +39,7 @@ import { ItemPreviewComponent } from './components/uniques-page/item-preview/ite
 import { FilterItemsComponent } from './components/uniques-page/filter-items/filter-items.component';
 import { ItemPageComponent } from './components/item-page/item-page.component';
 import { MobileMenuComponent } from './components/top-nav/mobile-menu/mobile-menu.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -86,7 +86,7 @@ import { MobileMenuComponent } from './components/top-nav/mobile-menu/mobile-men
     BrowserAnimationsModule,
     ClickOutsideModule,
     FormsModule,
-    TooltipModule
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
