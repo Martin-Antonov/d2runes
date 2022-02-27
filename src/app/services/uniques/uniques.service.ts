@@ -12,7 +12,7 @@ export class UniquesService {
   hoveredItem: ISpecificItem;
   filterOpen: boolean = false;
   heroBuilds: Array<HeroBuild>;
-  counter: number = 0;
+  counter: number = 379;
 
   mousePosition: { x: number, y: number };
 
@@ -175,6 +175,6 @@ export class UniquesService {
   }
 
   removeHoveredItem() {
-    // this.hoveredItem = null;
+    this.hoveredItem = null;
   }
 }
