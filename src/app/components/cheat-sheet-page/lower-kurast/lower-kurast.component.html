@@ -65,7 +65,7 @@
     <div class="calculator-container">
       <div class="player-input-container">
         <h4>Players Setting</h4>
-        <app-slider [values]="lk.players" (onValueChange)="lk.changeSelectedPlayers($event)"></app-slider>
+        <app-slider *ngIf="isBrowser" [values]="lk.players" (onValueChange)="lk.changeSelectedPlayers($event)"></app-slider>
       </div>
       <div class="runes-container">
         <h4>Runes</h4>

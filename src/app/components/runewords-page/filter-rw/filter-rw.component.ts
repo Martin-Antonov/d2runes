@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {RunesService} from "../../../services/runes/runes.service";
 import {Options} from "@angular-slider/ngx-slider";
 import {ARMOR_TYPES, MAGIC_WEAPONS, MELEE_WEAPONS, MISSILE_WEAPONS} from "../../../services/runes/models/WeaponTypes";
 import {STAT_TYPES} from "../../../services/runes/models/StatTypes";
+import {isPlatformBrowser} from "@angular/common";
 
 @Component({
   selector: 'app-filter-rw',
@@ -19,14 +20,15 @@ export class FilterRwComponent implements OnInit {
   armorTypes: Array<string>;
   sockets: Array<number>;
   stats: Array<{ name: string, searchKey: string }>;
-
-  constructor(public rs: RunesService) {
+  isBrowser: boolean;
+  constructor(public rs: RunesService, @Inject(PLATFORM_ID) private platformId) {
     this.meleeWeapons = MELEE_WEAPONS;
     this.magicWeapons = MAGIC_WEAPONS;
     this.missileWeapons = MISSILE_WEAPONS;
     this.armorTypes = ARMOR_TYPES;
     this.sockets = [2, 3, 4, 5, 6];
     this.stats = STAT_TYPES;
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {

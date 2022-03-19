@@ -4,10 +4,27 @@ import {ngExpressEngine} from '@nguniversal/express-engine';
 import * as express from 'express';
 import {join} from 'path';
 
-import {AppServerModule} from './src/main.server';
 import {APP_BASE_HREF} from '@angular/common';
 import {existsSync} from 'fs';
+import 'localstorage-polyfill';
 
+
+const domino = require('domino');
+const fs = require('fs');
+const path = require('path');
+
+// Use the browser index.html as template for the mock window
+const template = fs
+  .readFileSync(path.join(join(process.cwd()), 'index-server.html'))
+  .toString();
+
+// Shim for the global window and document objects.
+const window = domino.createWindow(template);
+global['window'] = window;
+global['document'] = window.document;
+global['localStorage'] = localStorage;
+
+import {AppServerModule} from './src/main.server';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {

@@ -12,7 +12,7 @@
     <div class="mode-container">
       <h3 class="subtitle">Mode</h3>
       <hr>
-      <app-slider
+      <app-slider *ngIf="isBrowser"
         [values]="['D2R', 'PD2']"
         [index]="rs.filterConfig.pd2ModeOn ? 1 : 0"
         (onValueChange)="changeMode($event)">
