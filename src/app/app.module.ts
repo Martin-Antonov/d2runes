@@ -77,7 +77,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     MobileMenuComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     AdsenseModule.forRoot({
       adClient: 'ca-pub-7640562161899788',

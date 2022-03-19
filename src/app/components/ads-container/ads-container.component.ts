@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {detectAnyAdblocker} from 'just-detect-adblock'
+// import {detectAnyAdblocker} from 'just-detect-adblock'
 
 @Component({
   selector: 'app-ads-container',
@@ -15,8 +15,8 @@ export class AdsContainerComponent implements OnInit {
 
   async ngOnInit() {
     console.log("shown");
-    const addBlock = await detectAnyAdblocker();
-    this.adsDisabled = Boolean(addBlock);
-    this.checkPerformed = true;
+    // const addBlock = await detectAnyAdblocker();
+    // this.adsDisabled = Boolean(addBlock);
+    // this.checkPerformed = true;
   }
 }

@@ -60,8 +60,10 @@ export class AppComponent {
   resizeForLargeScreens() {
     const ratio = window.outerWidth / 1920;
     if (ratio > 1) {
+      //@ts-ignore
       document.body.style.zoom = ratio.toString();
     } else {
+      //@ts-ignore
       document.body.style.zoom = '';
     }
   }
