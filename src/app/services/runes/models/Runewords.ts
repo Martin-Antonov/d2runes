@@ -389,7 +389,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Body Armor"
   },
   {
-    name: "Obedience", word: "Hel Ko Thul Eth Fal", itemType: "Polearms", level: 41, stats: [
+    name: "Obedience", word: "Hel Ko Thul Eth Fal", itemType: "Polearms/Spears/Amazon Spears", level: 41, stats: [
       '30% Chance to Cast Level 21 Enchant When You Kill An Enemy',
       '40% Faster Hit Recovery',
       '+370% Enhanced Damage',
@@ -961,7 +961,7 @@ export const RUNEWORDS_D2R = [
     itemTypeShort: "Melee Weapons"
   },
   {
-    name: "Infinity", word: "Ber Mal Ber Ist", itemType: "Polearms", level: 63, stats: [
+    name: "Infinity", word: "Ber Mal Ber Ist", itemType: "Polearms/Spears/Amazon Spears", level: 63, stats: [
       "50% Chance to Cast Level 20 Chain Lightning When You Kill An Enemy",
       "Level 12 Conviction Aura When Equipped",
       "+35% Faster Run/Walk",
@@ -1183,7 +1183,7 @@ export const RUNEWORDS_D2R = [
     itemTypeShort: "Weapons"
   },
   {
-    name: "Pride", word: "Cham Sur Io Lo", itemType: "Polearms", level: 67, stats: [
+    name: "Pride", word: "Cham Sur Io Lo", itemType: "Polearms/Spears/Amazon Spears", level: 67, stats: [
       "25% Chance to Cast Level 17 Fire Wall When Struck",
       "Level 16-20 Concentration Aura When Equipped (varies)",
       "260-300% Bonus to Attack Rating (varies)",
@@ -1198,7 +1198,7 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Polearms"
   },
   {
-    name: "Plague", word: "Cham Shael Um", itemType: "Swords", level: 67, stats: [
+    name: "Plague", word: "Cham Shael Um", itemType: "Swords/Claws/Daggers", level: 67, stats: [
       "20% Chance to cast level 12 Lower Resist when struck",
       "25% Chance to cast level 15 Poison Nova on striking",
       "Level 13-17 Cleansing Aura When Equipped (varies)",

@@ -34,7 +34,6 @@ import { FilterComponent } from './shared/components/filter/filter.component';
 import { InputComponent } from './shared/components/form-elements/input/input.component';
 import { SliderComponent } from './shared/components/form-elements/slider/slider.component';
 import { CheckboxComponent } from './shared/components/form-elements/checkbox/checkbox.component';
-import { RangesliderComponent } from './shared/components/form-elements/rangeslider/rangeslider.component';
 import { ItemPreviewComponent } from './components/uniques-page/item-preview/item-preview.component';
 import { FilterItemsComponent } from './components/uniques-page/filter-items/filter-items.component';
 import { ItemPageComponent } from './components/item-page/item-page.component';
@@ -70,7 +69,6 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     InputComponent,
     SliderComponent,
     CheckboxComponent,
-    RangesliderComponent,
     ItemPreviewComponent,
     FilterItemsComponent,
     ItemPageComponent,

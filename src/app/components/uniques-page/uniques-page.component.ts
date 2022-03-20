@@ -3,6 +3,7 @@ import {ALL_ITEMS} from "../../services/uniques/models/Items";
 import {UniquesService} from "../../services/uniques/uniques.service";
 import {TABLE_ANIMATION} from "../../shared/Animations";
 import {Title} from "@angular/platform-browser";
+import {SeoService} from "../../services/seo/seo.service";
 
 @Component({
   selector: 'app-uniques-page',
@@ -32,9 +33,9 @@ export class UniquesPageComponent implements OnInit {
   }
 
 
-  constructor(public us: UniquesService, private ts: Title) {
-  this.ts.setTitle('Diablo 2 Resurrected Explorer | Uniques');
-}
+  constructor(public us: UniquesService, private seo: SeoService) {
+    this.seo.setUniques();
+  }
 
   ngOnInit(): void {
   }

@@ -5,6 +5,7 @@ import {IRunewordUI} from "../../services/runes/models/Runewords";
 import {IRune} from "../../services/runes/models/Runes";
 import {filter} from "rxjs/operators";
 import {NavigationEnd, Router} from "@angular/router";
+import {SeoService} from "../../services/seo/seo.service";
 
 @Component({
   selector: 'app-rune-page',
@@ -15,7 +16,7 @@ export class RunePageComponent implements OnInit {
   currentRune: IRune;
   runewords: Array<IRunewordUI> = [];
 
-  constructor(public rs: RunesService, private ts: Title, private router: Router) {
+  constructor(public rs: RunesService, private router: Router, private seo: SeoService) {
     rs.filterOpen = false;
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -26,14 +27,14 @@ export class RunePageComponent implements OnInit {
         if (rune === "runes") {
           this.currentRune = null;
           this.runewords = [];
-          this.ts.setTitle('Diablo II Resurrected Explorer | Runes');
+          this.seo.setRunes();
         } else {
           const realRune = this.rs.runes.find((r: IRune) => {
             return r.key.toLowerCase() === rune.toLowerCase();
           });
 
           if (realRune) {
-            this.ts.setTitle('Diablo II Resurrected Explorer | Runes | ' + realRune.key);
+            this.seo.setRune(realRune.key.toLowerCase());
             this.setCurrentRune(realRune);
           }
         }

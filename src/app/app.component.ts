@@ -33,6 +33,8 @@ import {filter} from "rxjs/operators";
 import {NavigationEnd, NavigationStart, Router} from "@angular/router";
 import {RunesService} from "./services/runes/runes.service";
 import {LkService} from "./services/lk/lk.service";
+import {Meta, Title} from "@angular/platform-browser";
+import {SeoService} from "./services/seo/seo.service";
 
 
 @Component({
@@ -43,7 +45,7 @@ import {LkService} from "./services/lk/lk.service";
 export class AppComponent {
   title = 'd2r-runes';
 
-  constructor(private router: Router, private rs: RunesService, private lk: LkService) {
+  constructor(private router: Router, private rs: RunesService, private seo: SeoService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationStart))
       .subscribe((res: NavigationEnd) => {
@@ -53,6 +55,8 @@ export class AppComponent {
     window.onresize = () => {
       this.resizeForLargeScreens();
     }
+
+    this.seo.init();
 
     this.resizeForLargeScreens();
   }

@@ -66,7 +66,6 @@ export interface ISpecificItem {
 }
 
 export const ALL_ITEMS: Array<IItemGroup> = [
-
   {
     itemType: ItemType.CHARMS, items: [
       {

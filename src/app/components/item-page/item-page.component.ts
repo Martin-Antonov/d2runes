@@ -4,6 +4,7 @@ import {NavigationEnd, Router} from "@angular/router";
 import {UniquesService} from "../../services/uniques/uniques.service";
 import {IItemGroup, ISpecificItem, QualityType} from "../../services/uniques/models/Items";
 import {Title} from "@angular/platform-browser";
+import {SeoService} from "../../services/seo/seo.service";
 
 @Component({
   selector: 'app-item-page',
@@ -13,7 +14,7 @@ import {Title} from "@angular/platform-browser";
 export class ItemPageComponent implements OnInit {
   currentItem: ISpecificItem;
 
-  constructor(private router: Router, private us: UniquesService, private ts: Title) {
+  constructor(private router: Router, private us: UniquesService, private seo: SeoService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((res: NavigationEnd) => {
@@ -30,7 +31,7 @@ export class ItemPageComponent implements OnInit {
           });
         });
         if (realItem) {
-          this.ts.setTitle('Diablo II Resurrected Explorer | Items | ' + realItem.name);
+          this.seo.setUnique(realItem.name.toLowerCase());
           this.currentItem = realItem;
         }
       });
