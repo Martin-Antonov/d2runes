@@ -136,7 +136,7 @@ export const getRunewordMeta = (rw: string, word: string) => {
       content: `Diablo 2 Resurrected, ${rw} Runeword, ${word},runewords, hero builds, stats, Sorceress, Paladin, Assassin, Barbarian, Druid, Necromancer, Amazon.`
     },
     {name: 'description', content: `Information about the ${rw} runeword, hero builds and stats.`},
-    {property: 'og:title', content: `D2Runes.io | ${rw} '${word}' Runewords  | Diablo 2 Resurrected`},
+    {property: 'og:title', content: `D2Runes.io | ${rw} '${word}' Runeword | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/runes/pul.png'},
     {property: 'og:url', content: `https://d2runes.io/runewords/${rw}`},
@@ -155,7 +155,7 @@ export const getRuneMeta = (rune: string) => {
     },
     {property: 'og:title', content: `D2Runes.io | ${rune} Rune | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: `assets/runes/${rune}.png`},
+    {property: 'og:image', content: `https://d2runes.io/assets/runes/${rune}.png`},
     {property: 'og:url', content: `https://d2runes.io/runes/${rune}`},
   ]
 }
@@ -172,7 +172,7 @@ export const getItemMeta = (item: string, imgUrl: string) => {
     },
     {property: 'og:title', content: `D2Runes.io | ${item} | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: `${imgUrl}`},
+    {property: 'og:image', content: `https://d2runes.io/${imgUrl}`},
     {property: 'og:url', content: `https://d2runes.io/uniques/${item}`},
   ]
 }

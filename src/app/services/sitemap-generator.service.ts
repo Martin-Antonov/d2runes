@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {RunesService} from "./runes/runes.service";
+import {ALL_ITEMS, IItemGroup, ISpecificItem} from "./uniques/models/Items";
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,14 @@ export class SitemapGeneratorService {
     });
     rs.runewords.forEach((r) => {
       urls.push({url: 'runewords/' + r.name.split(" ").join("").toLowerCase(), priority: 0.9});
+    });
+
+    ALL_ITEMS.forEach((ig: IItemGroup) => {
+      ig.items.forEach((item: ISpecificItem) => {
+        const name = item.name.includes(' ') ? item.name.split(' ').join('-') : item.name;
+        const nameWithoutQuotes = name.includes('\'') ? name.split('\'').join('') : name;
+        urls.push({url: 'uniques/' + nameWithoutQuotes.toLowerCase(), priority: 0.9})
+      });
     });
 
     const result = urls.map((res) => {

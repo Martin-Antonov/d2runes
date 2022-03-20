@@ -34,13 +34,12 @@ export class SeoService {
   }
 
   setRuneword(runeword: string) {
-
     const rwCapital = this.capitalizeFirstLetter(runeword)
     const runes = RUNEWORDS_D2R.find((item) => {
       return item.name === rwCapital;
     })?.word;
     this.ts.setTitle(`D2Runes.io | ${rwCapital} '${runes}' Runeword | Diablo 2 Resurrected`)
-    getRunewordMeta(rwCapital, runes).forEach((tag) => {
+    getRunewordMeta(rwCapital.toLowerCase(), runes).forEach((tag) => {
       this.meta.updateTag(tag)
     });
   }
@@ -55,7 +54,7 @@ export class SeoService {
   setRune(rune: string) {
     const runeCapital = this.capitalizeFirstLetter(rune)
     this.ts.setTitle(`D2Runes.io | ${runeCapital} Rune | Diablo 2 Resurrected`)
-    getRuneMeta(runeCapital).forEach((tag) => {
+    getRuneMeta(runeCapital.toLowerCase()).forEach((tag) => {
       this.meta.updateTag(tag);
     });
   }
@@ -78,9 +77,9 @@ export class SeoService {
         return i.name.toLowerCase() === item;
       })
     });
-
+    const name = itemCapital.toLowerCase().split(' ').join('-').split('\'').join('');
     this.ts.setTitle(`D2Runes.io | ${itemCapital} | Diablo 2 Resurrected`)
-    getItemMeta(itemCapital, itemObj.img).forEach((tag) => {
+    getItemMeta(name, itemObj.img).forEach((tag) => {
       this.meta.updateTag(tag);
     });
   }
