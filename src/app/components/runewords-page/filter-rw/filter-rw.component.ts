@@ -20,15 +20,14 @@ export class FilterRwComponent implements OnInit {
   armorTypes: Array<string>;
   sockets: Array<number>;
   stats: Array<{ name: string, searchKey: string }>;
-  isBrowser: boolean;
-  constructor(public rs: RunesService, @Inject(PLATFORM_ID) private platformId) {
+
+  constructor(public rs: RunesService) {
     this.meleeWeapons = MELEE_WEAPONS;
     this.magicWeapons = MAGIC_WEAPONS;
     this.missileWeapons = MISSILE_WEAPONS;
     this.armorTypes = ARMOR_TYPES;
     this.sockets = [2, 3, 4, 5, 6];
     this.stats = STAT_TYPES;
-    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {

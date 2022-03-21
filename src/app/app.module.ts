@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AdsenseModule} from "ng2-adsense";
@@ -75,7 +74,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     MobileMenuComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     AdsenseModule.forRoot({
       adClient: 'ca-pub-7640562161899788',

@@ -12,7 +12,7 @@
     <div class="mode-container">
       <h3 class="subtitle">Mode</h3>
       <hr>
-      <app-slider *ngIf="isBrowser"
+      <app-slider
         [values]="['D2R', 'PD2']"
         [index]="rs.filterConfig.pd2ModeOn ? 1 : 0"
         (onValueChange)="changeMode($event)">
@@ -24,14 +24,14 @@
       <h3 class="subtitle">Sockets</h3>
       <hr>
       <div class="sockets">
-          <app-checkbox
-            *ngFor="let socket of sockets"
-            name="socket"
-            [label]="socket"
-            labelPosition="vertical"
-            [checked]="rs.filterConfig.sockets.includes(socket)"
-            (checkboxChange)="changeSockets($event, socket)">
-          </app-checkbox>
+        <app-checkbox
+          *ngFor="let socket of sockets"
+          name="socket"
+          [label]="socket"
+          labelPosition="vertical"
+          [checked]="rs.filterConfig.sockets.includes(socket)"
+          (checkboxChange)="changeSockets($event, socket)">
+        </app-checkbox>
       </div>
     </div>
 
