@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
@@ -16,18 +18,22 @@
     "@angular/compiler": "~12.1.0-",
     "@angular/core": "~12.1.0-",
     "@angular/forms": "~12.1.0-",
+    "@angular/material": "^12.2.13",
     "@angular/platform-browser": "~12.1.0-",
     "@angular/platform-browser-dynamic": "~12.1.0-",
-    "@angular/material": "^12.2.13",
     "@angular/router": "~12.1.0-",
+    "@scullyio/init": "^2.1.26",
+    "@scullyio/ng-lib": "^2.1.0",
+    "@scullyio/scully": "^2.1.0",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.0",
     "just-detect-adblock": "^1.1.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
     "ng-click-outside": "^9.0.0",
     "ng2-adsense": "^10.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "zone.js": "~0.11.4",
-    "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.3.2"
+    "typescript": "~4.3.2",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.1.3",

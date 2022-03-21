@@ -46,7 +46,7 @@ import {SitemapGeneratorService} from "./services/sitemap-generator.service";
 export class AppComponent {
   title = 'd2r-runes';
 
-  constructor(private router: Router, private rs: RunesService, private seo: SeoService, private sitemap: SitemapGeneratorService) {
+  constructor(private router: Router, private rs: RunesService, private seo: SeoService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationStart))
       .subscribe((res: NavigationEnd) => {
