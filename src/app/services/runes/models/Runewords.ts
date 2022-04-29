@@ -14,7 +14,10 @@ export const RUNEWORDS_D2R = [
       '-3 to Light Radius',
       'Level 13 Cloak of Shadows (9 Charges)'
     ],
-    itemTypeShort: "Helms"
+    itemTypeShort: "Helms",
+    bases: [
+      {item: 'Any Helm', foundIn: 'Buy from Charsi/Fara'},
+    ],
   },
   {
     name: "Steel",
@@ -31,7 +34,11 @@ export const RUNEWORDS_D2R = [
       '+2 to Mana After Each Kill',
       '+1 to Light Radius'
     ],
-    itemTypeShort: "Swords/Axes/Maces"
+    itemTypeShort: "Swords/Axes/Maces",
+    bases: [
+      {item: 'Flail', foundIn: 'Buy from Fara'},
+      {item: 'Sabre', foundIn: 'Buy from Fara'},
+    ],
   },
   {
     name: "Malice",
@@ -48,7 +55,10 @@ export const RUNEWORDS_D2R = [
       '-100 to Monster Defense per Hit',
       'Drain Life -5'
     ],
-    itemTypeShort: "Melee Weapons"
+    itemTypeShort: "Melee Weapons",
+    bases: [
+      {item: 'Flail', foundIn: 'Buy from Fara'},
+    ],
   },
   {
     name: "Stealth",
@@ -65,7 +75,10 @@ export const RUNEWORDS_D2R = [
     ],
     itemType: "Body Armor",
     level: 17,
-    itemTypeShort: "Body Armor"
+    itemTypeShort: "Body Armor",
+    bases: [
+      {item: 'Any Armor', foundIn: 'Buy from Charsi/Fara'},
+    ],
   },
   {
     name: "Leaf", word: "Tir Ral", itemType: "Staves", level: 19, stats: [
@@ -77,7 +90,10 @@ export const RUNEWORDS_D2R = [
       "+2-198 to Defense (Based On Character Level)",
       "Cold Resist +33%",
       "+2 to Mana After Each Kill"
-    ], itemTypeShort: "Staves (Not Orbs/Wands)"
+    ], itemTypeShort: "Staves (Not Orbs/Wands)",
+    bases: [
+      {item: 'Any Staff (with +Skills for Sorc)', foundIn: 'Buy from Drognan'},
+    ],
   },
   {
     name: "Ancient's Pledge", word: "Ral Ort Tal", itemType: "Shields", level: 21, stats: [
@@ -87,7 +103,10 @@ export const RUNEWORDS_D2R = [
       'Fire Resist +13% (48% Total)',
       'Poison Resist +13% (48% Total)',
       '10% Damage Goes to Mana'
-    ], itemTypeShort: "Shields"
+    ], itemTypeShort: "Shields",
+    bases: [
+      {item: 'Any Shield', foundIn: 'Buy from Fara'},
+    ],
   },
   {
     name: "Holy Thunder", word: "Eth Ral Ort Tal", itemType: "Scepters", level: 21, stats: [
@@ -101,7 +120,11 @@ export const RUNEWORDS_D2R = [
       '+5 to Maximum Lightning Resist',
       '+60% Lightning Resist',
       'Level 7 Chain Lightning (60 charges)'
-    ], itemTypeShort: "Scepters"
+    ], itemTypeShort: "Scepters",
+    bases: [
+      {item: 'War Scepter', foundIn: ''},
+      {item: 'Divine Scepter', foundIn: ''},
+    ],
   },
   {
     name: "Zephyr", word: "Ort Eth", itemType: "Bows/Crossbows", level: 21, stats: [
@@ -402,7 +425,7 @@ export const RUNEWORDS_D2R = [
       '+10 to Dexterity',
       'All Resistances +20-30 (varies)',
       'Requirements -20%'
-    ], itemTypeShort: "Polearms"
+    ], itemTypeShort: "Polearms/Spears/Amazon Spears"
   },
   {
     name: "Unbending Will", word: "Fal Io Ith Eld El Hel", itemType: "Swords", level: 41, stats: [
@@ -859,7 +882,11 @@ export const RUNEWORDS_D2R = [
       "Prevent Monster Heal",
       "+2 to Mana After Each Kill",
       "+10-15 Life After Each Kill (varies)",
-    ], itemTypeShort: "Swords/Axes"
+    ], itemTypeShort: "Swords/Axes",
+    bases: [
+      {item: 'Berserker Axe', foundIn: ''},
+      {item: 'Phase Blade', foundIn: ''}
+    ],
   },
   {
     name: "Bramble", word: "Ral Ohm Sur Eth", itemType: "Body Armor", level: 61, stats: [
@@ -924,7 +951,10 @@ export const RUNEWORDS_D2R = [
       "+10 to Energy",
       "+2 to Mana After Each Kill",
       "Level 13 Summon Grizzly (5 Charges)",
-    ], itemTypeShort: "Axes/Scepters/Hammers"
+    ], itemTypeShort: "Axes/Scepters/Hammers",
+    bases: [
+      {item: 'Berserker Axe', foundIn: ''}
+    ],
   },
   {
     name: "Chains of Honor", word: "Dol Um Ber Ist", itemType: "Body Armor", level: 63, stats: [
@@ -972,7 +1002,7 @@ export const RUNEWORDS_D2R = [
       "+(0.5*Clvl) to Vitality (Based on Character Level)",
       "30% Better Chance of Getting Magic Items",
       "Level 21 Cyclone Armor (30 Charges)",
-    ], itemTypeShort: "Polearms"
+    ], itemTypeShort: "Polearms/Spears/Amazon Spears"
   },
   {
     name: "Wrath", word: "Pul Lum Ber Mal", itemType: "Bows/Crossbows", level: 63, stats: [
@@ -1195,7 +1225,7 @@ export const RUNEWORDS_D2R = [
       "+10 to Vitality",
       "Replenish Life +8",
       "(1.875*Clvl)% Extra Gold From Monsters (Based on Character Level)",
-    ], itemTypeShort: "Polearms"
+    ], itemTypeShort: "Polearms/Spears/Amazon Spears"
   },
   {
     name: "Plague", word: "Cham Shael Um", itemType: "Swords/Claws/Daggers", level: 67, stats: [

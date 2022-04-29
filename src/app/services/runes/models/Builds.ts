@@ -4,12 +4,25 @@ export const BUDGET_BUILD = ["Spectral Shard", "Suicide Branch", "Skullder\'s Ir
 export interface HeroBuild {
   hero: string;
   abbr: string;
-  builds: Array<{ name: string, runewords: Array<string>, items: Array<string>}>
+  builds: Array<{ name: string, runewords: Array<string>, items: Array<string> }>
 }
 
 export const HERO_BUILDS: Array<HeroBuild> = [
   {
     hero: "Sorceress", abbr: "(S)", builds: [
+      {
+        name: 'Hydra/Orb (L)',
+        runewords: ["Heart of the Oak", "Chains of Honor", 'Call to Arms', "Spirit", "Leaf", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
+        items: ["Harlequin Crest", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Arachnid Mesh", "Stone of Jordan", "Bul-Kathos' Wedding Band",
+          "Magefist", "War Traveler", "Chance Guards", "Goldwrap", "Nagelring", "Hellfire Torch", "Annihilus"]
+      },
+      {
+        name: 'Nova (L)',
+        runewords: ["Spirit", "Chains of Honor", "Memory", "Call to Arms", "Heart of the Oak", "Memory", "Crescent Moon", "Infinity", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Nadir", "Lore"],
+        items: ["Eschuta\'s Temper", "Griffon\'s Eye", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Arachnid Mesh", "Magefist", "Frostburn", "Stone of Jordan", "Bul-Kathos' Wedding Band",
+          "Ormus\' Robes", "Hellfire Torch", "Annihilus",
+          "Harlequin Crest", "War Traveler", "Chance Guards", "Goldwrap", "Nagelring",]
+      },
       {
         name: 'Blizzard',
         runewords: ["Chains of Honor", "Spirit", "Call to Arms", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore", "Smoke", "Stealth"],
@@ -18,7 +31,7 @@ export const HERO_BUILDS: Array<HeroBuild> = [
       },
       {
         name: 'Meteorb',
-        runewords: ["Heart of the Oak", "Chains of Honor", "Spirit", "Leaf", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
+        runewords: ["Heart of the Oak", "Chains of Honor", "Spirit", 'Call to Arms', "Leaf", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
         items: ["Harlequin Crest", "Mara\'s Kaleidoscope", "Sandstorm Trek", "Arachnid Mesh", "Stone of Jordan", "Bul-Kathos' Wedding Band",
           "Magefist", "War Traveler", "Chance Guards", "Goldwrap", "Nagelring", "Hellfire Torch", "Annihilus"]
       },
@@ -55,13 +68,24 @@ export const HERO_BUILDS: Array<HeroBuild> = [
   {
     hero: "Paladin", abbr: "(P)", builds: [
       {
+        name: 'FoH (L)',
+        runewords: ["Enigma", "Call to Arms", "Spirit", "Heart of the Oak", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
+        items: ["Harlequin Crest", "Griffon's Eye", "Mara\'s Kaleidoscope", "Herald of Zakarum", "Sandstorm Trek", "Arachnid Mesh", "Stone of Jordan", "Bul-Kathos' Wedding Band",
+          "War Traveler", "Chance Guards", "Nagelring", "Hellfire Torch", "Annihilus"]
+      },
+      {
+        name: 'FoH Smiter (L)',
+        runewords: ["Grief", "Chains of Honor", "Exile", "Call to Arms", "Spirit", "Last Wish", "Strength", "Steel", "Black", "Duress", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary"],
+        items: ["Mara\'s Kaleidoscope", "Harlequin Crest", "Herald of Zakarum", "Arachnid Mesh", "Dracul\'s Grasp", "Raven Frost", "The Stone of Jordan", "Goblin Toe", "Hellfire Torch", "Annihilus",]
+      },
+      {
         name: 'Smiter',
         runewords: ["Grief", "Chains of Honor", "Exile", "Call to Arms", "Spirit", "Last Wish", "Strength", "Steel", "Black", "Duress", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary"],
         items: ["Mara\'s Kaleidoscope", "Highlord\'s Wrath", "Kira\'s Guardian", "Herald of Zakarum", "Dracul\'s Grasp", "Raven Frost", "Verdungo\'s Hearty Cord", "Thundergod\'s Vigor", "Dwarf Star", "Gore Rider", "Goblin Toe", "Hellfire Torch", "Annihilus",]
       },
       {
         name: 'Hammerdin',
-        runewords: ["Enigma", "Call to Arms", "Spirit", "Heart of the oak", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
+        runewords: ["Enigma", "Call to Arms", "Spirit", "Heart of the Oak", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
         items: ["Harlequin Crest", "Mara\'s Kaleidoscope", "Herald of Zakarum", "Sandstorm Trek", "Arachnid Mesh", "Stone of Jordan", "Bul-Kathos' Wedding Band",
           "War Traveler", "Chance Guards", "Nagelring", "Hellfire Torch", "Annihilus"]
       },
@@ -128,6 +152,11 @@ export const HERO_BUILDS: Array<HeroBuild> = [
   {
     hero: "Amazon", abbr: "(Ama)", builds: [
       {
+        name: 'Spearzon (L)',
+        runewords: ["Infinity", "Chains of Honor", "Call to Arms", "Spirit", "Stealth", "Peace", "Smoke", "Rhyme", "Ancient's Pledge", "Nadir", "Lore"],
+        items: ["Thundergod's Vigor", "Razortail", "Griffon's Eye", "Highlord's Wrath", "Bul-Kathos' Wedding Band", "Sandstorm Trek", "Stone of Jordan", "Raven Frost", "Waterwalk", "Hellfire Torch", "Annihilus"]
+      },
+      {
         name: 'Javazon',
         runewords: ["Chains of Honor", "Call to Arms", "Spirit", "Phoenix", "Stealth", "Peace", "Smoke", "Rhyme", "Ancient's Pledge", "Nadir", "Lore"],
         items: ["Titan's Revenge", "Thundergod's Vigor", "Thunderstroke", "Razortail", "Griffon's Eye", "Highlord's Wrath", "Bul-Kathos' Wedding Band", "Sandstorm Trek", "Stone of Jordan", "Raven Frost", "Waterwalk", "Bloodfist", "Hellfire Torch", "Annihilus"]
@@ -182,7 +211,7 @@ export const HERO_BUILDS: Array<HeroBuild> = [
       {
         name: 'Bone',
         runewords: ["White", "Heart of the Oak", "Spirit", "Call to Arms", "Stealth", "Ancient's Pledge", "Rhyme", "Lore"],
-        items: ["Magefist", "Arachnid Mesh", "War Traveler", "Chance Guards","Nagelring", "Harlequin Crest", "Mara's Kaleidoscope", "Sandstorm Trek", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
+        items: ["Magefist", "Arachnid Mesh", "War Traveler", "Chance Guards", "Nagelring", "Harlequin Crest", "Mara's Kaleidoscope", "Sandstorm Trek", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
       },
       {
         name: 'Poison',
@@ -192,7 +221,7 @@ export const HERO_BUILDS: Array<HeroBuild> = [
       {
         name: 'Summoner',
         runewords: ["Beast", "Enigma", "Spirit", "Call to Arms", "Heart of the Oak", "White", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Lore"],
-        items: ["Magefist", "Arachnid Mesh", "Chance Guards","Harlequin Crest", "Mara's Kaleidoscope", "Marrowwalk", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
+        items: ["Magefist", "Arachnid Mesh", "Chance Guards", "Harlequin Crest", "Mara's Kaleidoscope", "Marrowwalk", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
       },
     ]
   },
@@ -201,24 +230,24 @@ export const HERO_BUILDS: Array<HeroBuild> = [
       {
         name: 'Trapsin',
         runewords: ["Enigma", "Call to Arms", "Spirit", "Heart of the Oak", "Leaf", "Stealth", "Ancient's Pledge", "Rhyme", "Sanctuary", "Lore"],
-        items: ["Magefist", "Arachnid Mesh", "War Traveler", "Chance Guards","Nagelring", "Goldwrap", "Harlequin Crest", "Mara's Kaleidoscope", "Sandstorm Trek", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
+        items: ["Magefist", "Arachnid Mesh", "War Traveler", "Chance Guards", "Nagelring", "Goldwrap", "Harlequin Crest", "Mara's Kaleidoscope", "Sandstorm Trek", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
       },
       {
         name: 'Kicksin',
         runewords: ["Chains of Honor", "Spirit", "Sanctuary", "Rift", "Stealth", "Treachery", "Smoke", "Duress", "Ancient's Pledge", "Rhyme", "Lore"],
-        items: ["Dracul's Grasp","Nightwing's Veil","Head Hunter's Glory", "Verdungo's Hearty Cord", "Gore Rider", "Stormlash","Stormshield", "Mara's Kaleidoscope", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
+        items: ["Dracul's Grasp", "Nightwing's Veil", "Head Hunter's Glory", "Verdungo's Hearty Cord", "Gore Rider", "Stormlash", "Stormshield", "Mara's Kaleidoscope", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
 
       },
       {
         name: 'Whirlwind',
         runewords: ["Chaos", "Fury", "Fortitude", "Call to Arms", "Spirit", "Treachery"],
-        items: ["Raven Frost", "Highlord's Wrath", "Verdungo's Hearty Cord", "Gore Rider", "Mara's Kaleidoscope","Raven Frost", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
+        items: ["Raven Frost", "Highlord's Wrath", "Verdungo's Hearty Cord", "Gore Rider", "Mara's Kaleidoscope", "Raven Frost", "Bul-Kathos' Wedding Band", "Stone of Jordan", "Hellfire Torch", "Annihilus"]
 
       },
       {
         name: 'Bladesin',
         runewords: ["Death", "Fortitude", "Phoenix", "Fury", "Stealth", "Duress", "Treachery", "Smoke", "Ancient's Pledge", "Rhyme", "Spirit", "Sanctuary", "Lore"],
-        items: ["Jade Talon", "Blackbog's Sharp", "Fleshripper","Ghostflame", "Steelrend", "Raven Frost", "Highlord's Wrath", "Head Hunter's Glory", "Verdungo's Hearty Cord", "Gore Rider", "Mara's Kaleidoscope","Raven Frost", "Hellfire Torch", "Annihilus"]
+        items: ["Jade Talon", "Blackbog's Sharp", "Fleshripper", "Ghostflame", "Steelrend", "Raven Frost", "Highlord's Wrath", "Head Hunter's Glory", "Verdungo's Hearty Cord", "Gore Rider", "Mara's Kaleidoscope", "Raven Frost", "Hellfire Torch", "Annihilus"]
       },
     ]
   },
