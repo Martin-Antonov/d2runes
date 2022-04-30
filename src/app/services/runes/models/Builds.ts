@@ -76,7 +76,7 @@ export const HERO_BUILDS: Array<HeroBuild> = [
       {
         name: 'FoH Smiter (L)',
         runewords: ["Grief", "Chains of Honor", "Exile", "Call to Arms", "Spirit", "Last Wish", "Strength", "Steel", "Black", "Duress", "Stealth", "Smoke", "Ancient's Pledge", "Rhyme", "Sanctuary"],
-        items: ["Mara\'s Kaleidoscope", "Harlequin Crest", "Herald of Zakarum", "Arachnid Mesh", "Dracul\'s Grasp", "Raven Frost", "The Stone of Jordan", "Goblin Toe", "Hellfire Torch", "Annihilus",]
+        items: ["Mara\'s Kaleidoscope", "Harlequin Crest", "Herald of Zakarum", "Arachnid Mesh", "Dracul\'s Grasp", "Raven Frost", "Stone of Jordan", "Goblin Toe", "Hellfire Torch", "Annihilus",]
       },
       {
         name: 'Smiter',
