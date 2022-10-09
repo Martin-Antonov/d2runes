@@ -2,10 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {filter} from "rxjs/operators";
 import {NavigationEnd, Router} from "@angular/router";
 import {IRunewordUI} from "../../services/runes/models/Runewords";
-import {Title} from "@angular/platform-browser";
 import {RunesService} from "../../services/runes/runes.service";
 import {IRune} from "../../services/runes/models/Runes";
-import {SeoService} from "../../services/seo/seo.service";
 
 @Component({
   selector: 'app-runeword-single-page',
@@ -16,7 +14,7 @@ export class RunewordSinglePageComponent implements OnInit {
   currentRuneword: IRunewordUI;
   runes: Array<IRune>;
 
-  constructor(private router: Router, private rs: RunesService, private seo: SeoService) {
+  constructor(private router: Router, private rs: RunesService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((res: NavigationEnd) => {
@@ -28,7 +26,6 @@ export class RunewordSinglePageComponent implements OnInit {
           return withoutSpaces === rune;
         });
         if (realRune) {
-          this.seo.setRuneword(realRune.name);
           this.currentRuneword = realRune;
           const runes = this.currentRuneword.word.split(' ');
           this.runes = runes.map((r) => {

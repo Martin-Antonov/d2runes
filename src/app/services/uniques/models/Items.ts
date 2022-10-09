@@ -102,6 +102,60 @@ export const ALL_ITEMS: Array<IItemGroup> = [
           "Reduces All Vendor Prices 10-15%\n" +
           "20-40% Better Chance of Getting Magic Items",
       },
+      {
+        name: 'Cold Rupture',
+        type: 'Grand Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/cold-rupture.jpg',
+        stats: "Required Level: 75",
+        magicStats: "Monster Cold Immunity is Sundered\n" +
+          "Cold Resist -70% to -90%"
+      },
+      {
+        name: 'Flame Rift',
+        type: 'Grand Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/flame-rift.jpg',
+        stats: "Required Level: 75",
+        magicStats: "Monster Fire Immunity is Sundered\n" +
+          "Fire Resist -70% to -90%"
+      },
+      {
+        name: 'Crack of the Heavens',
+        type: 'Grand Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/crack-of-the-heavens.jpg',
+        stats: "Required Level: 75",
+        magicStats: "Monster Lightning Immunity is Sundered\n" +
+          "Lightning Resist -70% to -90%"
+      },
+      {
+        name: 'Rotting Fissure',
+        type: 'Grand Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/rotting-fissure.jpg',
+        stats: "Required Level: 75",
+        magicStats: "Monster Poison Immunity is Sundered\n" +
+          "Poison Resist -70% to -90%"
+      },
+      {
+        name: 'Bone Break',
+        type: 'Grand Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/bone-break.jpg',
+        stats: "Required Level: 75",
+        magicStats: "Monster Physical Immunity is Sundered\n" +
+          "Damage Increased by 10 to 30%"
+      },
+      {
+        name: 'Black Cleft',
+        type: 'Grand Charm',
+        quality: QualityType.NONE,
+        img: 'assets/items/unique/charms/black-cleft.jpg',
+        stats: "Required Level: 75",
+        magicStats: "Monster Magic Immunity is Sundered\n" +
+          "Magic Resist -45% to 65%"
+      },
     ]
   },
   {

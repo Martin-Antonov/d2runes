@@ -14,7 +14,6 @@ export class AdsContainerComponent implements OnInit {
   }
 
   async ngOnInit() {
-    console.log("shown");
     // const addBlock = await detectAnyAdblocker();
     // this.adsDisabled = Boolean(addBlock);
     // this.checkPerformed = true;

@@ -3,8 +3,6 @@ import {filter} from "rxjs/operators";
 import {NavigationEnd, Router} from "@angular/router";
 import {UniquesService} from "../../services/uniques/uniques.service";
 import {IItemGroup, ISpecificItem, QualityType} from "../../services/uniques/models/Items";
-import {Title} from "@angular/platform-browser";
-import {SeoService} from "../../services/seo/seo.service";
 
 @Component({
   selector: 'app-item-page',
@@ -14,7 +12,7 @@ import {SeoService} from "../../services/seo/seo.service";
 export class ItemPageComponent implements OnInit {
   currentItem: ISpecificItem;
 
-  constructor(private router: Router, private us: UniquesService, private seo: SeoService) {
+  constructor(private router: Router, private us: UniquesService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((res: NavigationEnd) => {
@@ -31,7 +29,6 @@ export class ItemPageComponent implements OnInit {
           });
         });
         if (realItem) {
-          this.seo.setUnique(realItem.name.toLowerCase());
           this.currentItem = realItem;
         }
       });

@@ -120,3 +120,26 @@
     }
   }
 }
+
+.click {
+  position: absolute;
+  top: 50%;
+  right: -180px;
+  transform: translate(0, -50%);
+  width: 125px;
+  height: 30px;
+  font-family: $d2;
+  color: $gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+  }
+
+  @include less-than(tablet) {
+    right: -100px;
+  }
+}

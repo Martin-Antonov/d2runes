@@ -59,7 +59,6 @@ export class UniquesService {
               break;
             }
           }
-          console.log(buildItem)
           foundItem.builds = foundItem.builds ?? [];
           foundItem.builds.push(hb.abbr + build.name);
         });

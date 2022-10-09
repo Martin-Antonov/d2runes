@@ -1,9 +1,7 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ALL_ITEMS} from "../../services/uniques/models/Items";
 import {UniquesService} from "../../services/uniques/uniques.service";
 import {TABLE_ANIMATION} from "../../shared/Animations";
-import {Title} from "@angular/platform-browser";
-import {SeoService} from "../../services/seo/seo.service";
 
 @Component({
   selector: 'app-uniques-page',
@@ -33,8 +31,7 @@ export class UniquesPageComponent implements OnInit {
   }
 
 
-  constructor(public us: UniquesService, private seo: SeoService) {
-    this.seo.setUniques();
+  constructor(public us: UniquesService) {
   }
 
   ngOnInit(): void {

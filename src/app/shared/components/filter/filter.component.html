@@ -4,4 +4,6 @@
     <ng-content></ng-content>
   </div>
 </div>
-<div class="arrow" [ngClass]="opened && 'reversed'" (click)="toggle.emit()"></div>
+<div class="arrow" [ngClass]="opened && 'reversed'" (click)="toggle.emit()">
+</div>
+<div class="click" *ngIf="showTooltip" (click)="toggle.emit()">Click me! :)</div>

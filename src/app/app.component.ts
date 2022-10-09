@@ -37,7 +37,6 @@ import {Meta, Title} from "@angular/platform-browser";
 import {SeoService} from "./services/seo/seo.service";
 import {SitemapGeneratorService} from "./services/sitemap-generator.service";
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -53,21 +52,5 @@ export class AppComponent {
         this.rs.deleteRuneword();
         this.rs.deleteRune();
       });
-    window.onresize = () => {
-      this.resizeForLargeScreens();
-    }
-
-    this.seo.init();
-
-    this.resizeForLargeScreens();
-  }
-
-  resizeForLargeScreens() {
-    const ratio = window.outerWidth / 1920;
-    if (ratio > 1) {
-      document.body.style.zoom = ratio.toString();
-    } else {
-      document.body.style.zoom = '';
-    }
   }
 }

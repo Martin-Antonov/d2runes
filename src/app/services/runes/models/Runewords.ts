@@ -1241,7 +1241,7 @@ export const RUNEWORDS_D2R = [
       "Freezes Target +3",
     ],
     ladderOnly: true,
-    itemTypeShort: "Swords"
+    itemTypeShort: "Swords/Daggers/Claws"
 
   },
   {

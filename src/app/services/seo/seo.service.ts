@@ -4,14 +4,25 @@ import {getItemMeta, getRuneMeta, getRunewordMeta, MetaConfig} from "./MetaConfi
 import {RUNEWORDS_D2R} from "../runes/models/Runewords";
 import {ALL_ITEMS, IItemGroup, ISpecificItem} from "../uniques/models/Items";
 import {RUNES_D2R} from "../runes/models/Runes";
+import {ScullyRoutesService} from "@scullyio/ng-lib";
+import {NavigationEnd, Router, RouterEvent} from "@angular/router";
+import {filter} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
-
-  constructor(private ts: Title, private meta: Meta) {
+  constructor(private ts: Title, private meta: Meta, private scully: ScullyRoutesService, private router: Router) {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((ev: RouterEvent) => {
+      this.setTags(ev.url);
+    });
+    this.scully.getCurrent().subscribe((link) => {
+      console.log(link.route);
+      const url = link.route;
+      this.setTags(url);
+    });
     // this.getAllRoutes();
+
   }
 
   init() {
@@ -20,7 +31,6 @@ export class SeoService {
   }
 
   setHome() {
-
     this.ts.setTitle('D2Runes.io | Runewords & Items Explorer FAQ | Diablo 2 Resurrected');
     MetaConfig.HOME.forEach((tag) => {
       this.meta.updateTag(tag);
@@ -124,6 +134,42 @@ export class SeoService {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  private setTags(url) {
+    if (url.endsWith('/home')) {
+      this.setHome();
+    } else if (url.endsWith('/runewords')) {
+      this.setRunewords();
+    } else if (url.endsWith('/runes')) {
+      this.setRunes();
+    } else if (url.endsWith('/uniques')) {
+      this.setUniques();
+    } else if (url.endsWith('/cheatsheet')) {
+      this.setFAQ();
+    } else if (url.endsWith('/socketing')) {
+      this.setSocketing();
+    } else if (url.endsWith('/useful-recipes')) {
+      this.setRecipes();
+    } else if (url.endsWith('/lk-farming')) {
+      this.setLK();
+    } else if (url.endsWith('/charts')) {
+      this.setTables();
+    } else if (url.includes('/runes/')) {
+      const params = url.split('/');
+      const last = params[params.length - 1];
+      this.setRune(last);
+    } else if (url.includes('/runewords/')) {
+      const params = url.split('/');
+      const last = params[params.length - 1];
+      this.setRuneword(last);
+    } else if (url.includes('/uniques/')) {
+      const params = url.split('/');
+      const last = params[params.length - 1];
+      this.setUnique(last);
+    } else {
+      this.init();
+    }
+  }
+
   getAllRoutes() {
     const routes = [];
     RUNEWORDS_D2R.forEach((rw) => {
@@ -134,14 +180,14 @@ export class SeoService {
     })
     ALL_ITEMS.forEach((iG: IItemGroup) => {
       iG.items.forEach((i: ISpecificItem) => {
-          routes.push(`/uniques/${i.name.toLowerCase().split(' ').join('-').split('\'').join('')}`)
+        routes.push(`/uniques/${i.name.toLowerCase().split(' ').join('-').split('\'').join('')}`)
       })
     })
     routes.push('/cheatsheet/socketing');
     routes.push('/cheatsheet/useful-recipes');
-    routes.push('/cheatsheet/lk-framing');
+    routes.push('/cheatsheet/lk-farming');
     routes.push('/cheatsheet/charts');
 
-    console.log(routes);
+    console.log(routes.toString());
   }
 }

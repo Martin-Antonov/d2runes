@@ -1,11 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {RunesService} from "../../services/runes/runes.service";
-import {Title} from "@angular/platform-browser";
 import {IRunewordUI} from "../../services/runes/models/Runewords";
 import {IRune} from "../../services/runes/models/Runes";
 import {filter} from "rxjs/operators";
 import {NavigationEnd, Router} from "@angular/router";
-import {SeoService} from "../../services/seo/seo.service";
 
 @Component({
   selector: 'app-rune-page',
@@ -16,7 +14,7 @@ export class RunePageComponent implements OnInit {
   currentRune: IRune;
   runewords: Array<IRunewordUI> = [];
 
-  constructor(public rs: RunesService, private router: Router, private seo: SeoService) {
+  constructor(public rs: RunesService, private router: Router) {
     rs.filterOpen = false;
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -27,14 +25,12 @@ export class RunePageComponent implements OnInit {
         if (rune === "runes") {
           this.currentRune = null;
           this.runewords = [];
-          this.seo.setRunes();
         } else {
           const realRune = this.rs.runes.find((r: IRune) => {
             return r.key.toLowerCase() === rune.toLowerCase();
           });
 
           if (realRune) {
-            this.seo.setRune(realRune.key.toLowerCase());
             this.setCurrentRune(realRune);
           }
         }
