@@ -85,7 +85,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     ClickOutsideModule,
     FormsModule,
     MatTooltipModule,
-    ScullyLibModule
+    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,6 @@ import {getItemMeta, getRuneMeta, getRunewordMeta, MetaConfig} from "./MetaConfi
 import {RUNEWORDS_D2R} from "../runes/models/Runewords";
 import {ALL_ITEMS, IItemGroup, ISpecificItem} from "../uniques/models/Items";
 import {RUNES_D2R} from "../runes/models/Runes";
-import {ScullyRoutesService} from "@scullyio/ng-lib";
 import {NavigationEnd, Router, RouterEvent} from "@angular/router";
 import {filter} from "rxjs/operators";
 
@@ -12,7 +11,7 @@ import {filter} from "rxjs/operators";
   providedIn: 'root'
 })
 export class SeoService {
-  constructor(private ts: Title, private meta: Meta, private scully: ScullyRoutesService, private router: Router) {
+  constructor(private ts: Title, private meta: Meta, private router: Router) {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((ev: RouterEvent) => {
       this.setTags(ev.url);
     });
