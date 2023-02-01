@@ -195,7 +195,7 @@ export const HERO_BUILDS: Array<HeroBuild> = [
       },
       {
         name: 'Fury',
-        runewords: ["Grief", "Fortitude", "Chains of Honor", "Oath", "Obedience", "Honor", "Rhyme", "Ancient's Pledge", "Sanctuary", "Stealth", "Duress"],
+        runewords: ["Grief", "Fortitude", "Chains of Honor", "Oath", "Obedience", "Honor", "Rhyme", "Ancient's Pledge", "Sanctuary", "Stealth", "Duress", "Metamorphosis"],
         items: ["Stormshield", "Dracul\'s Grasp", "Jalal's Mane", "Ribcracker", "Highlord's Wrath", "Raven Frost", "String of Ears", "Gore Rider", "Magefist", "Bul-Kathos' Wedding Band", "Buriza-Do Kyanon",
           "Hellfire Torch", "Annihilus", "Thundergod\'s Vigor", "Verdungo\'s Hearty Cord"]
       },
@@ -255,7 +255,7 @@ export const HERO_BUILDS: Array<HeroBuild> = [
     hero: "Mercenary", abbr: '(MERC)', builds: [
       {
         name: "Mercenary",
-        runewords: ["Obedience", "Fortitude", "Infinity", "Insight", "Treachery", "Duress", "Breath of the Dying"],
+        runewords: ["Obedience", "Fortitude", "Infinity", "Insight", "Treachery", "Duress", "Breath of the Dying", "Bulwark"],
         items: ["Shaftstop", "Andariel's Visage", "Vampire Gaze", "Bonehew", "The Reaper's Toll", "Tomb Reaver"]
       }
     ]

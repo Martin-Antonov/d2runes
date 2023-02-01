@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {IRune, RUNES_D2R, RUNES_PD2} from "./models/Runes";
-import {IRunewordUI, RUNEWORDS_D2R, RUNEWORDS_PD2} from "./models/Runewords";
+import {IRune, RUNES_D2R} from "./models/Runes";
+import {IRunewordUI, RUNEWORDS_D2R} from "./models/Runewords";
 import {SortOrder, SortType} from "./models/Sorting";
 import {IRunesFilterConfig} from "./models/IRunesFilterConfig";
 import {HERO_BUILDS, HeroBuild} from "./models/Builds";
@@ -9,10 +9,8 @@ import {HERO_BUILDS, HeroBuild} from "./models/Builds";
   providedIn: 'root'
 })
 export class RunesService {
-  private runesD2R: Array<IRune>;
-  private runewordsD2R: Array<IRunewordUI>;
-  private runesPD2: Array<IRune>;
-  private runewordsPD2: Array<IRunewordUI>;
+  runes: Array<IRune>;
+  runewords: Array<IRunewordUI>;
 
   filterConfig: IRunesFilterConfig;
   hoveredRuneword: IRunewordUI;
@@ -55,9 +53,9 @@ export class RunesService {
   }
 
   private initRunes() {
-    this.runesD2R = RUNES_D2R.slice();
-    this.runewordsD2R = RUNEWORDS_D2R.slice();
-    this.runewordsD2R.forEach((r: IRunewordUI) => {
+    this.runes = RUNES_D2R.slice();
+    this.runewords = RUNEWORDS_D2R.slice();
+    this.runewords.forEach((r: IRunewordUI) => {
       r.selected = true;
       r.sockets = r.word.split(" ").length;
       r.builds = [];
@@ -67,19 +65,12 @@ export class RunesService {
     this.heroBuilds.forEach((hero) => {
       hero.builds.forEach((build) => {
         build.runewords.forEach((rw: string) => {
-          const runeword = this.runewordsD2R.find((r) => {
+          const runeword = this.runewords.find((r) => {
             return r.name.toLowerCase() === rw.toLowerCase();
           });
           runeword.builds.push(hero.abbr + build.name);
         })
       })
-    });
-
-    this.runesPD2 = RUNES_PD2.slice();
-    this.runewordsPD2 = RUNEWORDS_PD2.slice();
-    this.runewordsPD2.forEach((r: IRunewordUI) => {
-      r.selected = true;
-      r.sockets = r.word.split(" ").length;
     });
   }
 
@@ -91,20 +82,11 @@ export class RunesService {
       level: {from: 13, to: 69},
       stats: [],
       search: "",
-      pd2ModeOn: false,
       build: null,
       ladderOnly: false,
     };
     localStorage.setItem('filter', null);
     this.filter();
-  }
-
-  public get runewords(): Array<IRunewordUI> {
-    return this.filterConfig.pd2ModeOn ? this.runewordsPD2 : this.runewordsD2R;
-  }
-
-  public get runes(): Array<IRune> {
-    return this.filterConfig.pd2ModeOn ? this.runesPD2 : this.runesD2R;
   }
 
   sortBy(type: SortType, order: SortOrder) {

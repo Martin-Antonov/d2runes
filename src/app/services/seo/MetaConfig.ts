@@ -1,3 +1,5 @@
+import {RUNES_D2R} from "../runes/models/Runes";
+
 export const MetaConfig = {
   DEFAULT: [
     {
@@ -125,11 +127,16 @@ export const MetaConfig = {
     {property: 'og:title', content: 'D2Runes.io | Cheatsheet | FCR FHR FBR Tables'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/items/unique/weapons/staves/death\'s-fathom-the-oculus'},
-    {property: 'og:url', content: 'https://d2runes.io/cheatsheet/lower-kurast'},
+    {property: 'og:url', content: 'https://d2runes.io/cheatsheet/charts'},
   ]
 }
 
-export const getRunewordMeta = (rw: string, word: string) => {
+export const getRunewordMeta = (rw: string, rwUrl: string, word: string) => {
+  const highestRune = word.split(' ').sort((a, b) => {
+    const aIndex = RUNES_D2R.findIndex((r1) => r1.key === a);
+    const bIndex = RUNES_D2R.findIndex((r2) => r2.key === b)
+    return aIndex > bIndex ? -1 : 1;
+  })[0].toLowerCase();
   return [
     {
       name: 'keywords',
@@ -138,8 +145,8 @@ export const getRunewordMeta = (rw: string, word: string) => {
     {name: 'description', content: `Information about the ${rw} runeword, hero builds and stats.`},
     {property: 'og:title', content: `D2Runes.io | ${rw} '${word}' Runeword | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: 'https://d2runes.io/assets/runes/pul.png'},
-    {property: 'og:url', content: `https://d2runes.io/runewords/${rw}`},
+    {property: 'og:image', content: `https://d2runes.io/assets/runes/${highestRune}.png`},
+    {property: 'og:url', content: `https://d2runes.io/runewords/${rwUrl}`},
   ]
 }
 
@@ -155,24 +162,24 @@ export const getRuneMeta = (rune: string) => {
     },
     {property: 'og:title', content: `D2Runes.io | ${rune} Rune | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: `https://d2runes.io/assets/runes/${rune}.png`},
-    {property: 'og:url', content: `https://d2runes.io/runes/${rune}`},
+    {property: 'og:image', content: `https://d2runes.io/assets/runes/${rune.toLowerCase()}.png`},
+    {property: 'og:url', content: `https://d2runes.io/runes/${rune.toLowerCase()}`},
   ]
 }
 
-export const getItemMeta = (item: string, imgUrl: string) => {
+export const getItemMeta = (itemName, itemUrl: string, imgUrl: string) => {
   return [
     {
       name: 'keywords',
-      content: `Diablo 2 Resurrected, ${item} Rune, unique item, hero builds, Sorceress, Paladin, Assassin, Barbarian, Druid, Necromancer, Amazon.`
+      content: `Diablo 2 Resurrected, ${itemName} Rune, unique item, hero builds, Sorceress, Paladin, Assassin, Barbarian, Druid, Necromancer, Amazon.`
     },
     {
       name: 'description',
-      content: `Information about the ${item} rune, hero builds, cube recipes, upgrading and stats.`
+      content: `Information and stats of the ${itemName} item.`
     },
-    {property: 'og:title', content: `D2Runes.io | ${item} | Diablo 2 Resurrected`},
+    {property: 'og:title', content: `D2Runes.io | ${itemName} | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: `https://d2runes.io/${imgUrl}`},
-    {property: 'og:url', content: `https://d2runes.io/uniques/${item}`},
+    {property: 'og:url', content: `https://d2runes.io/uniques/${itemUrl}`},
   ]
 }

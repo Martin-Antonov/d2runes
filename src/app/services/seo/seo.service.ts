@@ -16,11 +16,10 @@ export class SeoService {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((ev: RouterEvent) => {
       this.setTags(ev.url);
     });
-    this.scully.getCurrent().subscribe((link) => {
-      console.log(link.route);
-      const url = link.route;
-      this.setTags(url);
-    });
+    // this.scully.getCurrent().subscribe((link) => {
+    //   const url = link.route;
+    //   this.setTags(url);
+    // });
     // this.getAllRoutes();
 
   }
@@ -45,12 +44,12 @@ export class SeoService {
   }
 
   setRuneword(runeword: string) {
-    const rwCapital = this.capitalizeFirstLetter(runeword)
-    const runes = RUNEWORDS_D2R.find((item) => {
-      return item.name === rwCapital;
-    })?.word;
-    this.ts.setTitle(`D2Runes.io | ${rwCapital} '${runes}' Runeword | Diablo 2 Resurrected`)
-    getRunewordMeta(rwCapital.toLowerCase(), runes).forEach((tag) => {
+    // proper name
+    const runewordObj = RUNEWORDS_D2R.find((item) => {
+      return item.name.split(' ').join('').toLowerCase() === runeword;
+    });
+    this.ts.setTitle(`D2Runes.io | ${runewordObj.name} '${runewordObj.word}' Runeword | Diablo 2 Resurrected`)
+    getRunewordMeta(runewordObj.name, runeword, runewordObj.word).forEach((tag) => {
       this.meta.updateTag(tag)
     });
   }
@@ -63,9 +62,8 @@ export class SeoService {
   }
 
   setRune(rune: string) {
-    const runeCapital = this.capitalizeFirstLetter(rune)
-    this.ts.setTitle(`D2Runes.io | ${runeCapital} Rune | Diablo 2 Resurrected`)
-    getRuneMeta(runeCapital.toLowerCase()).forEach((tag) => {
+    this.ts.setTitle(`D2Runes.io | ${rune} Rune | Diablo 2 Resurrected`)
+    getRuneMeta(rune).forEach((tag) => {
       this.meta.updateTag(tag);
     });
   }
@@ -78,19 +76,20 @@ export class SeoService {
   }
 
   setUnique(item: string) {
-    const itemCapital = this.capitalizeFirstLetter(item)
     let itemObj: ISpecificItem = null;
+    let itemFullName = null;
     ALL_ITEMS.forEach((ig: IItemGroup) => {
       if (itemObj) {
         return;
       }
       itemObj = ig.items.find((i: ISpecificItem) => {
-        return i.name.toLowerCase() === item;
+        itemFullName = i.name;
+        return i.name.toLowerCase().split(' ').join('-').split('\'').join('') === item;
       })
     });
-    const name = itemCapital.toLowerCase().split(' ').join('-').split('\'').join('');
-    this.ts.setTitle(`D2Runes.io | ${itemCapital} | Diablo 2 Resurrected`)
-    getItemMeta(name, itemObj.img).forEach((tag) => {
+    const name = item.toLowerCase().split(' ').join('-').split('\'').join('');
+    this.ts.setTitle(`D2Runes.io | ${itemFullName} | Diablo 2 Resurrected`);
+    getItemMeta(itemFullName, name, itemObj.img).forEach((tag) => {
       this.meta.updateTag(tag);
     });
   }
@@ -130,11 +129,11 @@ export class SeoService {
     });
   }
 
-  private capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-
   private setTags(url) {
+    if (url === '/') {
+      return;
+    }
+
     if (url.endsWith('/home')) {
       this.setHome();
     } else if (url.endsWith('/runewords')) {
