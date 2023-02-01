@@ -38,7 +38,6 @@ import { FilterItemsComponent } from './components/uniques-page/filter-items/fil
 import { ItemPageComponent } from './components/item-page/item-page.component';
 import { MobileMenuComponent } from './components/top-nav/mobile-menu/mobile-menu.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
-import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -85,7 +84,6 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     ClickOutsideModule,
     FormsModule,
     MatTooltipModule,
-    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
