@@ -39,6 +39,7 @@ import {ItemPageComponent} from './components/item-page/item-page.component';
 import {MobileMenuComponent} from './components/top-nav/mobile-menu/mobile-menu.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {ScullyLibModule} from '@scullyio/ng-lib';
+import {SitemapGeneratorService} from "./services/sitemap-generator.service";
 
 @NgModule({
   declarations: [
@@ -85,10 +86,13 @@ import {ScullyLibModule} from '@scullyio/ng-lib';
     ClickOutsideModule,
     FormsModule,
     MatTooltipModule,
-    ScullyLibModule,
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor() {
+
+  }
 }

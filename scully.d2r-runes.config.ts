@@ -12,29 +12,28 @@ export const config: ScullyConfig = {
   outDir: './dist/static',
   defaultPostRenderers: [],
   routes: {
-    // '/runewords/:runewordId': {
-    //   type: 'runewords',
-    // },
+    '/runewords/:runewordId': {
+      type: 'runewords',
+    },
     '/runes/:runeId': {
       type: 'runes',
     },
-    // '/uniques/:item': {
-    //   type: 'uniques',
-    // },
+    '/uniques/:item': {
+      type: 'uniques',
+    },
   },
 };
 
+function runewordsPlugin(route: string, config = {}): Promise<HandledRoute[]> {
+  const rws = RUNEWORDS_D2R.map((rw) => {
+    return {route: '/runewords/' + rw.name.split(' ').join('').toLowerCase()};
+  })
 
-// function runewordsPlugin(route: string, config = {}): Promise<HandledRoute[]> {
-//   const rws = RUNEWORDS_D2R.map((rw) => {
-//     return {route: '/runewords/' + rw.name.split(' ').join('').toLowerCase()};
-//   })
-//
-//   return Promise.resolve(rws);
-// }
-//
-// const validatorRunewords = async (conf) => [];
-// registerPlugin('router', 'runewords', runewordsPlugin, validatorRunewords);
+  return Promise.resolve(rws);
+}
+
+const validatorRunewords = async (conf) => [];
+registerPlugin('router', 'runewords', runewordsPlugin, validatorRunewords);
 
 function runesPlugin(route: string, config = {}): Promise<HandledRoute[]> {
   const rs = RUNES_D2R.map((r) => {
@@ -47,15 +46,15 @@ function runesPlugin(route: string, config = {}): Promise<HandledRoute[]> {
 const validatorRunes = async (conf) => [];
 registerPlugin('router', 'runes', runesPlugin, validatorRunes);
 
-// function uniquesPlugin(route: string, config = {}): Promise<HandledRoute[]> {
-//   const us = [];
-//   ALL_ITEMS.forEach((ig) => {
-//     ig.items.forEach((item) => {
-//       us.push({route: '/uniques/' + item.name.toLowerCase().split(' ').join('-').split('\'').join('')})
-//     });
-//   })
-//   return Promise.resolve(us);
-// }
-//
-// const validatorUniques = async (conf) => [];
-// registerPlugin('router', 'uniques', uniquesPlugin, validatorUniques);
+function uniquesPlugin(route: string, config = {}): Promise<HandledRoute[]> {
+  const us = [];
+  ALL_ITEMS.forEach((ig) => {
+    ig.items.forEach((item) => {
+      us.push({route: '/uniques/' + item.name.toLowerCase().split(' ').join('-').split('\'').join('')})
+    });
+  })
+  return Promise.resolve(us);
+}
+
+const validatorUniques = async (conf) => [];
+registerPlugin('router', 'uniques', uniquesPlugin, validatorUniques);

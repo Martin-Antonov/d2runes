@@ -18,6 +18,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/runes/pul.png'},
     {property: 'og:url', content: 'https://d2runes.io/runewords'},
+    {property: 'og:description', content:'Runewords explorer allows you to filter runewords by runes, sockets, item types, hero builds and more. '},
     {charset: 'UTF-8'}
   ],
   HOME: [
@@ -30,6 +31,8 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/runes/pul.png'},
     {property: 'og:url', content: 'https://d2runes.io'},
+    {property: 'og:description', content:'D2runes.io is a runewords and items explorer with advanced filter.'},
+
   ],
   RUNES: [
     {
@@ -44,6 +47,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/runes/ber.png'},
     {property: 'og:url', content: 'https://d2runes.io/runes'},
+    {property: 'og:description', content:'The runes page allows you to check specific runes, their stats, corresponding upgrade cube recipes and all runewords they are a part of.'},
   ],
   UNIQUES: [
     {
@@ -58,6 +62,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/items/unique/helms/harlequin-crest.jpg'},
     {property: 'og:url', content: 'https://d2runes.io/uniques'},
+    {property: 'og:description', content:'Unique items explorer allows you to filter items by types, stats, hero builds and more. '},
   ],
   CHEATSHEET: [
     {
@@ -72,6 +77,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/socket-shield.jpg'},
     {property: 'og:url', content: 'https://d2runes.io/cheatsheet'},
+    {property: 'og:description', content:'The cheatsheet/faq page presents the most frequently used information in Diablo 2 Resurrected, such as lower kurast farming, FCR, FHR, FBR tables, crafting and more.'},
   ],
   SOCKETING: [
     {
@@ -86,6 +92,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/socket-shield.jpg'},
     {property: 'og:url', content: 'https://d2runes.io/cheatsheet/socketing'},
+    {property: 'og:description', content:'In this article you will find out how to add sockets to weapons, armors, shields, weapons and helm and how to reset sockets of an item.'},
   ],
   RECIPES: [
     {
@@ -100,6 +107,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/caster-ammy.jpg'},
     {property: 'og:url', content: 'https://d2runes.io/cheatsheet/recipes'},
+    {property: 'og:description', content:'This article contains information about crafting caster amulets and blood gloves, upping and rerolling items.'},
   ],
   KURAST: [
     {
@@ -114,6 +122,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/lk-minimap.jpg'},
     {property: 'og:url', content: 'https://d2runes.io/cheatsheet/lower-kurast'},
+    {property: 'og:description', content:'All you need to know high rune farming in Lower Kurast.'},
   ],
   TABLES: [
     {
@@ -128,6 +137,7 @@ export const MetaConfig = {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/items/unique/weapons/staves/death\'s-fathom-the-oculus'},
     {property: 'og:url', content: 'https://d2runes.io/cheatsheet/charts'},
+    {property: 'og:description', content:'Tables for Faster Cast Rate (FCR), Faster Hit Recovery (FHR) and Faster Block Rate (FBR)'},
   ]
 }
 
@@ -147,6 +157,7 @@ export const getRunewordMeta = (rw: string, rwUrl: string, word: string) => {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: `https://d2runes.io/assets/runes/${highestRune}.png`},
     {property: 'og:url', content: `https://d2runes.io/runewords/${rwUrl}`},
+    {property: 'og:description', content:`Information about the ${rw} runeword, hero builds and stats.`},
   ]
 }
 
@@ -164,6 +175,8 @@ export const getRuneMeta = (rune: string) => {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: `https://d2runes.io/assets/runes/${rune.toLowerCase()}.png`},
     {property: 'og:url', content: `https://d2runes.io/runes/${rune.toLowerCase()}`},
+    {property: 'og:description', content: `Information about the ${rune} rune, hero builds, cube recipes, upgrading and stats.`},
+
   ]
 }
 
@@ -181,5 +194,6 @@ export const getItemMeta = (itemName, itemUrl: string, imgUrl: string) => {
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: `https://d2runes.io/${imgUrl}`},
     {property: 'og:url', content: `https://d2runes.io/uniques/${itemUrl}`},
+    {property: 'og:description', content:`Information and stats of the ${itemName} item.`},
   ]
 }

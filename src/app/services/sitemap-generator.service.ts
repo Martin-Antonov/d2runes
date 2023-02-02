@@ -8,16 +8,16 @@ import {ALL_ITEMS, IItemGroup, ISpecificItem} from "./uniques/models/Items";
 export class SitemapGeneratorService {
 
   constructor(private rs: RunesService) {
-    const prefix = "https://d2runes.io/#/";
+    const prefix = "https://d2runes.io/";
     const urls = [{url: 'home', priority: 0.7}]
     urls.push({url: 'runewords', priority: 1});
     urls.push({url: 'runes', priority: 0.8});
     urls.push({url: 'cheatsheet', priority: 0.9});
-    urls.push({url: 'cheatsheet/socketing', priority: 0.7});
-    urls.push({url: 'cheatsheet/useful-recipes', priority: 0.7});
-    urls.push({url: 'cheatsheet/lk-farming', priority: 0.7});
-    urls.push({url: 'cheatsheet/charts', priority: 0.7});
-    urls.push({url: 'privacy-policy', priority: 0.7});
+    urls.push({url: 'cheatsheet/socketing', priority: 0.9});
+    urls.push({url: 'cheatsheet/useful-recipes', priority: 0.9});
+    urls.push({url: 'cheatsheet/lk-farming', priority: 0.9});
+    urls.push({url: 'cheatsheet/charts', priority: 0.9});
+    urls.push({url: 'privacy-policy', priority: 0.1});
     // urls.push({url: 'cheatsheet/mapping', priority: 0.7});
     // urls.push({url: 'cheatsheet/gambling', priority: 0.7});
     rs.runes.forEach((r) => {
@@ -31,18 +31,23 @@ export class SitemapGeneratorService {
       ig.items.forEach((item: ISpecificItem) => {
         const name = item.name.includes(' ') ? item.name.split(' ').join('-') : item.name;
         const nameWithoutQuotes = name.includes('\'') ? name.split('\'').join('') : name;
-        urls.push({url: 'uniques/' + nameWithoutQuotes.toLowerCase(), priority: 0.9})
+        urls.push({url: 'uniques/' + nameWithoutQuotes.toLowerCase(), priority: 0.7})
       });
     });
 
-    const result = urls.map((res) => {
+    const result =
+      urls.map((res) => {
       return `<url>
     <loc>${prefix + res.url}</loc>
-    <lastmod>2021-08-10</lastmod>
+    <lastmod>2023-01-02</lastmod>
     <priority>${res.priority}</priority>
-    </url>`
-    });
+    </url>
+`
+    }).join('');
 
-    console.log(result.join(''));
+    const full = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + result + '</urlset>'
+
+    console.log(full);
   }
 }
