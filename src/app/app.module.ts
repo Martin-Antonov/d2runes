@@ -12,32 +12,33 @@ import {FormsModule} from "@angular/forms";
 import {RunewordsPageComponent} from "./components/runewords-page/runewords-page.component";
 import {FilterRwComponent} from "./components/runewords-page/filter-rw/filter-rw.component";
 import {RunewordHoverComponent} from "./components/runewords-page/runeword-hover/runeword-hover.component";
-import { HomeComponent } from './components/home/home.component';
-import { RunewordsTableComponent } from './shared/components/runewords-table/runewords-table.component';
-import { AdsContainerComponent } from './components/ads-container/ads-container.component';
-import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
-import { RunewordSinglePageComponent } from './components/runeword-single-page/runeword-single-page.component';
+import {HomeComponent} from './components/home/home.component';
+import {RunewordsTableComponent} from './shared/components/runewords-table/runewords-table.component';
+import {AdsContainerComponent} from './components/ads-container/ads-container.component';
+import {PrivacyPolicyComponent} from './components/privacy-policy/privacy-policy.component';
+import {RunewordSinglePageComponent} from './components/runeword-single-page/runeword-single-page.component';
 import {RunePageComponent} from "./components/rune-page/rune-page.component";
 import {RunePreviewComponent} from "./shared/components/rune-preview/rune-preview.component";
-import { RuneComponent } from './shared/components/rune/rune.component';
-import { CheatSheetComponent } from './components/cheat-sheet-page/cheat-sheet.component';
-import { SocketingComponent } from './components/cheat-sheet-page/socketing/socketing.component';
-import { UsefulRecipesComponent } from './components/cheat-sheet-page/useful-recipes/useful-recipes.component';
-import { LowerKurastComponent } from './components/cheat-sheet-page/lower-kurast/lower-kurast.component';
-import { FChartsComponent } from './components/cheat-sheet-page/f-charts/f-charts.component';
-import { IndexComponent } from './components/cheat-sheet-page/index/index.component';
-import { MappingComponent } from './components/cheat-sheet-page/mapping/mapping.component';
-import { GamblingComponent } from './components/cheat-sheet-page/gambling/gambling.component';
-import { UniquesPageComponent } from './components/uniques-page/uniques-page.component';
-import { FilterComponent } from './shared/components/filter/filter.component';
-import { InputComponent } from './shared/components/form-elements/input/input.component';
-import { SliderComponent } from './shared/components/form-elements/slider/slider.component';
-import { CheckboxComponent } from './shared/components/form-elements/checkbox/checkbox.component';
-import { ItemPreviewComponent } from './components/uniques-page/item-preview/item-preview.component';
-import { FilterItemsComponent } from './components/uniques-page/filter-items/filter-items.component';
-import { ItemPageComponent } from './components/item-page/item-page.component';
-import { MobileMenuComponent } from './components/top-nav/mobile-menu/mobile-menu.component';
+import {RuneComponent} from './shared/components/rune/rune.component';
+import {CheatSheetComponent} from './components/cheat-sheet-page/cheat-sheet.component';
+import {SocketingComponent} from './components/cheat-sheet-page/socketing/socketing.component';
+import {UsefulRecipesComponent} from './components/cheat-sheet-page/useful-recipes/useful-recipes.component';
+import {LowerKurastComponent} from './components/cheat-sheet-page/lower-kurast/lower-kurast.component';
+import {FChartsComponent} from './components/cheat-sheet-page/f-charts/f-charts.component';
+import {IndexComponent} from './components/cheat-sheet-page/index/index.component';
+import {MappingComponent} from './components/cheat-sheet-page/mapping/mapping.component';
+import {GamblingComponent} from './components/cheat-sheet-page/gambling/gambling.component';
+import {UniquesPageComponent} from './components/uniques-page/uniques-page.component';
+import {FilterComponent} from './shared/components/filter/filter.component';
+import {InputComponent} from './shared/components/form-elements/input/input.component';
+import {SliderComponent} from './shared/components/form-elements/slider/slider.component';
+import {CheckboxComponent} from './shared/components/form-elements/checkbox/checkbox.component';
+import {ItemPreviewComponent} from './components/uniques-page/item-preview/item-preview.component';
+import {FilterItemsComponent} from './components/uniques-page/filter-items/filter-items.component';
+import {ItemPageComponent} from './components/item-page/item-page.component';
+import {MobileMenuComponent} from './components/top-nav/mobile-menu/mobile-menu.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {ScullyLibModule} from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     ClickOutsideModule,
     FormsModule,
     MatTooltipModule,
+    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

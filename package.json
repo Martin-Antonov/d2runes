@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,9 @@
     "@angular/platform-browser-dynamic": "^14.2.12",
     "@angular/platform-server": "^14.2.12",
     "@angular/router": "^14.2.12",
+    "@scullyio/ng-lib": "^2.1.41",
+    "@scullyio/scully": "^2.1.41",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.41",
     "just-detect-adblock": "^1.1.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-click-outside": "^9.0.0",

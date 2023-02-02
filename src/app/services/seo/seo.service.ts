@@ -6,19 +6,20 @@ import {ALL_ITEMS, IItemGroup, ISpecificItem} from "../uniques/models/Items";
 import {RUNES_D2R} from "../runes/models/Runes";
 import {NavigationEnd, Router, RouterEvent} from "@angular/router";
 import {filter} from "rxjs/operators";
+import {IdleMonitorService, ScullyRoutesService} from "@scullyio/ng-lib";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
-  constructor(private ts: Title, private meta: Meta, private router: Router) {
+  constructor(private ts: Title, private meta: Meta, private router: Router, private scully: ScullyRoutesService) {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((ev: RouterEvent) => {
       this.setTags(ev.url);
     });
-    // this.scully.getCurrent().subscribe((link) => {
-    //   const url = link.route;
-    //   this.setTags(url);
-    // });
+    this.scully.getCurrent().subscribe((link) => {
+      const url = link.route;
+      this.setTags(url);
+    });
     // this.getAllRoutes();
 
   }

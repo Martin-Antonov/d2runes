@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "importHelpers": false,
+    "lib": ["ES2019", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es2018",
+    "types": ["node"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "typeRoots": ["../node_modules/@types"],
+    "allowSyntheticDefaultImports": true
+  },
+  "files": ["../src/app/services/runes/models/Runewords.ts", "../src/app/services/runes/models/Runes.ts", "../src/app/services/uniques/models/Items.ts"],
+  "exclude": ["./**/*spec.ts"]
+}

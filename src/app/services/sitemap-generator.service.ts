@@ -17,6 +17,7 @@ export class SitemapGeneratorService {
     urls.push({url: 'cheatsheet/useful-recipes', priority: 0.7});
     urls.push({url: 'cheatsheet/lk-farming', priority: 0.7});
     urls.push({url: 'cheatsheet/charts', priority: 0.7});
+    urls.push({url: 'privacy-policy', priority: 0.7});
     // urls.push({url: 'cheatsheet/mapping', priority: 0.7});
     // urls.push({url: 'cheatsheet/gambling', priority: 0.7});
     rs.runes.forEach((r) => {
