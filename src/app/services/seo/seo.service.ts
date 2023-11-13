@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Meta, Title} from "@angular/platform-browser";
+import {Meta, Title} from '@angular/platform-browser';
 import {getItemMeta, getRuneMeta, getRunewordMeta, MetaConfig} from "./MetaConfig";
 import {RUNEWORDS_D2R} from "../runes/models/Runewords";
 import {ALL_ITEMS, IItemGroup, ISpecificItem} from "../uniques/models/Items";

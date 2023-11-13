@@ -331,12 +331,13 @@ export const RUNEWORDS_D2R = [
   },
   {
     name: "Cure", word: "Shael Io Tal", itemType: "Helms", level: 35, stats: [
+      "Level 1 Cleansing Aura when Equipped",
       "+20% Faster Hit Recovery",
       "+75-100% Enhanced Defense",
       "+10 to Vitality",
       "Increase Maximum Life 5%",
       "Poison Resist +40-60%",
-      "Poison Length Reduced by 75%",
+      "Poison Length Reduced by 50%",
     ], itemTypeShort: "Helms",
     ladderOnly: true,
   },
@@ -359,6 +360,7 @@ export const RUNEWORDS_D2R = [
       "Increase Maximum Life 5%",
       "Cold Resist +40-60%",
       "Cold Absorb +10-15%",
+      "Cannot be Frozen",
     ], itemTypeShort: "Helms",
     ladderOnly: true,
   },
@@ -456,23 +458,31 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Missile Weapons"
   },
   {
-    name: "Hustle", word: "Shael Ko Eld",     itemType: "Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws", level: 39, stats: [
-      "5% Chance to cast level nine Burst of Speed on striking",
+    name: "Hustle",
+    word: "Shael Ko Eld",
+    itemType: "Swords/Axes/Maces/Scepters/Fists/Polearms/Staves/Spears/Bows/Crossbows/Clubs/Hammers/Wands/Claws",
+    level: 39,
+    stats: [
+      "5% Chance to cast level 1 Burst of Speed on striking",
+      "Level 1 Fanaticism Aura",
       "+30% Increased Attack Speed",
-      "+130-150% Enhanced Damage",
+      "+180-200% Enhanced Damage",
       "+75% Damage to Undead",
       "+50 to Attack Rating against Undead",
       "+10 to Dexterity",
-    ], itemTypeShort: "All Weapons",
+    ],
+    itemTypeShort: "All Weapons",
     ladderOnly: true,
   },
   {
-    name: "Hustle", word: "Shael Ko Eld",     itemType: "Body Armor", level: 39, stats: [
-      "+50% Faster Run/Walk",
-      "+20% Increased Attack Speed",
+    name: "Hustle", word: "Shael Ko Eld", itemType: "Body Armor", level: 39, stats: [
+      "+65% Faster Run/Walk",
+      "+40% Increased Attack Speed",
       "+20% Faster Hit Recovery",
+      "+6 to Evade",
       "+10 to Dexterity",
       "50% Slower Stamina Drain",
+      "+All Resistances +10",
     ], itemTypeShort: "Body Armor",
     ladderOnly: true,
   },
@@ -823,13 +833,17 @@ export const RUNEWORDS_D2R = [
     ], itemTypeShort: "Body Armor"
   },
   {
-    name: "Mosaic", word: "Mal Gul Thul",     itemType: "Claws", level: 53, stats: [
-      "+25% chance for finishing moves to not consume charges",
+    name: "Mosaic", word: "Mal Gul Amn", itemType: "Claws", level: 53, stats: [
+      "+50% chance for finishing moves to not consume charges",
+      "When a finisher is executed this way, it now refreshes the expiration timer of the stack",
       "+2 to Martial Arts (Assassin only)",
       "+20% Increased Attack Speed",
       "+200-250% Enhanced Damage",
       "+20% Bonus to Attack Rating",
-      "Adds 3-14 Cold Damage",
+      "7% Life Steal",
+      "+8-15% to Cold Skill Damage",
+      "+8-15% to Lightning Skill Damage",
+      "+8-15% to Fire Skill Damage",
       "Prevent Monster Heal",
     ], itemTypeShort: "Claws",
     ladderOnly: true,
@@ -1333,7 +1347,7 @@ export const RUNEWORDS_D2R = [
     name: "Metamorphosis", word: "Io Cham Fal", itemType: "Helms", level: 67, stats: [
       "Werewolf strikes grant Mark for 180 seconds",
       "Mark of the Wolf:",
-      "+20% Bonus to Attack Rating",
+      "+30% Bonus to Attack Rating",
       "Increase Maximum Life 40%",
       "Werebear strikes grant Mark for 180 seconds",
       "Mark of the Bear:",

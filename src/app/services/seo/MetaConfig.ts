@@ -14,6 +14,7 @@ export const MetaConfig = {
     {name: 'author', content: 'Martin Antonov'},
     {name: 'viewport', content: 'width=device-width, initial-scale=1'},
     {name: 'date', content: '20-03-2022', scheme: 'DD-MM-YYYY'},
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Runewords & Items Explorer'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/runes/pul.png'},
@@ -27,6 +28,7 @@ export const MetaConfig = {
       content: 'Diablo 2 Resurrected, runewords, cheatsheet, runes, advanced filter, rune, items, unique, lower kurast, crafting, cube recipes, heroes, hero builds'
     },
     {name: 'description', content: 'D2runes.io is a runewords and items explorer with advanced filter.'},
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Runewords & Items Explorer | Welcome'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/runes/pul.png'},
@@ -43,6 +45,7 @@ export const MetaConfig = {
       name: 'description',
       content: 'The runes page allows you to check specific runes, their stats, corresponding upgrade cube recipes and all runewords they are a part of.',
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Runewords & Items Explorer | Runes'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/runes/ber.png'},
@@ -58,6 +61,7 @@ export const MetaConfig = {
       name: 'description',
       content: 'Unique items explorer allows you to filter items by types, stats, hero builds and more. ',
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Runewords & Items Explorer | Items'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/items/unique/helms/harlequin-crest.jpg'},
@@ -73,6 +77,7 @@ export const MetaConfig = {
       name: 'description',
       content: 'The cheatsheet/faq page presents the most frequently used information in Diablo 2 Resurrected, such as lower kurast farming, FCR, FHR, FBR tables, crafting and more.',
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Runewords & Items Explorer | Cheatsheet'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/socket-shield.jpg'},
@@ -88,6 +93,7 @@ export const MetaConfig = {
       name: 'description',
       content: 'In this article you will find out how to add sockets to weapons, armors, shields, weapons and helm and how to reset sockets of an item.',
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Cheatsheet | Socketing'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/socket-shield.jpg'},
@@ -103,6 +109,7 @@ export const MetaConfig = {
       name: 'description',
       content: 'This article contains information about crafting caster amulets and blood gloves, upping and rerolling items.',
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Cheatsheet | Useful Recipes'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/caster-ammy.jpg'},
@@ -118,6 +125,7 @@ export const MetaConfig = {
       name: 'description',
       content: 'All you need to know high rune farming in Lower Kurast.',
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Cheatsheet | Lower Kurast Farming'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/cheat-sheet/lk-minimap.jpg'},
@@ -133,6 +141,7 @@ export const MetaConfig = {
       name: 'description',
       content: 'Tables for Faster Cast Rate (FCR), Faster Hit Recovery (FHR) and Faster Block Rate (FBR)',
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: 'D2Runes.io | Cheatsheet | FCR FHR FBR Tables'},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: 'https://d2runes.io/assets/items/unique/weapons/staves/death\'s-fathom-the-oculus'},
@@ -152,6 +161,7 @@ export const getRunewordMeta = (rw: string, rwUrl: string, word: string) => {
       name: 'keywords',
       content: `Diablo 2 Resurrected, ${rw} Runeword, ${word},runewords, hero builds, stats, Sorceress, Paladin, Assassin, Barbarian, Druid, Necromancer, Amazon.`
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {name: 'description', content: `Information about the ${rw} runeword, hero builds and stats.`},
     {property: 'og:title', content: `D2Runes.io | ${rw} '${word}' Runeword | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
@@ -171,12 +181,12 @@ export const getRuneMeta = (rune: string) => {
       name: 'description',
       content: `Information about the ${rune} rune, hero builds, cube recipes, upgrading and stats.`
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: `D2Runes.io | ${rune} Rune | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: `https://d2runes.io/assets/runes/${rune.toLowerCase()}.png`},
     {property: 'og:url', content: `https://d2runes.io/runes/${rune.toLowerCase()}`},
     {property: 'og:description', content: `Information about the ${rune} rune, hero builds, cube recipes, upgrading and stats.`},
-
   ]
 }
 
@@ -190,6 +200,7 @@ export const getItemMeta = (itemName, itemUrl: string, imgUrl: string) => {
       name: 'description',
       content: `Information and stats of the ${itemName} item.`
     },
+    {name: 'google-adsense-account', content: 'ca-pub-1618583990709400'},
     {property: 'og:title', content: `D2Runes.io | ${itemName} | Diablo 2 Resurrected`},
     {property: 'og:type', content: 'website'},
     {property: 'og:image', content: `https://d2runes.io/${imgUrl}`},
